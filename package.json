@@ -1,5 +1,5 @@
 {
-  "name": "turning-forward-learning-portal",
+  "name": "tcf-learn-turning-forward",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@supabase/supabase-js": "2.110.7",
     "next": "16.2.10",
     "react": "19.1.0",
     "react-dom": "19.1.0"
@@ -21,5 +20,6 @@
   },
   "engines": {
     "node": ">=20.9.0 <23"
-  }
+  },
+  "packageManager": "npm@10.9.2"
 }
