@@ -15,9 +15,9 @@ export default function PaidCourseGate({ children }: { children: ReactNode }) {
     if (loading) return;
     if (!user || !supabase) { setAllowed(false); setChecking(false); return; }
     setChecking(true);
-    supabase.from("enrollments").select("id").eq("user_id", user.id).eq("course_slug", "turning-forward").eq("active", true).maybeSingle()
-      .then(({ data }) => setAllowed(Boolean(data)))
-      .finally(() => setChecking(false));
+    let cancelled=false;
+    (async()=>{const {data}=await supabase.from("enrollments").select("id").eq("user_id",user.id).eq("course_slug","turning-forward").eq("active",true).maybeSingle();if(!cancelled){setAllowed(Boolean(data));setChecking(false)}})();
+    return()=>{cancelled=true};
   }, [user, loading]);
 
   if (loading || checking) return <main><Header/><section className="empty-state"><h1>Checking course access…</h1></section></main>;
