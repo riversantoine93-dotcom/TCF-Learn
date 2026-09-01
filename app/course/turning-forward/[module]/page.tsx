@@ -77,6 +77,7 @@ function Video({title}:{title:string}){return <div className="video"><div classN
 
 function LessonVideo({module,lesson}:{module:CourseModuleContent,lesson:LessonContent}){
   if(module.number===1&&lesson.number===1) return <iframe src="https://player.mux.com/NN9S02p3YoJlnDezTiEKvL02vUOHHay7YlhUtXSQlNnlc" title="Module 1 Lesson 1: The Decision" style={{width:"100%",border:"none",aspectRatio:"16 / 9",display:"block",margin:"18px 0 24px",background:"#000"}} allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowFullScreen loading="lazy"/>;
+  if(module.number===1&&lesson.number===3) return <iframe src="https://player.mux.com/8B5hbbbYdboc6yek6gDmlqXPRna1x02UlKsD1M00zV8fw" title="Module 1 Lesson 3: Systems Create Stability" style={{width:"100%",border:"none",aspectRatio:"16 / 9",display:"block",margin:"18px 0 24px",background:"#000"}} allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowFullScreen loading="lazy"/>;
   return <Video title={lesson.videoTitle}/>;
 }
 
