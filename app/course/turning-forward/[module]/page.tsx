@@ -4,9 +4,11 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import Header from "@/components/Header";
+import GuidedStoryLesson from "@/components/GuidedStoryLesson";
 import { useAuth } from "@/components/AuthProvider";
 import { loadCloudProgress, loadLocalProgress, saveCloudProgress, saveLocalProgress, ProgressData } from "@/lib/progress";
 import { getModuleContent, CourseModuleContent, LessonContent, QuizQuestion } from "@/lib/course-content";
+import { getGuidedStory } from "@/lib/guided-story-content";
 import { moduleOneContent } from "@/lib/module-one-content";
 
 const tabs=["Lesson 1","Lesson 2","Lesson 3","Challenge"] as const;
@@ -80,14 +82,6 @@ function InteractiveModule({module}:{module:CourseModuleContent}){
   </section></main>;
 }
 
-function Video({title}:{title:string}){return <div className="video"><div className="play">▶</div><div><span>VIDEO LESSON</span><h3>{title}</h3><p>Video coming soon. This panel is ready for the lesson embed.</p></div></div>}
-
-function LessonVideo({module,lesson}:{module:CourseModuleContent,lesson:LessonContent}){
-  if(module.number===1&&lesson.number===1) return <iframe src="https://player.mux.com/NN9S02p3YoJlnDezTiEKvL02vUOHHay7YlhUtXSQlNnlc" title="Module 1 Lesson 1: The Decision" style={{width:"100%",border:"none",aspectRatio:"16 / 9",display:"block",margin:"18px 0 24px",background:"#000"}} allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowFullScreen loading="lazy"/>;
-  if(module.number===1&&lesson.number===3) return <iframe src="https://player.mux.com/8B5hbbbYdboc6yek6gDmlqXPRna1x02UlKsD1M00zV8fw" title="Module 1 Lesson 3: Systems Create Stability" style={{width:"100%",border:"none",aspectRatio:"16 / 9",display:"block",margin:"18px 0 24px",background:"#000"}} allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowFullScreen loading="lazy"/>;
-  return <Video title={lesson.videoTitle}/>;
-}
-
 function Quiz({moduleNumber,lessonNumber,items,s,f}:{moduleNumber:number,lessonNumber:number,items:QuizQuestion[],s:ProgressData,f:(k:string,v:string)=>void}){
   return <section className="quiz"><h3>Knowledge Check</h3>{items.map((item,i)=>{
     const key=quizKey(moduleNumber,lessonNumber,item.id);
@@ -99,13 +93,14 @@ function Quiz({moduleNumber,lessonNumber,items,s,f}:{moduleNumber:number,lessonN
 }
 
 function LessonView({module,lesson,s,f,done}:{module:CourseModuleContent,lesson:LessonContent,s:ProgressData,f:(k:string,v:string|boolean)=>void,done:()=>void}){
+  const story=getGuidedStory(module.slug,lesson.number);
   const fieldStatus=lesson.fields.map(item=>{const value=String(s[fieldKey(module.number,lesson.number,item.id)]||"");const min=item.min??3;return {item,value,min,complete:value.trim().length>=min};});
   const unansweredQuiz=lesson.quiz.filter(item=>!Boolean(s[quizKey(module.number,lesson.number,item.id)])).length;
   const missingFields=fieldStatus.filter(item=>!item.complete).length;
   const fieldsComplete=missingFields===0;
   const quizComplete=unansweredQuiz===0;
   const ok=fieldsComplete&&quizComplete;
-  return <article className="lesson-content"><span className="lesson-kicker">LESSON {lesson.number}</span><h2>{lesson.title}</h2><LessonVideo module={module} lesson={lesson}/><p>{lesson.intro}</p><blockquote>{lesson.quote}</blockquote><h3>{lesson.sectionTitle}</h3><p>{lesson.sectionBody}</p><section className="interaction"><h3>{lesson.activityTitle}</h3>{fieldStatus.map(({item,value,min,complete})=>{const key=fieldKey(module.number,lesson.number,item.id);return <label key={key}>{item.label}<textarea className={(item.min??0)>10?"large":""} value={value} aria-describedby={`${key}-requirement`} onChange={e=>f(key,e.target.value)}/><small id={`${key}-requirement`} className={`response-requirement ${complete?"is-met":"is-pending"}`} aria-live="polite">{responseRequirement(value,min)}</small></label>})}</section><Quiz moduleNumber={module.number} lessonNumber={lesson.number} items={lesson.quiz} s={s} f={(k,v)=>f(k,v)}/>{!ok&&<div className="notice" role="status"><b>Almost there.</b><p>Complete all required written responses and answer all Knowledge Check questions to continue.</p><p>{missingFields>0?`${missingFields} written ${missingFields===1?"response needs":"responses need"} attention. `:"Written responses complete. "}{unansweredQuiz>0?`${unansweredQuiz} Knowledge Check ${unansweredQuiz===1?"question remains":"questions remain"}.`:"Knowledge Check complete."}</p></div>}<button className="button full" disabled={!ok} onClick={done}>Complete Lesson {lesson.number} →</button></article>;
+  return <article className="lesson-content"><span className="lesson-kicker">LESSON {lesson.number}</span><h2>{lesson.title}</h2>{story?<GuidedStoryLesson story={story}/>:<><p>{lesson.intro}</p><blockquote>{lesson.quote}</blockquote><h3>{lesson.sectionTitle}</h3><p>{lesson.sectionBody}</p></>}<section className="interaction"><h3>{lesson.activityTitle}</h3>{fieldStatus.map(({item,value,min,complete})=>{const key=fieldKey(module.number,lesson.number,item.id);return <label key={key}>{item.label}<textarea className={(item.min??0)>10?"large":""} value={value} aria-describedby={`${key}-requirement`} onChange={e=>f(key,e.target.value)}/><small id={`${key}-requirement`} className={`response-requirement ${complete?"is-met":"is-pending"}`} aria-live="polite">{responseRequirement(value,min)}</small></label>})}</section><Quiz moduleNumber={module.number} lessonNumber={lesson.number} items={lesson.quiz} s={s} f={(k,v)=>f(k,v)}/>{!ok&&<div className="notice" role="status"><b>Almost there.</b><p>Complete all required written responses and answer all Knowledge Check questions to continue.</p><p>{missingFields>0?`${missingFields} written ${missingFields===1?"response needs":"responses need"} attention. `:"Written responses complete. "}{unansweredQuiz>0?`${unansweredQuiz} Knowledge Check ${unansweredQuiz===1?"question remains":"questions remain"}.`:"Knowledge Check complete."}</p></div>}<button className="button full" disabled={!ok} onClick={done}>Complete Lesson {lesson.number} →</button></article>;
 }
 
 function escapeHtml(value:string){return value.replace(/[&<>'"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[ch]||ch))}
