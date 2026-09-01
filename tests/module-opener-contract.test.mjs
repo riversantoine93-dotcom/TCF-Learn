@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 
-const page = fs.readFileSync(new URL("../app/course/turning-forward/[module]/page.tsx", import.meta.url), "utf8");
+const gate = fs.readFileSync(new URL("../components/ModuleOpenerGate.tsx", import.meta.url), "utf8");
+const layout = fs.readFileSync(new URL("../app/course/turning-forward/[module]/layout.tsx", import.meta.url), "utf8");
 
 const playbackIds = [
   "NV5Dudc13gqQfDXMX4miR7kYYlMrd4lZhRuUlqHZUrY",
@@ -14,9 +15,11 @@ const playbackIds = [
   "00v6chrDJ6VAEZWMslXC1Q7VKxuw8tFJ7iyv5Rrt3aVA"
 ];
 
-for (const id of playbackIds) assert.ok(page.includes(id), `missing Mux playback id ${id}`);
-assert.match(page, /moduleOpenerDoneKey/);
-assert.match(page, /Continue to Lesson 1/i);
-assert.match(page, /player\.js/);
-assert.match(page, /player\.on\("ended"/);
+for (const id of playbackIds) assert.ok(gate.includes(id), `missing Mux playback id ${id}`);
+assert.match(gate, /moduleOpenerDoneKey/);
+assert.match(gate, /Continue to Lesson 1/i);
+assert.match(gate, /player\.js/);
+assert.match(gate, /player\.on\("ended"/);
+assert.match(gate, /setCurrentTime/);
+assert.match(layout, /ModuleOpenerGate/);
 console.log("module opener contract passed");
