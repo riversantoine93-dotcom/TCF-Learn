@@ -23,6 +23,8 @@ for (const [slug, id, ratio] of mapping) {
 }
 assert.match(gate, /moduleOpenerDoneKey/);
 assert.match(gate, /Continue to Lesson 1/i);
+assert.match(gate, /Replay Module Introduction/i);
+assert.match(gate, /showReplay/);
 assert.match(gate, /player\.js/);
 assert.match(gate, /player\.on\("ended"/);
 assert.match(gate, /setCurrentTime/);
