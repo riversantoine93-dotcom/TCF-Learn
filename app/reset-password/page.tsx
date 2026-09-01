@@ -1,0 +1,12 @@
+"use client";
+import { FormEvent, useEffect, useState } from "react";
+import Link from "next/link";
+import Header from "@/components/Header";
+import { supabase } from "@/lib/supabase";
+
+export default function ResetPassword() {
+  const [password,setPassword]=useState(""); const [confirmPassword,setConfirmPassword]=useState(""); const [message,setMessage]=useState("Checking recovery link…"); const [ready,setReady]=useState(false); const [busy,setBusy]=useState(false);
+  useEffect(()=>{if(!supabase){setMessage("Password recovery is temporarily unavailable.");return;} const check=async()=>{const {data}=await supabase.auth.getSession(); if(data.session){setReady(true);setMessage("");} else setMessage("This password reset link is invalid or has expired. Request a new one.");}; check(); const {data:listener}=supabase.auth.onAuthStateChange((event,session)=>{if(event==="PASSWORD_RECOVERY"||session){setReady(true);setMessage("");}}); return()=>listener.subscription.unsubscribe();},[]);
+  async function submit(e:FormEvent){e.preventDefault(); if(!supabase)return; if(password.length<8){setMessage("Your new password must be at least 8 characters.");return;} if(password!==confirmPassword){setMessage("The passwords do not match.");return;} setBusy(true); const {error}=await supabase.auth.updateUser({password}); setBusy(false); if(error){setMessage(error.message);return;} setMessage("Password updated successfully. You can now return to User Login."); setReady(false);}
+  return <main><Header/><section className="auth-shell"><form className="auth-card" onSubmit={submit}><span className="eyebrow">ACCOUNT RECOVERY</span><h1>Choose a new password</h1><p>Use at least 8 characters and choose a password you do not reuse elsewhere.</p>{message&&<div className="notice">{message}</div>}{ready&&<><label>New password<input type="password" minLength={8} required autoComplete="new-password" value={password} onChange={e=>setPassword(e.target.value)}/></label><label>Confirm new password<input type="password" minLength={8} required autoComplete="new-password" value={confirmPassword} onChange={e=>setConfirmPassword(e.target.value)}/></label><button className="button full" disabled={busy}>{busy?"Updating password…":"Update password"}</button></>}<small>{ready?"Reset links are time-limited for your security.":<Link href="/forgot-password">Request a new reset link</Link>}</small><small><Link href="/login">Back to User Login</Link></small></form></section></main>;
+}
