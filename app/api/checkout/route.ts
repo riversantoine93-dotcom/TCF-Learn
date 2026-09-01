@@ -13,6 +13,7 @@ export async function POST(request: NextRequest) {
     body.set("cancel_url", `${origin}/course/turning-forward?checkout=cancelled`);
     body.set("customer_creation", "always");
     body.set("billing_address_collection", "auto");
+    body.set("allow_promotion_codes", "true");
     body.set("line_items[0][quantity]", "1");
     body.set("line_items[0][price]", TURNING_FORWARD_PRICE_ID);
     body.set("metadata[course_slug]", COURSE_SLUG);
