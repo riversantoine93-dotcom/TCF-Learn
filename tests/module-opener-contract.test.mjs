@@ -17,6 +17,6 @@ const playbackIds = [
 for (const id of playbackIds) assert.ok(page.includes(id), `missing Mux playback id ${id}`);
 assert.match(page, /moduleOpenerDoneKey/);
 assert.match(page, /Continue to Lesson 1/i);
-assert.match(page, /postMessage/);
-assert.match(page, /ended/);
+assert.match(page, /player\.js/);
+assert.match(page, /player\.on\("ended"/);
 console.log("module opener contract passed");
