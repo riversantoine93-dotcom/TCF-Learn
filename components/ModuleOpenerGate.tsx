@@ -39,6 +39,7 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
   const [progress, setProgress] = useState<ProgressData>({});
   const [ready, setReady] = useState(false);
   const [watchedNow, setWatchedNow] = useState(false);
+  const [showReplay, setShowReplay] = useState(false);
   const { user, loading } = useAuth();
 
   const doneKey = opener ? moduleOpenerDoneKey(opener.number) : "";
@@ -60,12 +61,16 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
   }, [user, loading, moduleSlug]);
 
   useEffect(() => {
-    if (!opener || !ready || canContinue || !iframeRef.current) return;
+    if (!opener || !ready || (canContinue && !showReplay) || !iframeRef.current) return;
     let cancelled = false;
     let player: PlayerJsPlayer | null = null;
 
     const markComplete = () => {
       if (cancelled) return;
+      if (previouslyWatched) {
+        setWatchedNow(true);
+        return;
+      }
       const duration = durationRef.current;
       if (!duration || furthestRef.current < duration - 1.5) return;
       const next = { ...progress, [doneKey]: true };
@@ -82,7 +87,7 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
         const seconds = Number(data?.seconds ?? 0);
         const duration = Number(data?.duration ?? 0);
         if (duration > 0) durationRef.current = duration;
-        if (seconds > furthestRef.current + 2.5) {
+        if (!previouslyWatched && seconds > furthestRef.current + 2.5) {
           player?.setCurrentTime(Math.max(0, furthestRef.current));
           return;
         }
@@ -109,11 +114,19 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
       player?.off?.("ended");
       player?.off?.("timeupdate");
     };
-  }, [opener, ready, canContinue, doneKey, progress, user]);
+  }, [opener, ready, canContinue, showReplay, doneKey, progress, user, previouslyWatched]);
 
   if (!opener) return <>{children}</>;
   if (!ready) return <main><Header/><section className={styles.loading}>Loading module…</section></main>;
-  if (previouslyWatched && !watchedNow) return <>{children}</>;
+
+  if (previouslyWatched && !showReplay && !watchedNow) {
+    return <>
+      <div style={{ maxWidth: 1180, margin: "18px auto 0", padding: "0 24px", textAlign: "right" }}>
+        <button className="button" onClick={() => { furthestRef.current = 0; durationRef.current = 0; setShowReplay(true); }}>Replay Module Introduction</button>
+      </div>
+      {children}
+    </>;
+  }
 
   return <main>
     <Header/>
@@ -131,7 +144,7 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
           title={`Module ${opener.number} introduction video`}
         />
       </div>
-      {!canContinue ? <div className={styles.locked} aria-live="polite"><span>Watch the complete module introduction to continue.</span></div> : <div className={styles.continueBox}><p>Introduction complete. You’re ready to begin.</p><button className="button" onClick={() => setWatchedNow(false)}>Continue to Lesson 1 →</button></div>}
+      {!canContinue ? <div className={styles.locked} aria-live="polite"><span>Watch the complete module introduction to continue.</span></div> : <div className={styles.continueBox}><p>{showReplay ? "Introduction replay complete. Return to your lesson when ready." : "Introduction complete. You’re ready to begin."}</p><button className="button" onClick={() => { setShowReplay(false); setWatchedNow(false); }}>{showReplay ? "Return to Module →" : "Continue to Lesson 1 →"}</button></div>}
     </section>
   </main>;
 }
