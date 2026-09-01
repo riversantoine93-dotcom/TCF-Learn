@@ -23,6 +23,13 @@ const quizKey=(moduleNumber:number,lessonNumber:number,id:string)=>moduleNumber=
 const challengeFieldKey=(moduleNumber:number,id:string)=>moduleNumber===1?id:`m${moduleNumber}c${id}`;
 const pledgeKey=(moduleNumber:number)=>moduleNumber===1?"pledge":`m${moduleNumber}cpledge`;
 
+function responseRequirement(value:string,min:number){
+  const count=value.trim().length;
+  if(count===0) return min>3?`Required: write at least ${min} characters.`:"Required: enter a brief, meaningful response.";
+  if(count<min){const remaining=min-count;return `Keep going — ${remaining} more ${remaining===1?"character":"characters"} remaining.`;}
+  return "✓ Requirement met";
+}
+
 export default function ModulePage(){
   const params=useParams<{module:string}>();
   const module=params.module==="module-1"?moduleOneContent:getModuleContent(params.module);
@@ -92,10 +99,13 @@ function Quiz({moduleNumber,lessonNumber,items,s,f}:{moduleNumber:number,lessonN
 }
 
 function LessonView({module,lesson,s,f,done}:{module:CourseModuleContent,lesson:LessonContent,s:ProgressData,f:(k:string,v:string|boolean)=>void,done:()=>void}){
-  const fieldsComplete=lesson.fields.every(item=>String(s[fieldKey(module.number,lesson.number,item.id)]||"").trim().length>=(item.min??3));
-  const quizComplete=lesson.quiz.every(item=>Boolean(s[quizKey(module.number,lesson.number,item.id)]));
+  const fieldStatus=lesson.fields.map(item=>{const value=String(s[fieldKey(module.number,lesson.number,item.id)]||"");const min=item.min??3;return {item,value,min,complete:value.trim().length>=min};});
+  const unansweredQuiz=lesson.quiz.filter(item=>!Boolean(s[quizKey(module.number,lesson.number,item.id)])).length;
+  const missingFields=fieldStatus.filter(item=>!item.complete).length;
+  const fieldsComplete=missingFields===0;
+  const quizComplete=unansweredQuiz===0;
   const ok=fieldsComplete&&quizComplete;
-  return <article className="lesson-content"><span className="lesson-kicker">LESSON {lesson.number}</span><h2>{lesson.title}</h2><LessonVideo module={module} lesson={lesson}/><p>{lesson.intro}</p><blockquote>{lesson.quote}</blockquote><h3>{lesson.sectionTitle}</h3><p>{lesson.sectionBody}</p><section className="interaction"><h3>{lesson.activityTitle}</h3>{lesson.fields.map(item=>{const key=fieldKey(module.number,lesson.number,item.id);return <label key={key}>{item.label}<textarea className={(item.min??0)>10?"large":""} value={String(s[key]||"")} onChange={e=>f(key,e.target.value)}/></label>})}</section><Quiz moduleNumber={module.number} lessonNumber={lesson.number} items={lesson.quiz} s={s} f={(k,v)=>f(k,v)}/><button className="button full" disabled={!ok} onClick={done}>Complete Lesson {lesson.number} →</button></article>;
+  return <article className="lesson-content"><span className="lesson-kicker">LESSON {lesson.number}</span><h2>{lesson.title}</h2><LessonVideo module={module} lesson={lesson}/><p>{lesson.intro}</p><blockquote>{lesson.quote}</blockquote><h3>{lesson.sectionTitle}</h3><p>{lesson.sectionBody}</p><section className="interaction"><h3>{lesson.activityTitle}</h3>{fieldStatus.map(({item,value,min,complete})=>{const key=fieldKey(module.number,lesson.number,item.id);return <label key={key}>{item.label}<textarea className={(item.min??0)>10?"large":""} value={value} aria-describedby={`${key}-requirement`} onChange={e=>f(key,e.target.value)}/><small id={`${key}-requirement`} className={`response-requirement ${complete?"is-met":"is-pending"}`} aria-live="polite">{responseRequirement(value,min)}</small></label>})}</section><Quiz moduleNumber={module.number} lessonNumber={lesson.number} items={lesson.quiz} s={s} f={(k,v)=>f(k,v)}/>{!ok&&<div className="notice" role="status"><b>Almost there.</b><p>Complete all required written responses and answer all Knowledge Check questions to continue.</p><p>{missingFields>0?`${missingFields} written ${missingFields===1?"response needs":"responses need"} attention. `:"Written responses complete. "}{unansweredQuiz>0?`${unansweredQuiz} Knowledge Check ${unansweredQuiz===1?"question remains":"questions remain"}.`:"Knowledge Check complete."}</p></div>}<button className="button full" disabled={!ok} onClick={done}>Complete Lesson {lesson.number} →</button></article>;
 }
 
 function escapeHtml(value:string){return value.replace(/[&<>'"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[ch]||ch))}
@@ -109,9 +119,10 @@ function saveChallengeAsPdf(module:CourseModuleContent,s:ProgressData){
 }
 
 function ChallengeView({module,s,f,done}:{module:CourseModuleContent,s:ProgressData,f:(k:string,v:string|boolean)=>void,done:()=>void}){
-  const fieldsComplete=module.challenge.fields.every(item=>String(s[challengeFieldKey(module.number,item.id)]||"").trim().length>=3);
+  const fieldStatus=module.challenge.fields.map(item=>{const value=String(s[challengeFieldKey(module.number,item.id)]||"");const min=item.min??3;return {item,value,min,complete:value.trim().length>=min};});
+  const fieldsComplete=fieldStatus.every(item=>item.complete);
   const pledge=pledgeKey(module.number);
   const complete=challengeDoneKey(module.number);
   const ok=fieldsComplete&&Boolean(s[pledge]);
-  return <article className="lesson-content"><span className="lesson-kicker">WEEKLY FORWARD CHALLENGE</span><h2>{module.challenge.title}</h2><p>{module.challenge.description}</p><section className="interaction"><h3>My commitments</h3>{module.challenge.fields.map(item=>{const key=challengeFieldKey(module.number,item.id);return <label key={key}>{item.label}<textarea value={String(s[key]||"")} onChange={e=>f(key,e.target.value)}/></label>})}<label className="check"><input type="checkbox" checked={Boolean(s[pledge])} onChange={e=>f(pledge,e.target.checked)}/> {module.challenge.pledge}</label></section>{s[complete]?<div className="completion"><b>✓</b><h3>Module {module.number} complete</h3><p>You completed the lessons and committed to the next forward action.</p><div className="completion-actions"><button className="button" onClick={()=>saveChallengeAsPdf(module,s)}>Save My Commitments as PDF</button><Link className="button secondary" href="/course/turning-forward">Return to course</Link></div></div>:<button className="button full" disabled={!ok} onClick={done}>I Commit to Turning Forward</button>}</article>;
+  return <article className="lesson-content"><span className="lesson-kicker">WEEKLY FORWARD CHALLENGE</span><h2>{module.challenge.title}</h2><p>{module.challenge.description}</p><section className="interaction"><h3>My commitments</h3>{fieldStatus.map(({item,value,min,complete:fieldComplete})=>{const key=challengeFieldKey(module.number,item.id);return <label key={key}>{item.label}<textarea value={value} aria-describedby={`${key}-requirement`} onChange={e=>f(key,e.target.value)}/><small id={`${key}-requirement`} className={`response-requirement ${fieldComplete?"is-met":"is-pending"}`} aria-live="polite">{responseRequirement(value,min)}</small></label>})}<label className="check"><input type="checkbox" checked={Boolean(s[pledge])} onChange={e=>f(pledge,e.target.checked)}/> {module.challenge.pledge}</label></section>{s[complete]?<div className="completion"><b>✓</b><h3>Module {module.number} complete</h3><p>You completed the lessons and committed to the next forward action.</p><div className="completion-actions"><button className="button" onClick={()=>saveChallengeAsPdf(module,s)}>Save My Commitments as PDF</button><Link className="button secondary" href="/course/turning-forward">Return to course</Link></div></div>:<>{!ok&&<div className="notice" role="status"><b>Finish your commitments.</b><p>Complete each written commitment and check the pledge box to finish this module.</p></div>}<button className="button full" disabled={!ok} onClick={done}>I Commit to Turning Forward</button></> }</article>;
 }
