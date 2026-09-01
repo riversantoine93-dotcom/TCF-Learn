@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { COURSE_PRICE_CENTS, COURSE_SLUG, requireStripeSecret } from "@/lib/server-payments";
+import { COURSE_SLUG, requireStripeSecret } from "@/lib/server-payments";
+
+const TURNING_FORWARD_PRICE_ID = "price_1UArD3D9JGdKoOvukMYQKkjS";
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,9 +14,7 @@ export async function POST(request: NextRequest) {
     body.set("customer_creation", "always");
     body.set("billing_address_collection", "auto");
     body.set("line_items[0][quantity]", "1");
-    body.set("line_items[0][price_data][currency]", "usd");
-    body.set("line_items[0][price_data][unit_amount]", String(COURSE_PRICE_CENTS));
-    body.set("line_items[0][price_data][product_data][name]", "Turning Forward: The Work Beyond Fear");
+    body.set("line_items[0][price]", TURNING_FORWARD_PRICE_ID);
     body.set("metadata[course_slug]", COURSE_SLUG);
 
     const stripe = await fetch("https://api.stripe.com/v1/checkout/sessions", {
