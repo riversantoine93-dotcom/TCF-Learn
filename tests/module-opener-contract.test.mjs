@@ -28,5 +28,6 @@ assert.match(gate, /showReplay/);
 assert.match(gate, /player\.js/);
 assert.match(gate, /player\.on\("ended"/);
 assert.match(gate, /setCurrentTime/);
+assert.match(gate, /window\.location\.reload\(\)/, "continue should reload cleanly after persisting opener completion");
 assert.match(layout, /ModuleOpenerGate/);
 console.log("module opener contract passed");
