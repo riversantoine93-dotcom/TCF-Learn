@@ -116,6 +116,15 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
     };
   }, [opener, ready, canContinue, showReplay, doneKey, progress, user, previouslyWatched]);
 
+  const enterModule = () => {
+    if (showReplay) {
+      setShowReplay(false);
+      setWatchedNow(false);
+      return;
+    }
+    window.location.reload();
+  };
+
   if (!opener) return <>{children}</>;
   if (!ready) return <main><Header/><section className={styles.loading}>Loading module…</section></main>;
 
@@ -144,7 +153,7 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
           title={`Module ${opener.number} introduction video`}
         />
       </div>
-      {!canContinue ? <div className={styles.locked} aria-live="polite"><span>Watch the complete module introduction to continue.</span></div> : <div className={styles.continueBox}><p>{showReplay ? "Introduction replay complete. Return to your lesson when ready." : "Introduction complete. You’re ready to begin."}</p><button className="button" onClick={() => { setShowReplay(false); setWatchedNow(false); }}>{showReplay ? "Return to Module →" : "Continue to Lesson 1 →"}</button></div>}
+      {!canContinue ? <div className={styles.locked} aria-live="polite"><span>Watch the complete module introduction to continue.</span></div> : <div className={styles.continueBox}><p>{showReplay ? "Introduction replay complete. Return to your lesson when ready." : "Introduction complete. You’re ready to begin."}</p><button className="button" onClick={enterModule}>{showReplay ? "Return to Module →" : "Continue to Lesson 1 →"}</button></div>}
     </section>
   </main>;
 }
