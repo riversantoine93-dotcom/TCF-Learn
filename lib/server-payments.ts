@@ -59,6 +59,10 @@ export async function createSupabaseUser(email: string, password: string, fullNa
   return body;
 }
 
+export async function deleteSupabaseUser(userId: string) {
+  await supabaseAdmin(`/auth/v1/admin/users/${userId}`, { method: "DELETE" });
+}
+
 export async function attachEnrollment(enrollmentId: number, userId: string) {
   const res = await supabaseAdmin(`/rest/v1/enrollments?id=eq.${enrollmentId}`, {
     method: "PATCH",
