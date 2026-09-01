@@ -39,18 +39,18 @@ export default function VoiceTextarea({value,onChange,describedBy}:{value:string
       recognition.lang=navigator.language||"en-US";
       recognitionRef.current=recognition;
       const startingValue=value;
-      let finalTranscript="";
+
       recognition.onresult=(event:any)=>{
-        let interimTranscript="";
-        for(let i=event.resultIndex;i<event.results.length;i++){
-          const transcript=String(event.results[i][0]?.transcript||"");
-          if(event.results[i].isFinal) finalTranscript+=`${transcript.trim()} `;
-          else interimTranscript+=transcript;
+        const segments:string[]=[];
+        for(let i=0;i<event.results.length;i++){
+          const transcript=String(event.results[i][0]?.transcript||"").trim();
+          if(transcript) segments.push(transcript);
         }
-        const spoken=`${finalTranscript}${interimTranscript}`.trim();
+        const spoken=segments.join(" ").replace(/\s+/g," ").trim();
         const prefix=startingValue.trimEnd();
         onChange(spoken?`${prefix}${prefix?" ":""}${spoken}`:startingValue);
       };
+
       recognition.onerror=(event:any)=>{
         setListening(false);
         const error=String(event?.error||"");
