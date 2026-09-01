@@ -36,6 +36,7 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const furthestRef = useRef(0);
   const durationRef = useRef(0);
+  const continueRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState<ProgressData>({});
   const [ready, setReady] = useState(false);
   const [watchedNow, setWatchedNow] = useState(false);
@@ -61,6 +62,12 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
   }, [user, loading, moduleSlug]);
 
   useEffect(() => {
+    if (canContinue && continueRef.current) {
+      continueRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [canContinue]);
+
+  useEffect(() => {
     if (!opener || !ready || (canContinue && !showReplay) || !iframeRef.current) return;
     let cancelled = false;
     let player: PlayerJsPlayer | null = null;
@@ -71,8 +78,10 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
         setWatchedNow(true);
         return;
       }
-      const duration = durationRef.current;
-      if (!duration || furthestRef.current < duration - 1.5) return;
+      // The player's `ended` event is the authoritative signal that the
+      // introduction played completely. Some mobile browsers do not include
+      // duration in Player.js timeupdate payloads, which previously prevented
+      // the Continue button from ever appearing even after the video ended.
       const next = { ...progress, [doneKey]: true };
       setProgress(next);
       saveLocalProgress(next);
@@ -153,7 +162,7 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
           title={`Module ${opener.number} introduction video`}
         />
       </div>
-      {!canContinue ? <div className={styles.locked} aria-live="polite"><span>Watch the complete module introduction to continue.</span></div> : <div className={styles.continueBox}><p>{showReplay ? "Introduction replay complete. Return to your lesson when ready." : "Introduction complete. You’re ready to begin."}</p><button className="button" onClick={enterModule}>{showReplay ? "Return to Module →" : "Continue to Lesson 1 →"}</button></div>}
+      {!canContinue ? <div className={styles.locked} aria-live="polite"><span>Watch the complete module introduction to continue.</span></div> : <div ref={continueRef} className={styles.continueBox}><p>{showReplay ? "Introduction replay complete. Return to your lesson when ready." : "Introduction complete. You’re ready to begin."}</p><button className="button" onClick={enterModule}>{showReplay ? "Return to Module →" : "Continue to Lesson 1 →"}</button></div>}
     </section>
   </main>;
 }
