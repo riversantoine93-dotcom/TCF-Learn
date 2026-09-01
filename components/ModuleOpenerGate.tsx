@@ -113,7 +113,7 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
 
   if (!opener) return <>{children}</>;
   if (!ready) return <main><Header/><section className={styles.loading}>Loading module…</section></main>;
-  if (previouslyWatched) return <>{children}</>;
+  if (previouslyWatched && !watchedNow) return <>{children}</>;
 
   return <main>
     <Header/>
@@ -131,7 +131,7 @@ export default function ModuleOpenerGate({ moduleSlug, children }: { moduleSlug:
           title={`Module ${opener.number} introduction video`}
         />
       </div>
-      {!canContinue ? <div className={styles.locked} aria-live="polite"><span>Watch the complete module introduction to continue.</span></div> : <div className={styles.continueBox}><p>Introduction complete. You’re ready to begin.</p><button className="button" onClick={() => setProgress(p => ({ ...p, [doneKey]: true }))}>Continue to Lesson 1 →</button></div>}
+      {!canContinue ? <div className={styles.locked} aria-live="polite"><span>Watch the complete module introduction to continue.</span></div> : <div className={styles.continueBox}><p>Introduction complete. You’re ready to begin.</p><button className="button" onClick={() => setWatchedNow(false)}>Continue to Lesson 1 →</button></div>}
     </section>
   </main>;
 }
