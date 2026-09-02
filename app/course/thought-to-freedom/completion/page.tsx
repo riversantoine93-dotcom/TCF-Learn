@@ -1,0 +1,22 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Header from "@/components/Header";
+import ActionPlanBuilder, { actionPlanComplete } from "@/components/course/ActionPlanBuilder";
+import { useAuth } from "@/components/AuthProvider";
+import { thoughtToFreedomActionPlanFields } from "@/lib/courses/thought-to-freedom";
+import { loadCloudProgress, loadLocalProgress, saveCloudProgress, saveLocalProgress, ProgressData } from "@/lib/progress";
+import "../thought-to-freedom.css";
+
+const escapeHtml = (value: string) => value.replace(/[&<>'"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[character] || character));
+
+export default function ThoughtToFreedomCompletion() {
+  const { user, loading } = useAuth(); const [progress, setProgress] = useState<ProgressData>({}); const [ready, setReady] = useState(false);
+  useEffect(() => { if (loading) return; const local = loadLocalProgress("thought-to-freedom"); if (!user) { setProgress(local); setReady(true); return; } loadCloudProgress(user.id, "thought-to-freedom").then((cloud) => setProgress({ ...local, ...cloud })).catch(() => setProgress(local)).finally(() => setReady(true)); }, [user, loading]);
+  useEffect(() => { if (!ready) return; saveLocalProgress(progress, "thought-to-freedom"); if (user) saveCloudProgress(user.id, progress, "thought-to-freedom").catch(() => undefined); }, [progress, ready, user]);
+  const moduleTenDone = Boolean(progress.m10lesson3); const complete = Boolean(progress.courseComplete) && actionPlanComplete(progress); const update = (key: string, value: string) => setProgress((current) => ({ ...current, [key]: value }));
+  function printPlan() { const win = window.open("", "_blank", "width=900,height=1100"); if (!win) return; const sections = thoughtToFreedomActionPlanFields.map((label, index) => `<section><h2>${escapeHtml(label)}</h2><p>${escapeHtml(String(progress[`actionPlan:${index + 1}`] || ""))}</p></section>`).join(""); win.document.write(`<!doctype html><html><head><title>Thought to Freedom Action Plan</title><style>@page{margin:.65in}body{font-family:Arial,sans-serif;color:#111;line-height:1.5}.sheet{max-width:760px;margin:auto;border-top:12px solid #111;padding-top:30px}.kicker{font-size:12px;font-weight:900;letter-spacing:.16em;color:#8c6b34}h1{font-size:42px;line-height:1;text-transform:uppercase}section{border-top:1px solid #ccc;padding:20px 0}section h2{font-size:14px;text-transform:uppercase;color:#8c6b34}section p{font-family:Georgia,serif;font-size:20px;white-space:pre-wrap}.actions{margin-bottom:20px}.actions button{padding:12px 18px;background:#111;color:#fff;border:0}@media print{.actions{display:none}}</style></head><body><div class="actions"><button onclick="window.print()">Save / Print PDF</button></div><main class="sheet"><span class="kicker">TCF LEARN · THOUGHT TO FREEDOM</span><h1>My 30-Day Action Plan</h1><p>Examine the thought. Challenge the pattern. Choose a different response.</p>${sections}</main><script>window.onload=()=>setTimeout(()=>window.print(),250)<\/script></body></html>`); win.document.close(); }
+  if (ready && !moduleTenDone) return <main className="ttf-shell"><Header/><section className="empty-state"><h1>Finish Module 10 first.</h1><p>Your final Action Plan unlocks after the last core lesson.</p><Link className="button" href="/course/thought-to-freedom/module-10">Return to Module 10</Link></section></main>;
+  return <main className="ttf-shell"><Header/><section className="shell ttf-completion-page">{ready && !complete && <ActionPlanBuilder progress={progress} onChange={update} onComplete={() => setProgress((current) => ({ ...current, courseComplete: true }))}/>} {complete && <section className="ttf-course-complete"><span className="eyebrow">COURSE COMPLETE</span><div className="ttf-complete-mark">✓</div><h1>Thought examined.<br/>Freedom practiced.</h1><p>You completed all 10 thinking-error modules and built a personal 30-day practice plan. The work now is repetition: recognize the pattern earlier, interrupt it faster, and practice the replacement thought until the new response becomes more available.</p><div className="ttf-completion-actions"><button className="button" type="button" onClick={printPlan}>Save / Print My Action Plan</button><Link className="button secondary" href="/dashboard">Return to Dashboard</Link></div></section>}</section></main>;
+}
