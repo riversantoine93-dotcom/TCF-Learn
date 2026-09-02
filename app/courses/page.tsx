@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useAuth } from "@/components/AuthProvider";
 import { activeCourseSlugs, DashboardCourseSlug } from "@/lib/dashboard-enrollments";
 import { courseCardsForUser } from "@/lib/courses-access";
+import { HEADER_THEME_STORAGE_KEY, HeaderTheme, nextHeaderTheme, normalizeHeaderTheme } from "@/lib/header-theme";
 import { supabase } from "@/lib/supabase";
 import "./courses.css";
 
@@ -32,6 +33,11 @@ export default function CoursesPage() {
   const { user, loading } = useAuth();
   const [enrolledCourses, setEnrolledCourses] = useState<DashboardCourseSlug[]>([]);
   const [checkingAccess, setCheckingAccess] = useState(true);
+  const [headerTheme, setHeaderTheme] = useState<HeaderTheme>("dark");
+
+  useEffect(() => {
+    setHeaderTheme(normalizeHeaderTheme(localStorage.getItem(HEADER_THEME_STORAGE_KEY)));
+  }, []);
 
   useEffect(() => {
     if (loading) return;
@@ -59,6 +65,12 @@ export default function CoursesPage() {
     };
   }, [user, loading]);
 
+  const toggleHeaderTheme = () => setHeaderTheme(current => {
+    const next = nextHeaderTheme(current);
+    localStorage.setItem(HEADER_THEME_STORAGE_KEY, next);
+    return next;
+  });
+
   const cards = useMemo(
     () => courseCardsForUser(Boolean(user), enrolledCourses),
     [user, enrolledCourses]
@@ -66,7 +78,7 @@ export default function CoursesPage() {
 
   return (
     <main className="courses-page">
-      <header className="courses-topbar">
+      <header className={`courses-topbar header-theme-${headerTheme}`}>
         <Link href="/" className="courses-brand" aria-label="TCF Learn home">
           <Image src="/learn-logo.png" alt="TCF Learn" width={160} height={66} priority />
         </Link>
@@ -75,6 +87,10 @@ export default function CoursesPage() {
           <Link className="active" href="/courses">Courses</Link>
           <Link href="/#purchase-center">Course Store</Link>
           {user ? <Link href="/profile">Profile</Link> : <Link href="/login">User Login</Link>}
+          <button type="button" className="courses-theme-toggle" onClick={toggleHeaderTheme} aria-label={`Switch header to ${headerTheme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${headerTheme === "dark" ? "light" : "dark"} mode`}>
+            <span aria-hidden="true">{headerTheme === "dark" ? "☀" : "☾"}</span>
+            <b>{headerTheme === "dark" ? "Light" : "Dark"}</b>
+          </button>
         </nav>
       </header>
 
