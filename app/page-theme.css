@@ -22,3 +22,16 @@ html[data-tcf-theme="dark"] .module-list .locked-pill{background:#252b2e;color:#
 html[data-tcf-theme="dark"] .module-list .module-card .button{background:#e0bd62;color:#111;border-color:#e0bd62}
 html[data-tcf-theme="light"] .site-header{background:#f6f0e4;color:#151515;border-bottom-color:#d8cdb8}
 html[data-tcf-theme="dark"] .site-header{background:rgba(11,11,11,.98);color:#f7f4ed;border-bottom-color:rgba(255,255,255,.12)}
+html[data-tcf-theme="dark"] .course-hero .eyebrow,html[data-tcf-theme="dark"] .course-hero h1,html[data-tcf-theme="dark"] .course-hero p{color:#d9c7a5}
+html[data-tcf-theme="dark"] .module-banner>span,html[data-tcf-theme="dark"] .module-banner h1{color:#d9c7a5}
+html[data-tcf-theme="dark"] .module-banner p{color:#e7dcc8}
+html[data-tcf-theme="dark"] .lesson-content{background:#fbf8f2;color:#0b0b0b;border-color:#d6cfc2}
+html[data-tcf-theme="dark"] .lesson-content>h2,html[data-tcf-theme="dark"] .lesson-content>h3,html[data-tcf-theme="dark"] .lesson-content .question,html[data-tcf-theme="dark"] .lesson-content .option{color:#0b0b0b}
+html[data-tcf-theme="dark"] .lesson-content>p{color:#403c35}
+html[data-tcf-theme="dark"] .lesson-kicker{color:#8c7249}
+html[data-tcf-theme="dark"] .lesson-content blockquote,html[data-tcf-theme="dark"] .interaction{background:#eee7db;color:#0b0b0b}
+html[data-tcf-theme="dark"] .lesson-content .option{background:#f8f4ed}
+html[data-tcf-theme="dark"] .lesson-content .option.correct{background:#eef3ea}
+html[data-tcf-theme="dark"] .lesson-content .option.incorrect{background:#faedf2}
+html[data-tcf-theme="dark"] .lesson-card{background:#fbf8f2;color:#0b0b0b;border-color:#d6cfc2}
+html[data-tcf-theme="dark"] .lesson-card p,html[data-tcf-theme="dark"] .lesson-card h2,html[data-tcf-theme="dark"] .lesson-card h3,html[data-tcf-theme="dark"] .lesson-number{color:#0b0b0b}
