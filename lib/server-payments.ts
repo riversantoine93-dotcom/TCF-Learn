@@ -1,3 +1,5 @@
+import { coursesForPurchase, isPurchaseKey, type EnrollableCourseSlug, type PurchaseKey } from "./course-purchases";
+
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
@@ -33,19 +35,21 @@ export async function supabaseAdmin(path: string, init: RequestInit = {}) {
   });
 }
 
-export async function findPaidEnrollment(email: string) {
+export async function findPaidEnrollments(email: string) {
   const normalized = normalizeEmail(email);
   const params = new URLSearchParams({
     purchaser_email: `eq.${normalized}`,
-    course_slug: `eq.${COURSE_SLUG}`,
     active: "eq.true",
     payment_status: "eq.paid",
     select: "id,user_id,purchaser_email,course_slug,active",
-    limit: "1",
   });
   const res = await supabaseAdmin(`/rest/v1/enrollments?${params}`);
   if (!res.ok) throw new Error("Unable to verify paid enrollment.");
-  const rows = await res.json();
+  return await res.json();
+}
+
+export async function findPaidEnrollment(email: string) {
+  const rows = await findPaidEnrollments(email);
   return rows[0] || null;
 }
 
@@ -72,27 +76,44 @@ export async function attachEnrollment(enrollmentId: number, userId: string) {
   if (!res.ok) throw new Error("Unable to attach course enrollment to user.");
 }
 
+export async function attachEnrollments(enrollmentIds: number[], userId: string) {
+  for (const enrollmentId of enrollmentIds) await attachEnrollment(enrollmentId, userId);
+}
+
+function purchaseFromSession(session: any): PurchaseKey {
+  const value = session?.metadata?.purchase_key || session?.metadata?.course_slug || COURSE_SLUG;
+  return isPurchaseKey(value) ? value : COURSE_SLUG;
+}
+
 export async function recordStripeEnrollment(session: any) {
   const email = normalizeEmail(session?.customer_details?.email || session?.customer_email || "");
   if (!email || session?.payment_status !== "paid") return;
-  const payload = {
-    purchaser_email: email,
-    course_slug: COURSE_SLUG,
-    active: true,
-    payment_status: "paid",
-    amount_paid: session.amount_total || COURSE_PRICE_CENTS,
-    currency: session.currency || "usd",
-    stripe_checkout_session_id: session.id,
-    stripe_customer_id: typeof session.customer === "string" ? session.customer : null,
-    stripe_payment_intent_id: typeof session.payment_intent === "string" ? session.payment_intent : null,
-    purchased_at: new Date((session.created || Math.floor(Date.now()/1000)) * 1000).toISOString(),
-  };
-  const res = await supabaseAdmin("/rest/v1/enrollments?on_conflict=stripe_checkout_session_id", {
-    method: "POST",
-    headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
-    body: JSON.stringify(payload),
-  });
-  if (!res.ok) throw new Error(`Unable to record Stripe enrollment: ${await res.text()}`);
+  const purchase = purchaseFromSession(session);
+  const courses = coursesForPurchase(purchase);
+  const total = Number(session.amount_total || (purchase === "bundle" ? 14550 : COURSE_PRICE_CENTS));
+  const perCourseAmount = purchase === "bundle" ? Math.round(total / courses.length) : total;
+
+  for (const courseSlug of courses) {
+    const checkoutId = purchase === "bundle" ? `${session.id}:${courseSlug}` : session.id;
+    const payload = {
+      purchaser_email: email,
+      course_slug: courseSlug as EnrollableCourseSlug,
+      active: true,
+      payment_status: "paid",
+      amount_paid: perCourseAmount,
+      currency: session.currency || "usd",
+      stripe_checkout_session_id: checkoutId,
+      stripe_customer_id: typeof session.customer === "string" ? session.customer : null,
+      stripe_payment_intent_id: typeof session.payment_intent === "string" ? session.payment_intent : null,
+      purchased_at: new Date((session.created || Math.floor(Date.now()/1000)) * 1000).toISOString(),
+    };
+    const res = await supabaseAdmin("/rest/v1/enrollments?on_conflict=stripe_checkout_session_id", {
+      method: "POST",
+      headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) throw new Error(`Unable to record Stripe enrollment: ${await res.text()}`);
+  }
 }
 
 export async function verifyStripeSignature(rawBody: string, signatureHeader: string, secret: string) {
