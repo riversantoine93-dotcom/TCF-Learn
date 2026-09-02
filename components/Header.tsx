@@ -11,12 +11,18 @@ export default function Header() {
   const [theme, setTheme] = useState<HeaderTheme>("dark");
 
   useEffect(() => {
-    setTheme(normalizeHeaderTheme(localStorage.getItem(HEADER_THEME_STORAGE_KEY)));
+    const saved = normalizeHeaderTheme(localStorage.getItem(HEADER_THEME_STORAGE_KEY));
+    setTheme(saved);
+    document.documentElement.dataset.tcfTheme = saved;
+    return () => {
+      delete document.documentElement.dataset.tcfTheme;
+    };
   }, []);
 
   const toggleTheme = () => setTheme(current => {
     const next = nextHeaderTheme(current);
     localStorage.setItem(HEADER_THEME_STORAGE_KEY, next);
+    document.documentElement.dataset.tcfTheme = next;
     return next;
   });
 
@@ -30,7 +36,7 @@ export default function Header() {
           <Link href="/">Dashboard</Link>
           <Link href="/courses">Courses</Link>
           {user ? <><Link href="/profile">Profile</Link><button className="nav-button" onClick={() => signOut()}>Sign out</button></> : <Link className="button small" href="/login">User Login</Link>}
-          <button type="button" className="header-theme-toggle" onClick={toggleTheme} aria-label={`Switch header to ${theme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}>
+          <button type="button" className="header-theme-toggle" onClick={toggleTheme} aria-label={`Switch page to ${theme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}>
             <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
             <b>{theme === "dark" ? "Light" : "Dark"}</b>
           </button>
