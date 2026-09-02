@@ -14,8 +14,8 @@ export default function Header() {
           <Image src="/learn-logo.png" alt="Learn — The Conviction Fiction Podcast" width={172} height={72} priority />
         </Link>
         <nav className="header-nav" aria-label="Primary navigation">
-          <Link href="/dashboard">Dashboard</Link>
-          <Link href="/course/turning-forward">Course</Link>
+          <Link href="/">Dashboard</Link>
+          <Link href="/courses">Courses</Link>
           {user ? <><Link href="/profile">Profile</Link><button className="nav-button" onClick={() => signOut()}>Sign out</button></> : <Link className="button small" href="/login">User Login</Link>}
         </nav>
       </div>
