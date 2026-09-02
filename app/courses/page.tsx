@@ -33,10 +33,15 @@ export default function CoursesPage() {
   const { user, loading } = useAuth();
   const [enrolledCourses, setEnrolledCourses] = useState<DashboardCourseSlug[]>([]);
   const [checkingAccess, setCheckingAccess] = useState(true);
-  const [headerTheme, setHeaderTheme] = useState<HeaderTheme>("dark");
+  const [pageTheme, setPageTheme] = useState<HeaderTheme>("dark");
 
   useEffect(() => {
-    setHeaderTheme(normalizeHeaderTheme(localStorage.getItem(HEADER_THEME_STORAGE_KEY)));
+    const saved = normalizeHeaderTheme(localStorage.getItem(HEADER_THEME_STORAGE_KEY));
+    setPageTheme(saved);
+    document.documentElement.dataset.tcfTheme = saved;
+    return () => {
+      delete document.documentElement.dataset.tcfTheme;
+    };
   }, []);
 
   useEffect(() => {
@@ -65,9 +70,10 @@ export default function CoursesPage() {
     };
   }, [user, loading]);
 
-  const toggleHeaderTheme = () => setHeaderTheme(current => {
+  const togglePageTheme = () => setPageTheme(current => {
     const next = nextHeaderTheme(current);
     localStorage.setItem(HEADER_THEME_STORAGE_KEY, next);
+    document.documentElement.dataset.tcfTheme = next;
     return next;
   });
 
@@ -77,8 +83,8 @@ export default function CoursesPage() {
   );
 
   return (
-    <main className="courses-page">
-      <header className={`courses-topbar header-theme-${headerTheme}`}>
+    <main className={`courses-page page-theme-${pageTheme}`}>
+      <header className={`courses-topbar header-theme-${pageTheme}`}>
         <Link href="/" className="courses-brand" aria-label="TCF Learn home">
           <Image src="/learn-logo.png" alt="TCF Learn" width={160} height={66} priority />
         </Link>
@@ -87,9 +93,9 @@ export default function CoursesPage() {
           <Link className="active" href="/courses">Courses</Link>
           <Link href="/#purchase-center">Course Store</Link>
           {user ? <Link href="/profile">Profile</Link> : <Link href="/login">User Login</Link>}
-          <button type="button" className="courses-theme-toggle" onClick={toggleHeaderTheme} aria-label={`Switch header to ${headerTheme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${headerTheme === "dark" ? "light" : "dark"} mode`}>
-            <span aria-hidden="true">{headerTheme === "dark" ? "☀" : "☾"}</span>
-            <b>{headerTheme === "dark" ? "Light" : "Dark"}</b>
+          <button type="button" className="courses-theme-toggle" onClick={togglePageTheme} aria-label={`Switch page to ${pageTheme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${pageTheme === "dark" ? "light" : "dark"} mode`}>
+            <span aria-hidden="true">{pageTheme === "dark" ? "☀" : "☾"}</span>
+            <b>{pageTheme === "dark" ? "Light" : "Dark"}</b>
           </button>
         </nav>
       </header>
@@ -97,63 +103,22 @@ export default function CoursesPage() {
       <section className="courses-hero">
         <span className="eyebrow">TCF LEARN COURSES</span>
         <h1>{user ? "Your courses and what comes next." : "Preview the work before you begin."}</h1>
-        <p>
-          {user
-            ? "Purchased courses are ready to open. Courses you have not purchased remain available to preview, with checkout kept in one central location on the Dashboard."
-            : "Explore both TCF Learn courses, review what each one covers, and return to the Dashboard when you are ready to purchase a course or the bundle."}
-        </p>
+        <p>{user ? "Purchased courses are ready to open. Courses you have not purchased remain available to preview, with checkout kept in one central location on the Dashboard." : "Explore both TCF Learn courses, review what each one covers, and return to the Dashboard when you are ready to purchase a course or the bundle."}</p>
       </section>
 
       <section className="courses-grid" aria-live="polite">
-        {checkingAccess && user ? (
-          <div className="courses-loading">Checking your course access…</div>
-        ) : (
-          cards.map((card) => {
-            const course = COURSE_DETAILS[card.slug];
-            return (
-              <article className={`course-preview-card ${card.purchased ? "purchased" : "preview"}`} key={card.slug}>
-                <div className="course-preview-art">
-                  <Image src={course.thumbnail} alt={`${course.title} course thumbnail`} fill sizes="(max-width: 820px) 100vw, 50vw" />
-                  <span>{card.purchased ? "PURCHASED" : "COURSE PREVIEW"}</span>
-                </div>
-                <div className="course-preview-body">
-                  <p className="course-meta">{course.meta}</p>
-                  <h2>{course.title}</h2>
-                  <h3>{course.subtitle}</h3>
-                  <p>{course.description}</p>
-                  <div className="course-actions">
-                    <Link className="primary-course-action" href={course.href}>
-                      {card.purchased ? "Open Course" : "Preview Course"}
-                    </Link>
-                    {card.showPurchaseCta && (
-                      <Link className="secondary-course-action" href="/#purchase-center">
-                        Purchase from Dashboard
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              </article>
-            );
-          })
-        )}
+        {checkingAccess && user ? <div className="courses-loading">Checking your course access…</div> : cards.map((card) => {
+          const course = COURSE_DETAILS[card.slug];
+          return <article className={`course-preview-card ${card.purchased ? "purchased" : "preview"}`} key={card.slug}>
+            <div className="course-preview-art"><Image src={course.thumbnail} alt={`${course.title} course thumbnail`} fill sizes="(max-width: 820px) 100vw, 50vw" /><span>{card.purchased ? "PURCHASED" : "COURSE PREVIEW"}</span></div>
+            <div className="course-preview-body"><p className="course-meta">{course.meta}</p><h2>{course.title}</h2><h3>{course.subtitle}</h3><p>{course.description}</p><div className="course-actions"><Link className="primary-course-action" href={course.href}>{card.purchased ? "Open Course" : "Preview Course"}</Link>{card.showPurchaseCta && <Link className="secondary-course-action" href="/#purchase-center">Purchase from Dashboard</Link>}</div></div>
+          </article>;
+        })}
       </section>
 
-      <section className="bundle-note">
-        <div>
-          <span className="eyebrow">ONE CHECKOUT LOCATION</span>
-          <h2>Buy either course for $97, or get both for $145.50.</h2>
-          <p>The bundle saves $48.50 and unlocks both courses. All purchases are completed from the Dashboard Course Store.</p>
-        </div>
-        <Link href="/#purchase-center">View Course Store</Link>
-      </section>
+      <section className="bundle-note"><div><span className="eyebrow">ONE CHECKOUT LOCATION</span><h2>Buy either course for $97, or get both for $145.50.</h2><p>The bundle saves $48.50 and unlocks both courses. All purchases are completed from the Dashboard Course Store.</p></div><Link href="/#purchase-center">View Course Store</Link></section>
 
-      <aside className="podcast-extras" aria-label="More from The Conviction Fiction Podcast">
-        <span>More from The Conviction Fiction Podcast</span>
-        <div>
-          <a href="https://theconvictionfictionpodcast.com/#books" target="_blank" rel="noreferrer">Browse Books ↗</a>
-          <a href="https://theconvictionfictionpodcast.com/#shop" target="_blank" rel="noreferrer">Visit the Shop ↗</a>
-        </div>
-      </aside>
+      <aside className="podcast-extras" aria-label="More from The Conviction Fiction Podcast"><span>More from The Conviction Fiction Podcast</span><div><a href="https://theconvictionfictionpodcast.com/#books" target="_blank" rel="noreferrer">Browse Books ↗</a><a href="https://theconvictionfictionpodcast.com/#shop" target="_blank" rel="noreferrer">Visit the Shop ↗</a></div></aside>
     </main>
   );
 }
