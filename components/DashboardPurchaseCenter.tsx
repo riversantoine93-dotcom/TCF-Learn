@@ -1,15 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import { DASHBOARD_PURCHASE_PRODUCTS } from "@/lib/dashboard-purchase-products";
+import { purchaseAvailability } from "@/lib/dashboard-purchase-ownership";
+import type { DashboardCourseSlug } from "@/lib/dashboard-enrollments";
 import type { PurchaseKey } from "@/lib/course-purchases";
 import "./dashboard-purchase-center.css";
 
-export default function DashboardPurchaseCenter() {
+export default function DashboardPurchaseCenter({ enrolledCourses = [] }: { enrolledCourses?: DashboardCourseSlug[] }) {
   const [buying, setBuying] = useState<PurchaseKey | null>(null);
+  const availability = useMemo(() => purchaseAvailability(enrolledCourses), [enrolledCourses]);
 
   async function checkout(purchase: PurchaseKey) {
+    if (availability[purchase] === "purchased") return;
     setBuying(purchase);
     try {
       const response = await fetch("/api/checkout", {
@@ -33,17 +37,20 @@ export default function DashboardPurchaseCenter() {
       <p>One central checkout location. Purchase either course separately, or save $48.50 when you get both together.</p>
     </div>
     <div className="purchase-product-grid">
-      {DASHBOARD_PURCHASE_PRODUCTS.map((product) => <article className={`purchase-product-card ${product.purchase === "bundle" ? "bundle" : ""}`} key={product.purchase}>
-        <div className={`purchase-product-art ${product.images.length > 1 ? "dual" : "single"}`}>
-          {product.images.map((src, index) => <div className="purchase-product-image" key={src}><Image src={src} alt={`${product.title} course thumbnail${product.images.length > 1 ? ` ${index + 1}` : ""}`} fill sizes="(max-width: 900px) 100vw, 33vw"/></div>)}
-          <span className="purchase-badge">{product.badge}</span>
-        </div>
-        <div className="purchase-product-body">
-          <div className="purchase-product-title"><div><h3>{product.title}</h3><h4>{product.subtitle}</h4></div><strong>{product.displayPrice}</strong></div>
-          <p>{product.description}</p>
-          <button className="purchase-button" type="button" disabled={Boolean(buying)} onClick={() => checkout(product.purchase)}>{buying === product.purchase ? "Opening secure checkout…" : product.cta}</button>
-        </div>
-      </article>)}
+      {DASHBOARD_PURCHASE_PRODUCTS.map((product) => {
+        const purchased = availability[product.purchase] === "purchased";
+        return <article className={`purchase-product-card ${product.purchase === "bundle" ? "bundle" : ""}`} key={product.purchase}>
+          <div className={`purchase-product-art ${product.images.length > 1 ? "dual" : "single"}`}>
+            {product.images.map((src, index) => <div className="purchase-product-image" key={src}><Image src={src} alt={`${product.title} course thumbnail${product.images.length > 1 ? ` ${index + 1}` : ""}`} fill sizes="(max-width: 900px) 100vw, 33vw"/></div>)}
+            <span className="purchase-badge">{product.badge}</span>
+          </div>
+          <div className="purchase-product-body">
+            <div className="purchase-product-title"><div><h3>{product.title}</h3><h4>{product.subtitle}</h4></div><strong>{product.displayPrice}</strong></div>
+            <p>{product.description}</p>
+            <button className={`purchase-button ${purchased ? "purchased" : ""}`} type="button" disabled={purchased || Boolean(buying)} onClick={() => checkout(product.purchase)}>{purchased ? "Purchased" : buying === product.purchase ? "Opening secure checkout…" : product.cta}</button>
+          </div>
+        </article>;
+      })}
     </div>
   </section>;
 }
