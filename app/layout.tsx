@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./page-theme.css";
 import "./course-layout.css";
 import "./course-overview.css";
 import { AuthProvider } from "@/components/AuthProvider";
