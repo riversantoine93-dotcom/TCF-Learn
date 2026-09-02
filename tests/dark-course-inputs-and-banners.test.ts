@@ -15,4 +15,9 @@ describe("dark course inputs and module banners", () => {
   it("keeps dark-mode module banner headings gold", () => {
     expect(css).toContain('html[data-tcf-theme="dark"] .module-banner>span,html[data-tcf-theme="dark"] .module-banner h1{color:#d9c7a5}');
   });
+
+  it("keeps dark-mode header navigation and toggle visible", () => {
+    expect(css).toContain('html[data-tcf-theme="dark"] .site-header a{color:#f7f4ed}');
+    expect(css).toContain('html[data-tcf-theme="dark"] .site-header .theme-toggle{color:#f7f4ed');
+  });
 });
