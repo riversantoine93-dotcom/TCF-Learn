@@ -8,6 +8,7 @@ import InteractiveLesson, { lessonDoneKey } from "@/components/course/Interactiv
 import { useAuth } from "@/components/AuthProvider";
 import { thoughtToFreedomCourse } from "@/lib/courses/thought-to-freedom";
 import { loadCloudProgress, loadLocalProgress, saveCloudProgress, saveLocalProgress, ProgressData } from "@/lib/progress";
+import { supabase } from "@/lib/supabase";
 import "../thought-to-freedom.css";
 
 type LessonTab = 1 | 2 | 3;
@@ -17,6 +18,8 @@ export default function ThoughtToFreedomModulePage() {
   const { user, loading } = useAuth();
   const [progress, setProgress] = useState<ProgressData>({});
   const [ready, setReady] = useState(false);
+  const [enrolled, setEnrolled] = useState(false);
+  const [accessChecked, setAccessChecked] = useState(false);
   const [tab, setTab] = useState<LessonTab>(1);
   const [sync, setSync] = useState("Saved on this device");
   const isOrientation = params.module === "orientation";
@@ -25,19 +28,34 @@ export default function ThoughtToFreedomModulePage() {
   useEffect(() => { setTab(1); setReady(false); }, [params.module]);
   useEffect(() => {
     if (loading) return;
-    const local = loadLocalProgress("thought-to-freedom");
-    if (!user) { setProgress(local); setReady(true); return; }
-    loadCloudProgress(user.id, "thought-to-freedom").then((cloud) => setProgress({ ...local, ...cloud })).catch(() => setProgress(local)).finally(() => setReady(true));
+    if (!user || !supabase) { setEnrolled(false); setAccessChecked(true); setReady(true); return; }
+    let cancelled = false;
+    (async () => {
+      const { data } = await supabase.from("enrollments").select("id").eq("user_id", user.id).eq("course_slug", "thought-to-freedom").eq("active", true).maybeSingle();
+      if (cancelled) return;
+      setEnrolled(Boolean(data));
+      setAccessChecked(true);
+      if (!data) { setReady(true); return; }
+      const local = loadLocalProgress("thought-to-freedom");
+      try { const cloud = await loadCloudProgress(user.id, "thought-to-freedom"); if (!cancelled) setProgress({ ...local, ...cloud }); }
+      catch { if (!cancelled) setProgress(local); }
+      finally { if (!cancelled) setReady(true); }
+    })();
+    return () => { cancelled = true; };
   }, [user, loading, params.module]);
   useEffect(() => {
-    if (!ready) return;
+    if (!ready || !enrolled) return;
     saveLocalProgress(progress, "thought-to-freedom");
-    if (!user) { setSync("Saved on this device"); return; }
+    if (!user) return;
     setSync("Saving…");
     const timer = setTimeout(() => saveCloudProgress(user.id, progress, "thought-to-freedom").then(() => setSync("Saved to your account")).catch(() => setSync("Cloud sync unavailable; saved locally")), 450);
     return () => clearTimeout(timer);
-  }, [progress, ready, user]);
+  }, [progress, ready, enrolled, user]);
   const update = (key: string, value: string | boolean | number) => setProgress((current) => ({ ...current, [key]: value }));
+
+  if (loading || !accessChecked) return <main className="ttf-shell"><Header/><section className="empty-state"><h1>Checking course access…</h1></section></main>;
+  if (!user) return <main className="ttf-shell"><Header/><section className="empty-state"><span className="eyebrow">PAID COURSE</span><h1>User Login required</h1><p>Thought to Freedom lesson content is available only to paid users.</p><Link className="button" href="/login">User Login</Link><Link className="button secondary" href="/course/thought-to-freedom">Preview & purchase</Link></section></main>;
+  if (!enrolled) return <main className="ttf-shell"><Header/><section className="empty-state"><span className="eyebrow">COURSE LOCKED</span><h1>Purchase required</h1><p>This account does not have an active Thought to Freedom enrollment. Unlock this course for $97, or get both TCF Learn courses for $145.50.</p><Link className="button" href="/course/thought-to-freedom">View purchase options</Link></section></main>;
 
   if (isOrientation && thoughtToFreedomCourse.orientation) {
     const orientation = thoughtToFreedomCourse.orientation;
