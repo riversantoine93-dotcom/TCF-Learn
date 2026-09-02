@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { DASHBOARD_PURCHASE_PRODUCTS } from "@/lib/dashboard-purchase-products";
 import type { PurchaseKey } from "@/lib/course-purchases";
+import "./dashboard-purchase-center.css";
 
 export default function DashboardPurchaseCenter() {
   const [buying, setBuying] = useState<PurchaseKey | null>(null);
