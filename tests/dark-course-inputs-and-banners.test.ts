@@ -18,6 +18,7 @@ describe("dark course inputs and module banners", () => {
 
   it("keeps dark-mode header navigation and toggle visible", () => {
     expect(css).toContain('html[data-tcf-theme="dark"] .site-header a{color:#f7f4ed}');
-    expect(css).toContain('html[data-tcf-theme="dark"] .site-header .theme-toggle{color:#f7f4ed');
+    expect(css).toContain('html[data-tcf-theme="dark"] .site-header .header-theme-toggle{color:#f7f4ed');
+    expect(css).toContain('html[data-tcf-theme="dark"] .site-header .nav-button{color:#f7f4ed');
   });
 });
