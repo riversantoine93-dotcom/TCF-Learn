@@ -7,6 +7,12 @@ export const PURCHASE_OPTIONS: Record<PurchaseKey, { label: string; amountCents:
   bundle: { label: "TCF Learn Bundle — Buy One, Get One Half Off", amountCents: 14550, envPriceId: "STRIPE_TCF_LEARN_BUNDLE_PRICE_ID" },
 };
 
+const FALLBACK_PRICE_IDS: Record<PurchaseKey, string> = {
+  "turning-forward": "price_1UArD3D9JGdKoOvukMYQKkjS",
+  "thought-to-freedom": "price_1UBckQD9JGdKoOvujCCd9jrM",
+  bundle: "price_1UBckYD9JGdKoOvuNOdGdLLQ",
+};
+
 export function isPurchaseKey(value: unknown): value is PurchaseKey {
   return typeof value === "string" && value in PURCHASE_OPTIONS;
 }
@@ -16,5 +22,5 @@ export function coursesForPurchase(purchase: PurchaseKey): EnrollableCourseSlug[
 }
 
 export function configuredPriceId(purchase: PurchaseKey) {
-  return process.env[PURCHASE_OPTIONS[purchase].envPriceId] || (purchase === "turning-forward" ? "price_1UArD3D9JGdKoOvukMYQKkjS" : "");
+  return process.env[PURCHASE_OPTIONS[purchase].envPriceId] || FALLBACK_PRICE_IDS[purchase];
 }
