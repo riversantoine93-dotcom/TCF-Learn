@@ -26,6 +26,8 @@ html[data-tcf-theme="dark"] .site-header a{color:#f7f4ed}
 html[data-tcf-theme="dark"] .site-header a:hover{color:#d9c7a5}
 html[data-tcf-theme="dark"] .site-header .header-theme-toggle{color:#f7f4ed;border-color:#6e6250;background:#151515}
 html[data-tcf-theme="dark"] .site-header .nav-button{color:#f7f4ed!important}
+html[data-tcf-theme="dark"] .site-header .button.small{background:#f7f4ed!important;color:#0b0b0b!important;border-color:#f7f4ed!important}
+html[data-tcf-theme="dark"] .site-header .button.small:hover{background:#d9c7a5!important;color:#0b0b0b!important;border-color:#d9c7a5!important}
 html[data-tcf-theme="dark"] .course-hero .eyebrow,html[data-tcf-theme="dark"] .course-hero h1,html[data-tcf-theme="dark"] .course-hero p{color:#d9c7a5}
 html[data-tcf-theme="dark"] .module-banner{background:#111;border-bottom-color:#d9c7a5}
 html[data-tcf-theme="dark"] .module-banner>span,html[data-tcf-theme="dark"] .module-banner h1{color:#d9c7a5}
