@@ -13,6 +13,10 @@ const FALLBACK_PRICE_IDS: Record<PurchaseKey, string> = {
   bundle: "price_1UBckYD9JGdKoOvuNOdGdLLQ",
 };
 
+const RETIRED_PRICE_IDS = new Set([
+  "price_1Tvf7pD9JGdKoOvuktXx2rHz",
+]);
+
 export function isPurchaseKey(value: unknown): value is PurchaseKey {
   return typeof value === "string" && value in PURCHASE_OPTIONS;
 }
@@ -22,5 +26,7 @@ export function coursesForPurchase(purchase: PurchaseKey): EnrollableCourseSlug[
 }
 
 export function configuredPriceId(purchase: PurchaseKey) {
-  return process.env[PURCHASE_OPTIONS[purchase].envPriceId] || FALLBACK_PRICE_IDS[purchase];
+  const configured = process.env[PURCHASE_OPTIONS[purchase].envPriceId]?.trim();
+  if (configured && !RETIRED_PRICE_IDS.has(configured)) return configured;
+  return FALLBACK_PRICE_IDS[purchase];
 }
