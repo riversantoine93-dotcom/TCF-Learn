@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { configuredPriceId } from "@/lib/course-purchases";
 
 export const runtime = "nodejs";
 
@@ -10,7 +11,7 @@ export async function POST(request: Request) {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
     const stripeKey = process.env.STRIPE_SECRET_KEY;
-    const priceId = process.env.STRIPE_TURNING_FORWARD_PRICE_ID;
+    const priceId = configuredPriceId("turning-forward");
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
     if (!token) return NextResponse.json({ error: "Sign in before enrolling." }, { status: 401 });
     if (!supabaseUrl || !publishableKey || !stripeKey || !priceId || !siteUrl) throw new Error("Server configuration is incomplete.");
