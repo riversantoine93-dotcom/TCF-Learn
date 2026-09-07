@@ -1,23 +1,64 @@
 import { NextRequest, NextResponse } from "next/server";
-import { attachEnrollments, createSupabaseUser, deleteSupabaseUser, findPaidEnrollments, normalizeEmail } from "@/lib/server-payments";
+import { attachEnrollments, createSupabaseUser, deleteSupabaseUser, findPaidEnrollments, normalizeEmail, requireStripeSecret } from "@/lib/server-payments";
+import { isPurchaseKey } from "@/lib/course-purchases";
 import { saveSecurityQuestions, validateSecurityAnswers } from "@/lib/server-security";
+
+async function paidEmailFromSession(sessionId: string) {
+  if (!sessionId.startsWith("cs_")) return null;
+  const secret = requireStripeSecret();
+  const res = await fetch(`https://api.stripe.com/v1/checkout/sessions/${encodeURIComponent(sessionId)}`, {
+    headers: { Authorization: `Bearer ${secret}` },
+    cache: "no-store",
+  });
+  const session = await res.json().catch(() => ({}));
+  if (!res.ok || session?.payment_status !== "paid") return null;
+  const purchase = session?.metadata?.purchase_key || session?.metadata?.course_slug;
+  if (!isPurchaseKey(purchase)) return null;
+  const email = session?.customer_details?.email || session?.customer_email || "";
+  return email ? normalizeEmail(email) : null;
+}
 
 export async function POST(request: NextRequest) {
   try {
-    const { fullName, email, password, securityAnswers } = await request.json();
+    const { fullName, email, password, securityAnswers, sessionId } = await request.json();
     if (!fullName?.trim() || !email?.trim() || typeof password !== "string" || password.length < 8) {
       return NextResponse.json({ error: "Name, paid email, and a password of at least 8 characters are required." }, { status: 400 });
     }
+
     let answers;
     try {
       answers = validateSecurityAnswers(securityAnswers);
     } catch (error) {
       return NextResponse.json({ error: error instanceof Error ? error.message : "Choose and answer all three security questions." }, { status: 400 });
     }
-    const normalized = normalizeEmail(email);
+
+    const enteredEmail = normalizeEmail(email);
+    const verifiedPaidEmail = typeof sessionId === "string" && sessionId ? await paidEmailFromSession(sessionId) : null;
+    if (sessionId && !verifiedPaidEmail) {
+      return NextResponse.json({ error: "We could not verify this paid TCF Learn checkout. Please return from your Stripe confirmation page and try again." }, { status: 403 });
+    }
+    if (verifiedPaidEmail && verifiedPaidEmail !== enteredEmail) {
+      return NextResponse.json({ error: `Use the same email used at checkout: ${verifiedPaidEmail}` }, { status: 400 });
+    }
+
+    const normalized = verifiedPaidEmail || enteredEmail;
     const enrollments = await findPaidEnrollments(normalized);
-    if (!enrollments.length) return NextResponse.json({ error: "No paid TCF Learn enrollment was found for this email. Use the same email used at checkout." }, { status: 403 });
-    if (enrollments.some((enrollment: any) => enrollment.user_id)) return NextResponse.json({ error: "This purchase is already connected to an account. Please use User Login." }, { status: 409 });
+    if (!enrollments.length) {
+      return NextResponse.json({ error: "Your payment was received, but course access is still syncing. Please wait a few seconds and try again." }, { status: 409 });
+    }
+
+    const claimedUserIds = [...new Set(enrollments.map((enrollment: any) => enrollment.user_id).filter(Boolean))];
+    const unclaimed = enrollments.filter((enrollment: any) => !enrollment.user_id);
+
+    if (claimedUserIds.length > 1) {
+      return NextResponse.json({ error: "This purchase email is connected to more than one account. Please contact TCF Learn support." }, { status: 409 });
+    }
+
+    if (claimedUserIds.length === 1) {
+      if (unclaimed.length) await attachEnrollments(unclaimed.map((enrollment: any) => enrollment.id), claimedUserIds[0] as string);
+      return NextResponse.json({ ok: true, existingAccount: true });
+    }
+
     const user = await createSupabaseUser(normalized, password, fullName.trim());
     try {
       await saveSecurityQuestions(user.id, answers);
@@ -26,7 +67,7 @@ export async function POST(request: NextRequest) {
       await deleteSupabaseUser(user.id);
       throw error;
     }
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, existingAccount: false });
   } catch (error) {
     return NextResponse.json({ error: error instanceof Error ? error.message : "Unable to create account." }, { status: 500 });
   }
