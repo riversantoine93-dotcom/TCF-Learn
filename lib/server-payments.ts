@@ -103,10 +103,19 @@ export async function recordStripeEnrollment(session: any) {
   const courses = coursesForPurchase(purchase);
   const total = Number(session.amount_total || (purchase === "bundle" ? 14550 : COURSE_PRICE_CENTS));
   const perCourseAmount = purchase === "bundle" ? Math.round(total / courses.length) : total;
+  const existingEnrollments = await findPaidEnrollments(email);
+  const existingUserId = existingEnrollments.find((row: any) => row.user_id)?.user_id || null;
 
   for (const courseSlug of courses) {
+    const existing = existingEnrollments.find((row: any) => row.course_slug === courseSlug);
+    if (existing) {
+      if (!existing.user_id && existingUserId) await attachEnrollment(existing.id, existingUserId);
+      continue;
+    }
+
     const checkoutId = purchase === "bundle" ? `${session.id}:${courseSlug}` : session.id;
     const payload = {
+      user_id: existingUserId,
       purchaser_email: email,
       course_slug: courseSlug as EnrollableCourseSlug,
       active: true,
