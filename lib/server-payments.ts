@@ -80,15 +80,26 @@ export async function attachEnrollments(enrollmentIds: number[], userId: string)
   for (const enrollmentId of enrollmentIds) await attachEnrollment(enrollmentId, userId);
 }
 
-function purchaseFromSession(session: any): PurchaseKey {
-  const value = session?.metadata?.purchase_key || session?.metadata?.course_slug || COURSE_SLUG;
-  return isPurchaseKey(value) ? value : COURSE_SLUG;
+function purchaseFromSession(session: any): PurchaseKey | null {
+  const purchaseKey = session?.metadata?.purchase_key;
+  if (isPurchaseKey(purchaseKey)) return purchaseKey;
+
+  const courseSlug = session?.metadata?.course_slug;
+  if (isPurchaseKey(courseSlug)) return courseSlug;
+
+  return null;
 }
 
 export async function recordStripeEnrollment(session: any) {
   const email = normalizeEmail(session?.customer_details?.email || session?.customer_email || "");
   if (!email || session?.payment_status !== "paid") return;
+
   const purchase = purchaseFromSession(session);
+  if (!purchase) {
+    console.info("Ignoring non-TCF Learn Stripe Checkout Session", session?.id || "unknown");
+    return;
+  }
+
   const courses = coursesForPurchase(purchase);
   const total = Number(session.amount_total || (purchase === "bundle" ? 14550 : COURSE_PRICE_CENTS));
   const perCourseAmount = purchase === "bundle" ? Math.round(total / courses.length) : total;
