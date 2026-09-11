@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { attachEnrollments, createSupabaseUser, deleteSupabaseUser, findPaidEnrollments, normalizeEmail, requireStripeSecret } from "@/lib/server-payments";
+import { attachEnrollments, createSupabaseUser, deleteSupabaseUser, findPaidEnrollments, normalizeEmail, recordStripeEnrollment, requireStripeSecret } from "@/lib/server-payments";
 import { isPurchaseKey } from "@/lib/course-purchases";
 import { saveSecurityQuestions, validateSecurityAnswers } from "@/lib/server-security";
 
-async function paidEmailFromSession(sessionId: string) {
+async function paidSessionFromId(sessionId: string) {
   if (!sessionId.startsWith("cs_")) return null;
   const secret = requireStripeSecret();
   const res = await fetch(`https://api.stripe.com/v1/checkout/sessions/${encodeURIComponent(sessionId)}`, {
@@ -15,7 +15,7 @@ async function paidEmailFromSession(sessionId: string) {
   const purchase = session?.metadata?.purchase_key || session?.metadata?.course_slug;
   if (!isPurchaseKey(purchase)) return null;
   const email = session?.customer_details?.email || session?.customer_email || "";
-  return email ? normalizeEmail(email) : null;
+  return email ? session : null;
 }
 
 export async function POST(request: NextRequest) {
@@ -33,7 +33,11 @@ export async function POST(request: NextRequest) {
     }
 
     const enteredEmail = normalizeEmail(email);
-    const verifiedPaidEmail = typeof sessionId === "string" && sessionId ? await paidEmailFromSession(sessionId) : null;
+    const verifiedSession = typeof sessionId === "string" && sessionId ? await paidSessionFromId(sessionId) : null;
+    const verifiedPaidEmail = verifiedSession
+      ? normalizeEmail(verifiedSession?.customer_details?.email || verifiedSession?.customer_email || "")
+      : null;
+
     if (sessionId && !verifiedPaidEmail) {
       return NextResponse.json({ error: "We could not verify this paid TCF Learn checkout. Please return from your Stripe confirmation page and try again." }, { status: 403 });
     }
@@ -42,9 +46,13 @@ export async function POST(request: NextRequest) {
     }
 
     const normalized = verifiedPaidEmail || enteredEmail;
-    const enrollments = await findPaidEnrollments(normalized);
+    let enrollments = await findPaidEnrollments(normalized);
+    if (!enrollments.length && verifiedSession) {
+      await recordStripeEnrollment(verifiedSession);
+      enrollments = await findPaidEnrollments(normalized);
+    }
     if (!enrollments.length) {
-      return NextResponse.json({ error: "Your payment was received, but course access is still syncing. Please wait a few seconds and try again." }, { status: 409 });
+      return NextResponse.json({ error: "Your payment was verified, but course access could not be created yet. Please try again or contact TCF Learn support." }, { status: 409 });
     }
 
     const claimedUserIds = [...new Set(enrollments.map((enrollment: any) => enrollment.user_id).filter(Boolean))];
