@@ -5,7 +5,7 @@ import { requireSuperAdmin } from "@/lib/server-super-admin";
 export async function GET(request: NextRequest) {
   try {
     await requireSuperAdmin(request);
-    const admin = getSupabaseAdmin();
+    const admin: any = getSupabaseAdmin();
 
     const [{ data: organizations, error: orgError }, { data: memberships, error: memberError }, { data: events, error: eventError }] = await Promise.all([
       admin.from("organizations").select("*").order("created_at", { ascending: false }),
