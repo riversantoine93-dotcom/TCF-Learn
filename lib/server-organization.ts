@@ -19,13 +19,45 @@ export async function recordOrganizationPurchase(session: any) {
   if (!purchaserEmail || !organizationName) throw new Error("Organization checkout is missing purchaser details.");
 
   const plan = ORGANIZATION_PLANS[planKey];
+  const paidAmount = Number(session.amount_total ?? 0);
+  if (plan.salesMode === "checkout" && plan.amountCents !== null && paidAmount !== plan.amountCents) {
+    throw new Error(`Organization payment amount mismatch. Expected ${plan.amountCents} cents and received ${paidAmount} cents.`);
+  }
+
+  const ensurePrimaryAdminEntitlement = async (organizationId: string, ownerUserId?: string | null) => {
+    const { data: currentAdmin, error: adminLookupError } = await admin
+      .from("organization_memberships")
+      .select("id")
+      .eq("organization_id", organizationId)
+      .eq("role", "admin")
+      .neq("status", "removed")
+      .maybeSingle();
+    if (adminLookupError) throw adminLookupError;
+    if (currentAdmin) return;
+
+    const { error: entitlementError } = await admin.from("organization_memberships").insert({
+      organization_id: organizationId,
+      user_id: ownerUserId || null,
+      email: purchaserEmail,
+      full_name: null,
+      role: "admin",
+      status: ownerUserId ? "active" : "invited",
+      invited_at: new Date().toISOString(),
+      accepted_at: ownerUserId ? new Date().toISOString() : null,
+    });
+    if (entitlementError) throw entitlementError;
+  };
+
   const { data: existing, error: existingError } = await admin
     .from("organizations")
     .select("*")
     .eq("stripe_checkout_session_id", session.id)
     .maybeSingle();
   if (existingError) throw existingError;
-  if (existing) return existing;
+  if (existing) {
+    await ensurePrimaryAdminEntitlement(existing.id, existing.owner_user_id);
+    return existing;
+  }
 
   const { data, error } = await admin
     .from("organizations")
@@ -34,9 +66,10 @@ export async function recordOrganizationPurchase(session: any) {
       purchaser_email: purchaserEmail,
       plan_key: planKey,
       seat_limit: plan.seats,
+      admin_license_limit: plan.adminLicenses,
       co_admin_limit: plan.coAdminLimit,
       status: "active",
-      amount_paid: Number(session.amount_total || plan.amountCents),
+      amount_paid: paidAmount,
       currency: session.currency || "usd",
       stripe_checkout_session_id: session.id,
       stripe_customer_id: typeof session.customer === "string" ? session.customer : null,
@@ -50,6 +83,7 @@ export async function recordOrganizationPurchase(session: any) {
   const accessRows = ORGANIZATION_COURSE_SLUGS.map((courseSlug) => ({ organization_id: data.id, course_slug: courseSlug, active: true }));
   const { error: accessError } = await admin.from("organization_course_access").upsert(accessRows, { onConflict: "organization_id,course_slug" });
   if (accessError) throw accessError;
+  await ensurePrimaryAdminEntitlement(data.id, data.owner_user_id);
   return data;
 }
 
