@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { recordStripeEnrollment, verifyStripeSignature } from "@/lib/server-payments";
 import { recordOrganizationPurchase } from "@/lib/server-organization";
+import { activateStripeInvoiceOrganization } from "@/lib/server-super-admin";
 
 export const runtime = "nodejs";
 
@@ -20,6 +21,10 @@ export async function POST(request: NextRequest) {
       } else {
         await recordStripeEnrollment(session);
       }
+    }
+
+    if (event.type === "invoice.paid") {
+      await activateStripeInvoiceOrganization(event.data.object);
     }
     return NextResponse.json({ received: true });
   } catch (error) {
