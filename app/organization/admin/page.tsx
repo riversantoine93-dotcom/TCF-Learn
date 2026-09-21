@@ -143,9 +143,10 @@ export default function OrganizationAdmin(){
   useEffect(()=>{load()},[]);
 
   useEffect(()=>{
-    if(!supabase||!data?.organization?.id)return;
+    const client=supabase;
+    if(!client||!data?.organization?.id)return;
 
-    const channel=supabase
+    const channel=client
       .channel("organization-progress-"+data.organization.id)
       .on(
         "postgres_changes",
@@ -160,7 +161,7 @@ export default function OrganizationAdmin(){
     const fallback=window.setInterval(()=>load({silent:true}),15000);
     return ()=>{
       window.clearInterval(fallback);
-      supabase.removeChannel(channel);
+      client.removeChannel(channel);
     };
   },[data?.organization?.id]);
 
