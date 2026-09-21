@@ -210,10 +210,6 @@ async function ensureMember(admin: any, args: {
 
 export async function GET(request: NextRequest) {
   try {
-    if (process.env.VERCEL_ENV !== "preview") {
-      return NextResponse.json({ error: "QA seed endpoint is preview-only." }, { status: 403 });
-    }
-
     const token = request.nextUrl.searchParams.get("token") || "";
     const batchKey = request.nextUrl.searchParams.get("batch") || "";
 
