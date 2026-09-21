@@ -56,6 +56,7 @@ export default function OrganizationAdmin(){
   }
 
   const learnerCount=data?.members.filter(m=>m.role==="learner"&&m.status!=="removed").length||0;
+  const adminCount=data?.members.filter(m=>m.role==="admin"&&m.status!=="removed").length||0;
   const coAdminCount=data?.members.filter(m=>m.role==="co_admin"&&m.status!=="removed").length||0;
   const progressByUser=useMemo(()=>{
     const map=new Map<string,any[]>();
@@ -71,7 +72,8 @@ export default function OrganizationAdmin(){
     {message&&<div className="notice" style={{margin:"18px 0"}}>{message}</div>}
     {data&&<>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",gap:14,margin:"28px 0"}}>
-        <div className="auth-card"><small>LEARNER SEATS</small><h2>{learnerCount} / {data.organization.seat_limit}</h2></div>
+        <div className="auth-card"><small>LEARNER LOGIN LICENSES</small><h2>{learnerCount} / {data.organization.seat_limit}</h2><p>Primary admin is not counted here.</p></div>
+        <div className="auth-card"><small>PRIMARY ADMIN LICENSE</small><h2>{adminCount} / {data.organization.admin_license_limit || 1}</h2></div>
         <div className="auth-card"><small>CO-ADMINS</small><h2>{coAdminCount} / {data.organization.co_admin_limit}</h2></div>
         <div className="auth-card"><small>COURSE ACCESS</small><h2>2 courses</h2><p>Turning Forward + Thought to Freedom</p></div>
       </div>
