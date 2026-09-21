@@ -1,0 +1,4 @@
+alter table public.organizations drop constraint if exists organizations_status_check;
+alter table public.organizations
+  add constraint organizations_status_check
+  check (status in ('pending','active','paused','cancelled'));
