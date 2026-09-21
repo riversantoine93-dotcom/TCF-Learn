@@ -79,7 +79,7 @@ export async function POST(request: NextRequest) {
     const finalized = await stripePost("/v1/invoices/" + encodeURIComponent(invoice.id) + "/finalize", new URLSearchParams(), secret);
     const sent = await stripePost("/v1/invoices/" + encodeURIComponent(invoice.id) + "/send", new URLSearchParams(), secret);
 
-    const admin = getSupabaseAdmin();
+    const admin: any = getSupabaseAdmin();
     const { error: updateError } = await admin.from("organizations").update({
       stripe_invoice_id: invoice.id,
       stripe_customer_id: customer.id,
@@ -109,7 +109,7 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     if (organizationId) {
-      const admin = getSupabaseAdmin();
+      const admin: any = getSupabaseAdmin();
       await admin.from("organizations").update({ status: "cancelled", license_notes: "Invoice creation failed before activation." }).eq("id", organizationId);
     }
     return NextResponse.json({ error: error instanceof Error ? error.message : "Unable to create Stripe invoice." }, { status: 400 });
