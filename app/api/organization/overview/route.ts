@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { requireAuthenticatedUser } from "@/lib/server-auth";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
+import { summarizeLearnerProgress } from "@/lib/organization-progress";
 
 export async function GET(request: NextRequest) {
   try {
@@ -24,14 +25,24 @@ export async function GET(request: NextRequest) {
     if (memberError) throw memberError;
 
     const learnerUserIds=(members||[]).filter((m:any)=>m.role==="learner"&&m.status==="active"&&m.user_id).map((m:any)=>m.user_id);
-    let progress:any[]=[];
+    let rawProgress:any[]=[];
     if(learnerUserIds.length){
       const result=await admin.from("course_progress").select("user_id,course_slug,progress,updated_at").in("user_id",learnerUserIds);
       if(result.error) throw result.error;
-      progress=result.data||[];
+      rawProgress=result.data||[];
     }
 
-    return NextResponse.json({ organization, adminRole: membership.role, members: members||[], progress });
+    const progressSummaries=learnerUserIds.map((userId:string)=>
+      summarizeLearnerProgress(userId, rawProgress.filter((row:any)=>row.user_id===userId))
+    );
+
+    return NextResponse.json({
+      organization,
+      adminRole: membership.role,
+      members: members||[],
+      progressSummaries,
+      refreshedAt: new Date().toISOString(),
+    });
   } catch (error) {
     return NextResponse.json({ error: error instanceof Error ? error.message : "Unable to load organization." }, { status: 400 });
   }
