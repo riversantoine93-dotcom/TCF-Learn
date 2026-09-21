@@ -236,6 +236,15 @@ export async function acceptOrganizationInvite(args: { inviteToken: string; full
       invite_token: null,
     }).eq("id", membership.id);
     if (updateError) throw updateError;
+
+    if (membership.role === "admin") {
+      const { error: ownerError } = await admin
+        .from("organizations")
+        .update({ owner_user_id: user.id })
+        .eq("id", membership.organization_id);
+      if (ownerError) throw ownerError;
+    }
+
     await grantOrganizationCourseAccess(membership.organization_id, user.id);
     return { userId: user.id, email: membership.email, organizationId: membership.organization_id };
   } catch (error) {
