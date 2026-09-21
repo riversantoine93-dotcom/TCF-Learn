@@ -1,1 +1,1 @@
-export const PRIMARY_HOME_PATH = "/dashboard";
+export const PRIMARY_HOME_PATH = "/organizations";

@@ -29,11 +29,11 @@ export default function Header() {
   return <>
     <header className={`site-header header-theme-${theme}`}>
       <div className="shell nav-wrap">
-        <Link href="/" className="brand header-brand" aria-label="TCF Learn home">
+        <Link href={user ? "/dashboard" : "/organizations"} className="brand header-brand" aria-label="TCF Learn home">
           <Image src="/learn-logo.png" alt="Learn — The Conviction Fiction Podcast" width={172} height={72} priority />
         </Link>
         <nav className="header-nav" aria-label="Primary navigation">
-          <Link href="/">Dashboard</Link>
+          <Link href={user ? "/dashboard" : "/organizations"}>{user ? "Dashboard" : "Organization Plans"}</Link>
           <Link href="/courses">Courses</Link>
           {user ? <><Link href="/profile">Profile</Link><button className="nav-button" onClick={() => signOut()}>Sign out</button></> : <Link className="button small" href="/login">User Login</Link>}
           <button type="button" className="header-theme-toggle" onClick={toggleTheme} aria-label={`Switch page to ${theme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}>

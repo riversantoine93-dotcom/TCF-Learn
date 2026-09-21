@@ -89,9 +89,9 @@ export default function CoursesPage() {
           <Image src="/learn-logo.png" alt="TCF Learn" width={160} height={66} priority />
         </Link>
         <nav aria-label="Courses navigation">
-          <Link href="/">Dashboard</Link>
+          <Link href={user ? "/dashboard" : "/organizations"}>{user ? "Dashboard" : "Organization Plans"}</Link>
           <Link className="active" href="/courses">Courses</Link>
-          <Link href="/#purchase-center">Course Store</Link>
+          <Link href="/organizations">Organization Plans</Link>
           {user ? <Link href="/profile">Profile</Link> : <Link href="/login">User Login</Link>}
           <button type="button" className="courses-theme-toggle" onClick={togglePageTheme} aria-label={`Switch page to ${pageTheme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${pageTheme === "dark" ? "light" : "dark"} mode`}>
             <span aria-hidden="true">{pageTheme === "dark" ? "☀" : "☾"}</span>
@@ -103,7 +103,7 @@ export default function CoursesPage() {
       <section className="courses-hero">
         <span className="eyebrow">TCF LEARN COURSES</span>
         <h1>{user ? "Your courses and what comes next." : "Preview the work before you begin."}</h1>
-        <p>{user ? "Purchased courses are ready to open. Courses you have not purchased remain available to preview, with checkout kept in one central location on the Dashboard." : "Explore both TCF Learn courses, review what each one covers, and return to the Dashboard when you are ready to purchase a course or the bundle."}</p>
+        <p>{user ? "Courses assigned through your organization are ready to open. Other courses remain available to preview." : "Explore both TCF Learn courses. Organizations license both courses together for their enrolled learners."}</p>
       </section>
 
       <section className="courses-grid" aria-live="polite">
@@ -111,12 +111,12 @@ export default function CoursesPage() {
           const course = COURSE_DETAILS[card.slug];
           return <article className={`course-preview-card ${card.purchased ? "purchased" : "preview"}`} key={card.slug}>
             <div className="course-preview-art"><Image src={course.thumbnail} alt={`${course.title} course thumbnail`} fill sizes="(max-width: 820px) 100vw, 50vw" /><span>{card.purchased ? "PURCHASED" : "COURSE PREVIEW"}</span></div>
-            <div className="course-preview-body"><p className="course-meta">{course.meta}</p><h2>{course.title}</h2><h3>{course.subtitle}</h3><p>{course.description}</p><div className="course-actions"><Link className="primary-course-action" href={course.href}>{card.purchased ? "Open Course" : "Preview Course"}</Link>{card.showPurchaseCta && <Link className="secondary-course-action" href="/#purchase-center">Purchase from Dashboard</Link>}</div></div>
+            <div className="course-preview-body"><p className="course-meta">{course.meta}</p><h2>{course.title}</h2><h3>{course.subtitle}</h3><p>{course.description}</p><div className="course-actions"><Link className="primary-course-action" href={course.href}>{card.purchased ? "Open Course" : "Preview Course"}</Link>{card.showPurchaseCta && <Link className="secondary-course-action" href="/organizations">View Organization Plans</Link>}</div></div>
           </article>;
         })}
       </section>
 
-      <section className="bundle-note"><div><span className="eyebrow">ONE CHECKOUT LOCATION</span><h2>Buy either course for $97, or get both for $145.50.</h2><p>The bundle saves $48.50 and unlocks both courses. All purchases are completed from the Dashboard Course Store.</p></div><Link href="/#purchase-center">View Course Store</Link></section>
+      <section className="bundle-note"><div><span className="eyebrow">ORGANIZATIONAL ACCESS</span><h2>Both courses are included with every learner seat.</h2><p>Organizations can enroll 10, 50, or 100 learners under one license, with centralized administration and learner progress visibility.</p></div><Link href="/organizations">View Organization Plans</Link></section>
 
       <aside className="podcast-extras" aria-label="More from The Conviction Fiction Podcast"><span>More from The Conviction Fiction Podcast</span><div><a href="https://theconvictionfictionpodcast.com/#books" target="_blank" rel="noreferrer">Browse Books ↗</a><a href="https://theconvictionfictionpodcast.com/#shop" target="_blank" rel="noreferrer">Visit the Shop ↗</a></div></aside>
     </main>
