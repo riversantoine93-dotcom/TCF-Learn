@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     const customerBody = new URLSearchParams();
     customerBody.set("email", purchaserEmail.trim().toLowerCase());
     customerBody.set("name", organizationName.trim());
-    customerBody.set("metadata[tcf_organization_id]", organizationId);
+    customerBody.set("metadata[tcf_organization_id]", String(organizationId));
     const customer = await stripePost("/v1/customers", customerBody, secret);
 
     const invoiceBody = new URLSearchParams();
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
     invoiceBody.set("auto_advance", "false");
     invoiceBody.set("description", "TCF Learn organization license");
     invoiceBody.set("metadata[purchase_type]", "tcf_org_invoice");
-    invoiceBody.set("metadata[organization_id]", organizationId);
+    invoiceBody.set("metadata[organization_id]", String(organizationId));
     invoiceBody.set("metadata[organization_plan]", planKey);
     invoiceBody.set("metadata[learner_login_licenses]", String(managed.organization.seat_limit));
     invoiceBody.set("metadata[primary_admin_login_licenses]", "1");
