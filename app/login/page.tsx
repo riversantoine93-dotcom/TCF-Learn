@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { supabase, isSupabaseConfigured } from "@/lib/supabase";
@@ -10,6 +10,7 @@ import "./login.css";
 type LoginKind = "user" | "admin";
 
 export default function Login() {
+  const [mode, setMode] = useState<LoginKind>("user");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [adminEmail, setAdminEmail] = useState("");
@@ -17,6 +18,11 @@ export default function Login() {
   const [busy, setBusy] = useState<LoginKind | null>(null);
   const [userMessage, setUserMessage] = useState("");
   const [adminMessage, setAdminMessage] = useState("");
+
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get("mode");
+    setMode(requested === "admin" ? "admin" : "user");
+  }, []);
 
   async function userLogin(event: FormEvent) {
     event.preventDefault();
@@ -81,17 +87,20 @@ export default function Login() {
     window.location.href = "/organization/admin";
   }
 
+  const isAdmin = mode === "admin";
+
   return (
     <main>
       <Header />
 
       <section className="login-page">
         <div className="login-intro">
-          <span className="eyebrow">TCF LEARN ACCESS</span>
-          <h1>Choose how you enter TCF Learn.</h1>
+          <span className="eyebrow">{isAdmin ? "ORGANIZATION ACCESS" : "LEARNER ACCESS"}</span>
+          <h1>{isAdmin ? "Admin Login" : "User Login"}</h1>
           <p>
-            Learners enter through User Login. Organization purchasers and approved co-admins
-            enter through Admin Login.
+            {isAdmin
+              ? "For organization purchasers and approved co-admins managing seats, invitations, and learner progress."
+              : "For learners assigned a TCF Learn seat by their organization."}
           </p>
         </div>
 
@@ -99,90 +108,92 @@ export default function Login() {
           <div className="notice error login-config-notice">Supabase is not configured.</div>
         )}
 
-        <div className="login-panels">
-          <form className="login-panel" onSubmit={userLogin}>
-            <span className="login-panel-kicker">LEARNER ACCESS</span>
-            <h2>User Login</h2>
-            <p>For learners assigned a seat by their organization.</p>
+        <div className="login-panels single-panel">
+          {!isAdmin ? (
+            <form className="login-panel" onSubmit={userLogin}>
+              <span className="login-panel-kicker">LEARNER ACCESS</span>
+              <h2>User Login</h2>
+              <p>Continue your assigned TCF Learn courses.</p>
 
-            {userMessage && <div className="notice" role="status">{userMessage}</div>}
+              {userMessage && <div className="notice" role="status">{userMessage}</div>}
 
-            <label>
-              Email
-              <input
-                type="email"
-                required
-                autoComplete="email"
-                value={userEmail}
-                onChange={(event) => setUserEmail(event.target.value)}
-              />
-            </label>
+              <label>
+                Email
+                <input
+                  type="email"
+                  required
+                  autoComplete="email"
+                  value={userEmail}
+                  onChange={(event) => setUserEmail(event.target.value)}
+                />
+              </label>
 
-            <label>
-              Password
-              <input
-                type="password"
-                required
-                autoComplete="current-password"
-                value={userPassword}
-                onChange={(event) => setUserPassword(event.target.value)}
-              />
-            </label>
+              <label>
+                Password
+                <input
+                  type="password"
+                  required
+                  autoComplete="current-password"
+                  value={userPassword}
+                  onChange={(event) => setUserPassword(event.target.value)}
+                />
+              </label>
 
-            <div className="login-help">
-              <Link href="/forgot-password">Forgot password?</Link>
-            </div>
+              <div className="login-help">
+                <Link href="/forgot-password">Forgot password?</Link>
+              </div>
 
-            <button className="button full" disabled={busy !== null}>
-              {busy === "user" ? "Signing in…" : "User Login"}
-            </button>
+              <button className="button full" disabled={busy !== null}>
+                {busy === "user" ? "Signing in…" : "User Login"}
+              </button>
 
-            <small>
-              Have an invitation? Open the organization invitation link you received to activate your account.
-            </small>
-          </form>
+              <small>
+                Organization administrator? <Link href="/login?mode=admin">Admin Login</Link>
+              </small>
+            </form>
+          ) : (
+            <form className="login-panel admin-panel" onSubmit={adminLogin}>
+              <span className="login-panel-kicker">ORGANIZATION ACCESS</span>
+              <h2>Admin Login</h2>
+              <p>Manage your organization, learner seats, invitations, and progress.</p>
 
-          <form id="admin-login" className="login-panel admin-panel" onSubmit={adminLogin}>
-            <span className="login-panel-kicker">ORGANIZATION ACCESS</span>
-            <h2>Admin Login</h2>
-            <p>For primary purchasers and approved organization co-admins.</p>
+              {adminMessage && <div className="notice" role="status">{adminMessage}</div>}
 
-            {adminMessage && <div className="notice" role="status">{adminMessage}</div>}
+              <label>
+                Admin email
+                <input
+                  type="email"
+                  required
+                  autoComplete="email"
+                  value={adminEmail}
+                  onChange={(event) => setAdminEmail(event.target.value)}
+                />
+              </label>
 
-            <label>
-              Admin email
-              <input
-                type="email"
-                required
-                autoComplete="email"
-                value={adminEmail}
-                onChange={(event) => setAdminEmail(event.target.value)}
-              />
-            </label>
+              <label>
+                Password
+                <input
+                  type="password"
+                  required
+                  autoComplete="current-password"
+                  value={adminPassword}
+                  onChange={(event) => setAdminPassword(event.target.value)}
+                />
+              </label>
 
-            <label>
-              Password
-              <input
-                type="password"
-                required
-                autoComplete="current-password"
-                value={adminPassword}
-                onChange={(event) => setAdminPassword(event.target.value)}
-              />
-            </label>
+              <div className="login-help">
+                <Link href="/forgot-password">Forgot password?</Link>
+              </div>
 
-            <div className="login-help">
-              <Link href="/forgot-password">Forgot password?</Link>
-            </div>
+              <button className="button full" disabled={busy !== null}>
+                {busy === "admin" ? "Opening admin console…" : "Admin Login"}
+              </button>
 
-            <button className="button full" disabled={busy !== null}>
-              {busy === "admin" ? "Opening admin console…" : "Admin Login"}
-            </button>
-
-            <small>
-              Need an organization license? Choose a seat package below.
-            </small>
-          </form>
+              <small>
+                Learner? <Link href="/login?mode=user">User Login</Link>
+              </small>
+            </form>
+          )}
         </div>
 
         <section className="login-seat-section" aria-labelledby="seat-options-title">
