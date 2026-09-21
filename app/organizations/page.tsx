@@ -54,6 +54,7 @@ export default function OrganizationsPage(){
           <h2 className={plan.salesMode==="contact"?"contact-price":""}>{plan.displayPrice}</h2>
           <strong>{plan.label}</strong>
           <p>{plan.description}</p>
+          <div className="plan-detail"><b>{plan.seats} learner logins + {plan.adminLicenses} primary admin login</b><span>Admin login does not consume a learner seat.</span></div>
           <div className="plan-detail"><b>Both courses included</b><span>{plan.perSeatLabel}</span></div>
           {plan.coAdminLimit>0&&<div className="plan-detail"><b>Co-admin access</b><span>Up to {plan.coAdminLimit} co-admins</span></div>}
         </button>})}
@@ -62,7 +63,7 @@ export default function OrganizationsPage(){
       <form className="auth-card organization-enroll-card" onSubmit={submit}>
         <h2>{selectedPlan.salesMode==="contact"?"Contact for pricing":"Enroll your organization"}</h2>
         <label>Organization / institution name<input required value={organizationName} onChange={e=>setOrganizationName(e.target.value)} placeholder="Example: Common Good Atlanta"/></label>
-        <div className="notice"><strong>{selectedPlan.seats} learner seats · {selectedPlan.displayPrice}</strong><br/>Includes both TCF Learn courses for every learner. Administrator accounts do not consume learner seats.</div>
+        <div className="notice"><strong>{selectedPlan.seats} learner logins + {selectedPlan.adminLicenses} primary admin login · {selectedPlan.displayPrice}</strong><br/>Includes both TCF Learn courses for every learner. The primary admin login is separate and does not consume one of the learner licenses.</div>
         {message&&<div className="notice" role="status">{message}</div>}
         <button className="button full" type="submit" disabled={busy}>{busy?"Opening secure checkout…":selectedPlan.salesMode==="contact"?"Contact for "+selectedPlan.seats+"-seat pricing":"Purchase "+selectedPlan.seats+"-seat license"}</button>
         <small>Already part of an organization? <Link href="/login?mode=user">User Login</Link> or <Link href="/login?mode=admin">Admin Login</Link>.</small>
