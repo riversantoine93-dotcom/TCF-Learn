@@ -35,7 +35,7 @@ export default function Header() {
         <nav className="header-nav" aria-label="Primary navigation">
           <Link href={user ? "/dashboard" : "/organizations"}>{user ? "Dashboard" : "Organization Plans"}</Link>
           <Link href="/courses">Courses</Link>
-          {user ? <><Link href="/profile">Profile</Link><button className="nav-button" onClick={() => signOut()}>Sign out</button></> : <Link className="button small" href="/login">User Login</Link>}
+          {user ? <><Link href="/profile">Profile</Link><button className="nav-button" onClick={() => signOut()}>Sign out</button></> : <><Link className="button small" href="/login">User Login</Link><Link className="button small admin-login-link" href="/login#admin-login">Admin Login</Link></>}
           <button type="button" className="header-theme-toggle" onClick={toggleTheme} aria-label={`Switch page to ${theme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}>
             <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
             <b>{theme === "dark" ? "Light" : "Dark"}</b>
@@ -56,7 +56,7 @@ export default function Header() {
       .header-theme-light{background:#f6f0e4!important;color:#151515!important;border-bottom-color:#d8cdb8!important}
       .header-theme-light .header-nav :global(a),.header-theme-light .header-nav :global(.nav-button){color:#151515!important}
       .header-theme-light .header-nav :global(a:hover),.header-theme-light .header-nav :global(.nav-button:hover){color:#8a6910!important}
-      .header-theme-light .header-nav :global(.button.small){background:#151515!important;color:#f7f1e5!important}
+      .header-theme-light .header-nav :global(.button.small){background:#151515!important;color:#f7f1e5!important}.header-nav :global(.admin-login-link){background:transparent!important;border-color:var(--gold)!important;color:var(--gold-light)!important}.header-theme-light .header-nav :global(.admin-login-link){color:#71540f!important;border-color:#8a6910!important}
       .header-theme-light .header-theme-toggle{color:#151515;border-color:#bcae95;background:#fffaf0}
       @media(max-width:720px){.nav-wrap{gap:18px;width:min(94vw,1180px)}.header-brand :global(img){width:118px;max-height:48px}.header-nav{gap:10px 14px;flex-wrap:wrap;row-gap:8px}.header-theme-toggle b{display:none}}
       @media(max-width:520px){.nav-wrap{align-items:center;gap:14px}.header-brand :global(img){width:102px;max-height:42px}.header-nav{gap:7px 10px}.header-nav :global(a),.header-nav :global(.nav-button){font-size:.6rem;letter-spacing:.07em}.header-nav :global(.button.small){padding:8px 10px}.header-theme-toggle{padding:7px 8px}}
