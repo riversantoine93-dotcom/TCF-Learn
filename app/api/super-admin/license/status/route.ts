@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Organization and a valid status are required." }, { status: 400 });
     }
 
-    const admin = getSupabaseAdmin();
+    const admin: any = getSupabaseAdmin();
     const { data: organization, error } = await admin
       .from("organizations")
       .update({ status })
