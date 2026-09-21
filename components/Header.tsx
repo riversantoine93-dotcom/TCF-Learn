@@ -35,7 +35,7 @@ export default function Header() {
         <nav className="header-nav" aria-label="Primary navigation">
           <Link href={user ? "/dashboard" : "/organizations"}>{user ? "Dashboard" : "Organization Plans"}</Link>
           <Link href="/courses">Courses</Link>
-          {user ? <><Link href="/profile">Profile</Link><button className="nav-button" onClick={() => signOut()}>Sign out</button></> : <><Link className="button small" href="/login">User Login</Link><Link className="button small admin-login-link" href="/login#admin-login">Admin Login</Link></>}
+          {user ? <><Link href="/profile">Profile</Link><button className="nav-button" onClick={() => signOut()}>Sign out</button></> : <><Link className="button small" href="/login?mode=user">User Login</Link><Link className="button small admin-login-link" href="/login?mode=admin">Admin Login</Link></>}
           <button type="button" className="header-theme-toggle" onClick={toggleTheme} aria-label={`Switch page to ${theme === "dark" ? "light" : "dark"} mode`} title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}>
             <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
             <b>{theme === "dark" ? "Light" : "Dark"}</b>

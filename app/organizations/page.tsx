@@ -65,7 +65,7 @@ export default function OrganizationsPage(){
         <div className="notice"><strong>{selectedPlan.seats} learner seats · {selectedPlan.displayPrice}</strong><br/>Includes both TCF Learn courses for every learner. Administrator accounts do not consume learner seats.</div>
         {message&&<div className="notice" role="status">{message}</div>}
         <button className="button full" type="submit" disabled={busy}>{busy?"Opening secure checkout…":selectedPlan.salesMode==="contact"?"Contact for "+selectedPlan.seats+"-seat pricing":"Purchase "+selectedPlan.seats+"-seat license"}</button>
-        <small>Already part of an organization? <Link href="/login">User Login</Link> or <Link href="/login#admin-login">Admin Login</Link>.</small>
+        <small>Already part of an organization? <Link href="/login?mode=user">User Login</Link> or <Link href="/login?mode=admin">Admin Login</Link>.</small>
       </form>
     </div>
   </section></main>;
