@@ -8,8 +8,12 @@ export async function POST(request: NextRequest) {
     if (!isOrganizationPlanKey(plan)) return NextResponse.json({ error: "Choose a valid organization plan." }, { status: 400 });
     if (!organizationName?.trim()) return NextResponse.json({ error: "Organization name is required." }, { status: 400 });
 
-    const secret = requireStripeSecret();
     const option = ORGANIZATION_PLANS[plan];
+    if (option.salesMode === "contact" || option.amountCents === null) {
+      return NextResponse.json({ error: "This organization package requires contact for pricing." }, { status: 400 });
+    }
+
+    const secret = requireStripeSecret();
     const priceId = configuredOrganizationPriceId(plan);
     const origin = request.nextUrl.origin;
     const body = new URLSearchParams();

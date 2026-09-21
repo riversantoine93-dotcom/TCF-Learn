@@ -215,7 +215,7 @@ export default function Login() {
                     </div>
                   )}
                   <Link className="button full" href="/organizations">
-                    Choose {plan.seats} Seats
+                    {plan.salesMode === "contact" ? "Contact for Pricing" : "Choose " + plan.seats + " Seats"}
                   </Link>
                 </article>
               );
