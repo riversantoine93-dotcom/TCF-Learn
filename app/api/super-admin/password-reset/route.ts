@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
     const normalized = normalizeEmail(String(email || ""));
     if (!normalized) return NextResponse.json({ error: "Email is required." }, { status: 400 });
 
-    const admin = getSupabaseAdmin();
+    const admin: any = getSupabaseAdmin();
     const redirectTo = new URL("/reset-password", request.nextUrl.origin).toString();
     const { error } = await admin.auth.resetPasswordForEmail(normalized, { redirectTo });
     if (error) throw error;
