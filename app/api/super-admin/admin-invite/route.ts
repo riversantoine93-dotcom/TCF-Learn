@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     const { organizationId } = await request.json();
     if (!organizationId) return NextResponse.json({ error: "Organization is required." }, { status: 400 });
 
-    const admin = getSupabaseAdmin();
+    const admin: any = getSupabaseAdmin();
     const { data: membership, error } = await admin
       .from("organization_memberships")
       .select("id,email,status,user_id")
