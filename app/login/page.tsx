@@ -142,7 +142,7 @@ export default function Login() {
             </small>
           </form>
 
-          <form className="login-panel admin-panel" onSubmit={adminLogin}>
+          <form id="admin-login" className="login-panel admin-panel" onSubmit={adminLogin}>
             <span className="login-panel-kicker">ORGANIZATION ACCESS</span>
             <h2>Admin Login</h2>
             <p>For primary purchasers and approved organization co-admins.</p>
