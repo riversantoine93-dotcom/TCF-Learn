@@ -216,6 +216,10 @@ export default function Login() {
                   <strong>{plan.label}</strong>
                   <p>{plan.description}</p>
                   <div className="seat-card-detail">
+                    <b>{plan.seats} learner logins + {plan.adminLicenses} primary admin login</b>
+                    <small>Admin login does not consume a learner license.</small>
+                  </div>
+                  <div className="seat-card-detail">
                     <b>Both courses included</b>
                     <small>{plan.perSeatLabel}</small>
                   </div>

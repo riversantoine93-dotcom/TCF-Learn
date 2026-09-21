@@ -5,6 +5,7 @@ export type OrganizationPlan = {
   key: OrganizationPlanKey;
   label: string;
   seats: number;
+  adminLicenses: number;
   amountCents: number | null;
   displayPrice: string;
   perSeatLabel: string;
@@ -20,6 +21,7 @@ export const ORGANIZATION_PLANS: Record<OrganizationPlanKey, OrganizationPlan> =
     key: "org-10",
     label: "Starter Organization",
     seats: 10,
+    adminLicenses: 1,
     amountCents: 97000,
     displayPrice: "$970",
     perSeatLabel: "$97 per learner",
@@ -33,6 +35,7 @@ export const ORGANIZATION_PLANS: Record<OrganizationPlanKey, OrganizationPlan> =
     key: "org-50",
     label: "Growth Organization",
     seats: 50,
+    adminLicenses: 1,
     amountCents: null,
     displayPrice: "Contact for pricing",
     perSeatLabel: "Custom organization pricing",
@@ -46,6 +49,7 @@ export const ORGANIZATION_PLANS: Record<OrganizationPlanKey, OrganizationPlan> =
     key: "org-100",
     label: "Institution Organization",
     seats: 100,
+    adminLicenses: 1,
     amountCents: null,
     displayPrice: "Contact for pricing",
     perSeatLabel: "Custom institutional pricing",
