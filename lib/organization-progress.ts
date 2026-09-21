@@ -47,12 +47,17 @@ type ProgressRow = {
   updated_at: string | null;
 };
 
-function statusForItems(items: { key: string; label: string; complete: boolean }[], hasActivity: boolean) {
-  const firstIncomplete = items.findIndex((item) => !item.complete);
-  return items.map((item, index): ProgressItemSummary => ({
-    key: item.key,
-    label: item.label,
-    status: item.complete ? "complete" : hasActivity && index === firstIncomplete ? "in_progress" : "not_started",
+function baseStatus(complete: boolean): ProgressItemStatus {
+  return complete ? "complete" : "not_started";
+}
+
+function markCurrentItem(modules: ProgressModuleSummary[], currentKey: string | null, hasActivity: boolean) {
+  if (!hasActivity || !currentKey) return modules;
+  return modules.map((module) => ({
+    ...module,
+    items: module.items.map((item) => item.key === currentKey && item.status !== "complete"
+      ? { ...item, status: "in_progress" as const }
+      : item),
   }));
 }
 
@@ -70,7 +75,8 @@ export function summarizeTurningForward(row?: ProgressRow): ProgressCourseSummar
   const progress = row?.progress || {};
   const hasActivity = Object.keys(progress).length > 0;
   const flatItems: { key: string; label: string; complete: boolean }[] = [];
-  const modules = turningForwardModules.map((module) => {
+
+  let modules: ProgressModuleSummary[] = turningForwardModules.map((module) => {
     const items = [
       ...[1, 2, 3].map((lessonNumber) => {
         const key = module.number === 1 ? `lesson${lessonNumber}` : `m${module.number}lesson${lessonNumber}`;
@@ -82,21 +88,23 @@ export function summarizeTurningForward(row?: ProgressRow): ProgressCourseSummar
         complete: Boolean(progress[module.number === 1 ? "challenge" : `m${module.number}challenge`]),
       },
     ];
+
     flatItems.push(...items.map((item) => ({ ...item, label: `Module ${module.number}: ${item.label}` })));
-    const statuses = statusForItems(items, hasActivity);
+
     return {
       number: module.number,
       title: module.title,
       completed: items.filter((item) => item.complete).length,
       total: items.length,
       introWatched: Boolean(progress[`m${module.number}opener`]),
-      items: statuses,
+      items: items.map((item) => ({ key: item.key, label: item.label, status: baseStatus(item.complete) })),
     };
   });
 
   const completed = flatItems.filter((item) => item.complete).length;
   const total = flatItems.length;
-  const firstOpen = flatItems.find((item) => !item.complete);
+  const firstOpen = flatItems.find((item) => !item.complete) || null;
+  modules = markCurrentItem(modules, firstOpen?.key || null, hasActivity);
 
   return {
     courseSlug: "turning-forward",
@@ -121,35 +129,37 @@ export function summarizeThoughtToFreedom(row?: ProgressRow): ProgressCourseSumm
   };
 
   const flatItems: { key: string; label: string; complete: boolean }[] = [orientation];
-  const moduleSummaries = thoughtToFreedomCourse.modules.map((module) => {
-    const items = module.lessons.map((lesson) => {
-      const key = `m${module.number}lesson${lesson.number}`;
-      return { key, label: `Lesson ${lesson.number}: ${lesson.title}`, complete: Boolean(progress[key]) };
-    });
-    flatItems.push(...items.map((item) => ({ ...item, label: `Module ${module.number}: ${item.label}` })));
-    return {
-      number: module.number,
-      title: module.title,
-      completed: items.filter((item) => item.complete).length,
-      total: items.length,
-      items: statusForItems(items, hasActivity),
-    };
-  });
 
-  const modules: ProgressModuleSummary[] = [
+  let modules: ProgressModuleSummary[] = [
     {
       number: 0,
       title: "Orientation",
       completed: orientation.complete ? 1 : 0,
       total: 1,
-      items: statusForItems([orientation], hasActivity),
+      items: [{ key: orientation.key, label: orientation.label, status: baseStatus(orientation.complete) }],
     },
-    ...moduleSummaries,
+    ...thoughtToFreedomCourse.modules.map((module) => {
+      const items = module.lessons.map((lesson) => {
+        const key = `m${module.number}lesson${lesson.number}`;
+        return { key, label: `Lesson ${lesson.number}: ${lesson.title}`, complete: Boolean(progress[key]) };
+      });
+
+      flatItems.push(...items.map((item) => ({ ...item, label: `Module ${module.number}: ${item.label}` })));
+
+      return {
+        number: module.number,
+        title: module.title,
+        completed: items.filter((item) => item.complete).length,
+        total: items.length,
+        items: items.map((item) => ({ key: item.key, label: item.label, status: baseStatus(item.complete) })),
+      };
+    }),
   ];
 
   const completed = flatItems.filter((item) => item.complete).length;
   const total = flatItems.length;
-  const firstOpen = flatItems.find((item) => !item.complete);
+  const firstOpen = flatItems.find((item) => !item.complete) || null;
+  modules = markCurrentItem(modules, firstOpen?.key || null, hasActivity);
 
   return {
     courseSlug: "thought-to-freedom",
