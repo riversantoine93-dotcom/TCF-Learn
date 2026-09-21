@@ -7,7 +7,7 @@ import { ORGANIZATION_PLANS, isOrganizationPlanKey, type OrganizationPlanKey } f
 
 export async function requireSuperAdmin(request: NextRequest) {
   const user = await requireAuthenticatedUser(request);
-  const admin = getSupabaseAdmin();
+  const admin: any = getSupabaseAdmin();
   const { data, error } = await admin
     .from("platform_super_admins")
     .select("user_id,email,active")
@@ -25,7 +25,7 @@ export async function auditLicenseAction(args: {
   action: string;
   details?: Record<string, unknown>;
 }) {
-  const admin = getSupabaseAdmin();
+  const admin: any = getSupabaseAdmin();
   const { error } = await admin.from("organization_license_events").insert({
     organization_id: args.organizationId || null,
     actor_user_id: args.actorUserId,
@@ -49,7 +49,7 @@ export async function createManagedOrganization(args: {
 }) {
   if (!isOrganizationPlanKey(args.planKey)) throw new Error("Choose a valid organization plan.");
   const plan = ORGANIZATION_PLANS[args.planKey];
-  const admin = getSupabaseAdmin();
+  const admin: any = getSupabaseAdmin();
   const purchaserEmail = normalizeEmail(args.purchaserEmail);
   if (!purchaserEmail) throw new Error("Purchaser email is required.");
   if (!args.organizationName.trim()) throw new Error("Organization name is required.");
@@ -120,7 +120,7 @@ export async function activateStripeInvoiceOrganization(invoice: any) {
   const organizationId = String(invoice?.metadata?.organization_id || "");
   if (!organizationId || invoice?.metadata?.purchase_type !== "tcf_org_invoice") return null;
 
-  const admin = getSupabaseAdmin();
+  const admin: any = getSupabaseAdmin();
   const amountPaid = Number(invoice?.amount_paid || invoice?.total || 0);
   const { data: organization, error } = await admin
     .from("organizations")
