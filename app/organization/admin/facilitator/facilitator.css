@@ -1,0 +1,211 @@
+.facilitator-page{
+  width:min(1280px,94vw);
+  margin:42px auto 100px;
+}
+.facilitator-heading{
+  display:flex;
+  justify-content:space-between;
+  gap:22px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+.facilitator-heading h1{
+  font-size:clamp(2.8rem,6vw,5.6rem);
+  line-height:.92;
+  margin:10px 0 14px;
+  text-transform:uppercase;
+  letter-spacing:-.05em;
+}
+.facilitator-heading p{
+  max-width:760px;
+  color:var(--muted);
+  font-size:1.05rem;
+}
+.facilitator-safety-note{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  margin:26px 0;
+  padding:16px 18px;
+  border-left:5px solid var(--gold);
+  background:rgba(184,147,79,.1);
+}
+.facilitator-safety-note strong{
+  white-space:nowrap;
+}
+.facilitator-safety-note span{
+  color:var(--muted);
+}
+.facilitator-course-tabs{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin:24px 0;
+}
+.facilitator-course-tabs button{
+  padding:16px;
+  border:1px solid var(--line);
+  background:var(--cream);
+  color:var(--ink);
+  font:inherit;
+  font-weight:900;
+  cursor:pointer;
+}
+.facilitator-course-tabs button.active{
+  background:var(--ink);
+  color:var(--cream);
+  border-color:var(--ink);
+}
+.facilitator-layout{
+  display:grid;
+  grid-template-columns:280px minmax(0,1fr);
+  gap:24px;
+  align-items:start;
+}
+.facilitator-nav{
+  position:sticky;
+  top:22px;
+  border:1px solid var(--line);
+  background:var(--cream);
+  padding:18px;
+}
+.facilitator-nav label{
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.facilitator-nav select{
+  width:100%;
+  margin-top:7px;
+  padding:11px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:#171512;
+  font:inherit;
+}
+.facilitator-lesson-list{
+  display:grid;
+  gap:8px;
+  margin-top:16px;
+}
+.facilitator-lesson-list button{
+  text-align:left;
+  padding:12px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:inherit;
+  cursor:pointer;
+}
+.facilitator-lesson-list button.active{
+  border-color:var(--gold);
+  background:rgba(184,147,79,.12);
+}
+.facilitator-lesson-list small,
+.facilitator-lesson-list strong{
+  display:block;
+}
+.facilitator-lesson-list small{
+  font-size:.65rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--muted);
+  margin-bottom:4px;
+}
+.facilitator-guide{
+  min-width:0;
+}
+.facilitator-guide-header{
+  padding:28px;
+  background:var(--ink);
+  color:var(--cream);
+  border-top:7px solid var(--gold);
+}
+.facilitator-guide-header>span{
+  color:var(--gold-light);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.facilitator-guide-header h2{
+  font-size:clamp(2rem,4vw,3.6rem);
+  margin:8px 0;
+}
+.facilitator-guide-header p{
+  margin:0;
+  color:#d7d0c4;
+}
+.facilitator-card{
+  border:1px solid var(--line);
+  background:var(--cream);
+  padding:22px;
+  margin-top:14px;
+}
+.facilitator-card p{
+  line-height:1.7;
+  margin-bottom:0;
+}
+.facilitator-label{
+  display:block;
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  color:var(--rust);
+}
+.discussion-list{
+  margin:14px 0 0;
+  padding-left:24px;
+}
+.discussion-list li{
+  padding:7px 0;
+  line-height:1.55;
+}
+.facilitator-notes-card ul{
+  margin-bottom:0;
+  padding-left:20px;
+}
+.facilitator-notes-card li{
+  margin:7px 0;
+}
+.facilitator-script-section{
+  margin-top:20px;
+}
+.script-heading h3{
+  font-size:1.6rem;
+  margin:7px 0 14px;
+}
+.script-block{
+  border:1px solid var(--line);
+  background:var(--cream);
+  padding:22px;
+  margin-bottom:12px;
+}
+.script-block-title{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--line);
+}
+.script-block-title strong{
+  font-size:1.08rem;
+}
+.script-block p{
+  font-family:Georgia,serif;
+  font-size:1.04rem;
+  line-height:1.75;
+  margin:14px 0 0;
+}
+@media(max-width:860px){
+  .facilitator-layout{grid-template-columns:1fr}
+  .facilitator-nav{position:static}
+  .facilitator-safety-note{display:block}
+  .facilitator-safety-note strong{display:block;margin-bottom:6px}
+}
+@media(max-width:620px){
+  .facilitator-course-tabs{grid-template-columns:1fr}
+  .facilitator-guide-header,.facilitator-card,.script-block{padding:18px}
+  .script-block-title{align-items:flex-start}
+}
