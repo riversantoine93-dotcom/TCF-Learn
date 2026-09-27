@@ -253,6 +253,7 @@ export default function OrganizationAdmin(){
           <p>Manage seats and track learner completion across both TCF Learn courses without viewing private written responses.</p>
         </div>
         <div className="organization-admin-heading-actions">
+          <Link className="button" href="/organization/admin/facilitator">Facilitator Guide</Link>
           <div className={"live-indicator live-"+liveState}>
             <span/>
             {liveState==="live"?"Live progress":liveState==="fallback"?"Auto-refreshing":"Connecting…"}
