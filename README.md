@@ -21,11 +21,26 @@ Build:
 ## Supabase
 Add these in Vercel > Project Settings > Environment Variables:
 
-NEXT_PUBLIC_SUPABASE_URL=https://hgcdchahcdncxbmzjfwk.supabase.co
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 
-NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_ne89Tdh-ImkmhlsBT9ItbQ_k_TgpRAe
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your-supabase-publishable-key
 
 Do not add the direct PostgreSQL password/connection string to browser code.
+
+## Environment configuration
+Production values are managed in Vercel > Project Settings > Environment Variables.
+Keep `.env.production` and other populated environment files out of Git; `.env.example`
+is the only tracked environment template. Do not deploy its placeholder values.
+
+For local development, copy `.env.example` to `.env.local` and fill in your own
+configuration. The template lists the public Supabase and site settings, private
+Supabase/Stripe settings required by enrollment and payment features, and optional
+price overrides. Blank course price overrides preserve the application defaults;
+the 10-seat organization checkout needs its configured price ID. The 50- and
+100-seat plans remain contact-only.
+
+Never put a service-role key, Stripe secret, or webhook secret in a `NEXT_PUBLIC_`
+variable. Supabase publishable keys are public browser configuration, not server secrets.
 
 ## Database setup
 In Supabase > SQL Editor, run:
