@@ -7,8 +7,8 @@ import "./course-overview.css";
 import { AuthProvider } from "@/components/AuthProvider";
 
 export const metadata: Metadata = {
-  title: "Turning Forward Learning Portal",
-  description: "An interactive course from The Conviction Fiction Podcast.",
+  title: "TCF Learn | Skills for Your Next Chapter",
+  description: "30 practical courses in trade skills, technology, and reentry from The Conviction Fiction.",
   icons: { icon: "/learn-logo.png" }
 };
 

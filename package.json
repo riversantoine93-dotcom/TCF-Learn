@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "vitest run tests/*.test.ts && next build",
+    "build": "node scripts/build-learning-curriculum.mjs && vitest run tests/*.test.ts && next build",
     "start": "next start",
-    "test": "vitest run tests/*.test.ts",
+    "test": "node scripts/build-learning-curriculum.mjs && vitest run tests/*.test.ts",
     "test:watch": "vitest tests/*.test.ts"
   },
   "dependencies": {
@@ -23,7 +23,7 @@
     "vitest": "^3.2.4"
   },
   "engines": {
-    "node": "22.x"
+    "node": ">=22 <25"
   },
   "packageManager": "yarn@1.22.22"
 }

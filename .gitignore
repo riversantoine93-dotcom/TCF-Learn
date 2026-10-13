@@ -6,3 +6,7 @@ node_modules
 
 .vercel
 .env.local
+
+.task-seed/
+*.tsbuildinfo
+scripts/learning-lessons.json

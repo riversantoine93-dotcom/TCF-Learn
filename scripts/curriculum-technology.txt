@@ -1,0 +1,169 @@
+Digital Literacy Essentials|digital-literacy|Build confidence with devices, files, everyday apps, accessible settings, and reliable digital habits.
+Device vocabulary|Hardware is physical equipment while software provides instructions. Distinguishing them helps describe a problem accurately.|Label the hardware and software used in three everyday tasks.
+Operating systems|The operating system manages apps, files, and device settings. Its interface differs from the interface inside a website.|Identify which settings belong to a device versus an online account.
+Keyboard and touch skills|Shortcuts and selection gestures can reduce repetitive work. Practice with harmless sample text before changing important documents.|Use select, copy, paste, and undo on a practice paragraph.
+Files and folders|A file name, extension, and location help identify an item. Moving a shortcut may not move the original file.|Organize five practice files into clearly named folders.
+Saving and backups|Saving updates the working file; a backup provides another recoverable copy. Confirm a backup can actually be opened.|Create two copies of a practice document and verify both.
+Browser basics|Tabs organize pages while the address bar identifies location. Search results and advertisements are not the same as verified destinations.|Open three known public pages and record their domains.
+Downloads and uploads|Downloading moves a copy to your device; uploading sends a copy to another system. Verify the selected file before sending.|Practice identifying the right file from a sample upload list.
+Account recovery|Recovery methods help regain access but must remain protected. Keep recovery codes offline and never send them in an unsolicited message.|Create a recovery checklist without recording any actual secrets.
+Password management|Unique passwords limit damage when one service is compromised. A reputable password manager can support unique credentials.|List the properties of a strong account setup using fictional examples.
+Accessibility tools|Zoom, captions, keyboard navigation, and text settings can make tasks easier. Choose settings that support your needs rather than struggling silently.|Try two accessibility settings and record which task each improves.
+Storage awareness|Device storage and cloud storage are different locations. A synchronized deletion may affect more than one copy.|Draw where a sample document exists before and after synchronization.
+Updates and restarts|Updates can correct defects and security weaknesses. Save work and follow approved update procedures rather than dismissing prompts indefinitely.|Write a safe update routine for a personal device.
+Troubleshooting basics|Observe, reproduce, and isolate a problem before making changes. Record exact error wording and what happened immediately before it.|Write a troubleshooting note for a supplied app error.
+Digital service forms|Online forms may time out or reject unsupported formats. Gather information first and confirm submission rather than assuming a button worked.|Create a preparation checklist for a fictional application form.
+Digital confidence plan|Confidence grows through repeatable practice and successful recovery from small problems. Track useful tasks rather than comparing yourself to experts.|Build a one-week practice plan with five measurable digital tasks.
+
+Email and Professional Communication|email-communication|Write clear messages, manage attachments and calendars, and communicate professionally online.
+Email anatomy|To identifies primary recipients, CC provides visibility, and BCC hides recipient addresses from others. Choose fields based on purpose and privacy.|Assign recipient fields for three fictional communication scenarios.
+Clear subject lines|A subject should name the task or decision needed. Vague subjects make messages harder to prioritize and retrieve.|Rewrite five vague subjects into specific ones.
+Purpose-first writing|State the reason for the message early, then provide the details needed to act. Long introductions can hide the request.|Rewrite a sample email with its request in the first two sentences.
+Tone and respect|Professional tone is clear and considerate without unnecessary formality. Avoid language that assumes hostile intent from limited information.|Revise a frustrated message into factual, respectful wording.
+Attachment checks|Verify the file, recipient, and version before attaching. A document with similar naming may contain the wrong person's information.|Create a pre-send attachment checklist.
+Links and phishing|Unexpected requests for credentials or urgency deserve verification through a known channel. Display text may differ from a link's destination.|Identify warning signs in three fictional emails.
+Calendar invitations|An invitation should state date, time zone, location or link, and purpose. Acceptance does not resolve an unclear time zone.|Draft a complete fictional meeting invitation.
+Reply and reply-all|Reply-all sends information to the entire visible group. Confirm that everyone needs the response before including the whole thread.|Choose reply or reply-all for four sample situations.
+Follow-up messages|A follow-up should restate context and the needed next step without pretending a deadline was agreed when it was not.|Write a follow-up on an unanswered application question.
+Message organization|Folders, labels, and search improve retrieval when used consistently. An unread inbox is not a dependable task system.|Create three useful labels and a rule for using each.
+Response commitments|A realistic response window is better than an unsupported promise. Tell the recipient what you will do and when you will update them.|Draft an acknowledgment with a specific next update.
+Video meeting readiness|Test access, audio, and the meeting link before the start. Choose a suitable setting and confirm whether recording is expected.|Build a ten-minute pre-meeting checklist.
+Communicating a problem|Describe the event, effect, and requested action using facts. Include only the personal information necessary for resolution.|Write a concise service issue report from a scenario.
+Professional signatures|A signature should provide relevant contact information without unnecessary sensitive details. Keep its content appropriate to the audience.|Create a fictional job-search signature.
+Communication portfolio|Save examples that demonstrate clarity, follow-through, and respectful requests. Remove personal identifiers before sharing samples.|Compile three revised messages into a practice portfolio.
+
+Office Documents and Presentations|office-documents|Create readable documents, basic spreadsheets, and useful presentations for work and learning.
+Choosing a format|Documents explain, spreadsheets organize data, and presentations support speaking. Choose the tool that fits the task rather than forcing every task into slides.|Match six workplace tasks to suitable formats.
+Document structure|Headings and short sections help readers find information. Appearance should reflect hierarchy rather than random font changes.|Structure a one-page fictional procedure with three headings.
+Formatting consistency|Styles apply repeated formatting reliably. Manual spacing and repeated blank lines can make documents unstable when edited.|Apply a consistent title and heading style to sample text.
+Tables for information|Tables make repeated fields easier to compare. Use clear labels and avoid merging cells that readers need to sort or understand.|Create a contact table using fictional entries.
+Reviewing documents|Spelling tools support review but cannot confirm facts or tone. Check names, dates, links, and required details manually.|Proofread a sample document with planted errors.
+Spreadsheet cells|Cells hold values or formulas at row-column addresses. A formula uses references to calculate rather than storing a final typed answer.|Identify values, formulas, and references in a sample sheet.
+Basic formulas|Sum and average answer different questions. Check whether blank or text cells affect the intended calculation.|Calculate a sample expense total and average using formulas.
+Sorting and filters|Sorting changes order while filtering hides nonmatching records. Keep complete rows together so fields remain attached to the correct person.|Sort a fictional inventory and filter items below a stock threshold.
+Readable charts|Choose a chart that matches the question and use truthful scales. Decoration should not obscure the actual values.|Choose a suitable chart for three sample data questions.
+Presentation outlines|A presentation should guide one central message through a clear sequence. Slides work best when each supports a specific point.|Outline a five-slide introduction to a fictional community project.
+Slide readability|Large text, sufficient contrast, and limited content support viewing from a distance. A slide should not become a full script.|Simplify a crowded sample slide into three key points.
+Speaker notes|Notes hold prompts and supporting detail that do not belong on the screen. Use them to maintain flow without reading every word.|Write brief speaking notes for two practice slides.
+Exporting and sharing|PDF preserves layout while editable formats support collaboration. Confirm the exported version includes the intended pages and links.|Export a practice file and compare it with the original.
+Version control habits|Clear file names and a shared authoritative copy reduce confusion. Include dates or versions when the process requires them.|Design a naming convention for a small team's documents.
+Workplace project|A useful project combines accurate content, consistent structure, and a format suited to its reader. Review before handing it over.|Create a one-page report and three-slide summary using fictional data.
+
+IT Support Foundations|it-support|Learn help-desk habits, troubleshooting structure, device concepts, and service documentation.
+Support roles|A help desk receives, documents, and routes issues. Escalation is a professional action when authority or knowledge is insufficient.|Map responsibilities for a user, help desk, and specialist.
+Ticket quality|A ticket needs symptoms, impact, steps already tried, and identifiers appropriate to policy. Vague descriptions make diagnosis slower.|Turn a vague complaint into a structured fictional ticket.
+Reproducing issues|A reproducible issue provides evidence about conditions. Record exact steps without assuming the first visible symptom is the root cause.|Create reproduction steps for a supplied software problem.
+Change one variable|Changing several things at once hides which change mattered. Keep a record and a reversal plan for approved changes.|Sequence three possible troubleshooting actions and record expected results.
+Hardware basics|Processor, memory, and storage have different functions. Their roles help explain performance without assuming every slow device needs replacement.|Match device components to their primary functions.
+Software installation|Installation should follow approved sources and organizational permissions. Downloading a familiar name from an advertisement is not verification.|Build an approved-source checklist for a fictional application.
+User accounts|Authentication confirms identity while authorization defines permitted actions. A successful login does not grant every permission.|Distinguish three authentication problems from authorization problems.
+Network symptoms|A connection problem may involve the device, local network, or remote service. Test known alternatives to narrow the scope.|Create a diagnostic question tree for a fictional outage.
+Printer troubleshooting|Connection, queue, supplies, and application settings can each affect printing. Check evidence in an organized order.|Draft a noninvasive checklist for a sample printer complaint.
+Remote support consent|Users should know who is connecting and what access is granted. Follow approved tools and consent procedures.|Write a short remote-support introduction explaining the process.
+Data handling|Support staff should collect only necessary information. Never request a user's password or recovery secret as a shortcut.|Remove unnecessary sensitive details from a sample support note.
+Escalation decisions|Escalation should include collected evidence and attempted actions. Sending only a complaint forces the next person to restart.|Write an escalation package for an unresolved scenario.
+Knowledge articles|An article should specify scope, prerequisites, steps, and verification. Include when to stop and seek help.|Outline a knowledge article for a harmless settings task.
+Service confirmation|Ask whether the original problem is resolved and document the result. Completing an action does not prove the user's task now works.|Draft a closure message that confirms the actual outcome.
+Support portfolio|A portfolio can show tickets, question trees, and knowledge articles using fictional data. State which tasks were simulated.|Create a three-item help-desk portfolio with reflection notes.
+
+Networking Fundamentals|networking-fundamentals|Understand network paths, addressing, connection troubleshooting, and responsible administration.
+Network purpose|A network connects devices so they can exchange information. Local access and internet access are related but different capabilities.|Draw a small home network and label its components.
+Switches and routers|A switch connects local devices while a router connects networks. A combined consumer device may perform several roles.|Identify switching and routing functions on a sample diagram.
+IP addresses|An IP address identifies an interface for network communication. Address assignment and route availability both affect connectivity.|Label source and destination addresses in a sample packet journey.
+Private and public addresses|Private addresses are used within local networks while public addresses support internet routing. Their roles should not be confused with trustworthiness.|Classify supplied address examples using a reference sheet.
+DHCP concepts|DHCP can provide address configuration automatically. A device without suitable configuration may fail before reaching any website.|Identify missing configuration fields in a simulated device record.
+DNS concepts|DNS resolves names to address information. A naming failure can look like a broader connection failure.|Explain why a simulated direct connection works while a name lookup fails.
+Ports and services|Port numbers help distinguish service endpoints. An open port is not proof that its service is trustworthy or correctly configured.|Match common service examples to a supplied port reference.
+Wi-Fi conditions|Signal strength, interference, and network settings can affect wireless access. Strong signal does not establish internet availability.|Compare three wireless symptoms and propose a safe observation.
+Cables and links|A physical link can fail through damage, loose connections, or incompatible components. Inspect without opening powered equipment.|Build a visual inspection checklist for a sample desk network.
+Latency and bandwidth|Latency measures delay while bandwidth describes capacity. A high-capacity link can still have noticeable delay.|Interpret three simplified network performance examples.
+Firewall purpose|A firewall applies traffic rules according to policy. Disabling it to make a task work can expose unrelated services.|Write an escalation request instead of bypassing a firewall rule.
+Network segmentation|Segmentation separates traffic or access between groups. Its purpose should be defined before changing a network.|Sketch guest and staff segments on a fictional network.
+Troubleshooting sequence|Check scope, physical connection, configuration, and service availability systematically. Record what each observation rules out.|Build a troubleshooting flow for a simulated connection problem.
+Network documentation|A diagram and change log support shared understanding. Record device roles without publishing passwords or sensitive management details.|Create a labeled diagram and change record for a fictional office.
+Career learning plan|Networking skills grow through controlled labs and clear explanations. Never test or scan systems without permission.|Write a permitted-lab learning plan with three measurable outcomes.
+
+Cybersecurity Everyday Practices|cybersecurity-basics|Protect accounts, recognize scams, handle information responsibly, and report security concerns.
+Security goals|Confidentiality protects access, integrity protects accuracy, and availability supports use. A control may support more than one goal.|Classify five example controls by the goal they support.
+Threats and vulnerabilities|A threat can exploit a weakness but is not the weakness itself. Naming both helps choose a relevant control.|Separate threat, vulnerability, and possible impact in three scenarios.
+Unique passwords|Password reuse lets one compromise affect several services. Unique credentials and suitable management reduce that exposure.|Audit fictional account practices without recording real passwords.
+Multi-factor authentication|A second factor adds protection but does not remove every scam risk. Approve only authentication requests you initiated.|Identify the safest response to an unexpected approval prompt.
+Phishing clues|Urgency, impersonation, and requests for secrets are warning signs. Verify through a contact method you already trust.|Annotate three fictional phishing messages.
+Software updates|Updates can address known weaknesses. Install through approved mechanisms rather than links in unsolicited warnings.|Write a routine for checking authorized update settings.
+Device locks|A lock reduces casual access when a device is unattended. It does not replace encryption, permissions, or physical protection.|Create a personal-device lock and travel checklist.
+Least privilege|Give only the access needed for the task and review it when roles change. Convenience is not sufficient reason for permanent broad access.|Design roles for a fictional shared project folder.
+Safe sharing|Confirm audience and sensitivity before sharing a file. A public link can expose information beyond the intended recipients.|Choose appropriate access settings for three example files.
+Backups and recovery|A recoverable backup should be separate enough to survive likely failures. Test restoration rather than trusting a completed indicator alone.|Write a backup-and-restore test using fictional files.
+Scam payments|Unexpected payment pressure should trigger independent verification. Gift-card or unusual transfer demands are common warning signs.|Draft a verification message for a fictional suspicious invoice.
+Public networks|Unknown networks create additional exposure concerns. Follow organizational guidance and avoid sensitive work when conditions are untrusted.|Create a safe public-network decision checklist.
+Incident reporting|Report observed facts quickly through approved channels. Preserve evidence without forwarding harmful files or investigating beyond your role.|Write an incident note with time, symptoms, and action taken.
+Social engineering|Manipulation can happen by phone, text, or in person. Authority claims should be verified before granting information or access.|Role-play a respectful refusal to share a recovery code.
+Security habits plan|A sustainable plan has specific routines and recovery steps. Prioritize high-impact changes rather than chasing perfect security.|Create a 30-day plan for account protection and verification habits.
+
+Web Design Foundations|web-design|Plan accessible pages, understand HTML and CSS, and build a simple original portfolio site.
+Audience and purpose|A website should help a defined audience complete a task. Decide the task before choosing visual decoration.|Write a purpose statement for a fictional community resource page.
+Page structure|HTML describes content structure through elements. Heading levels should communicate hierarchy rather than font preference.|Outline a page with one main heading and useful sections.
+Links and navigation|Links should explain their destination. Navigation works best when labels match user tasks and remain consistent.|Create a five-link navigation plan with clear labels.
+Images and alternatives|Alternative text communicates meaningful image content. Decorative images may need empty alternatives rather than distracting descriptions.|Write alternatives for three meaningful images and identify one decorative image.
+CSS selectors|Selectors choose which elements receive styles. Narrow, understandable rules are easier to maintain than repeated overrides.|Match three selectors to elements in a sample page.
+Spacing and hierarchy|Consistent spacing shows relationships between items. Group related content and separate unrelated sections.|Sketch a card layout using a small spacing scale.
+Responsive layouts|A responsive page adapts to available space. Avoid fixed widths that force small screens to scroll horizontally.|Plan desktop and mobile layouts for a three-card page.
+Color and contrast|Text and controls need sufficient contrast against their backgrounds. Do not rely only on color to communicate a result.|Compare two sample palettes and add a non-color status cue.
+Forms and labels|A form input needs a clear label and useful feedback. Placeholders do not replace persistent labels.|Design a fictional contact form with field labels and error wording.
+Keyboard navigation|Interactive controls should be reachable and usable with a keyboard. Visible focus helps people understand their position.|Create a keyboard-only test checklist for a sample page.
+Content clarity|Short headings and direct descriptions help visitors decide what to do. Remove technical implementation detail that does not help them.|Rewrite a vague webpage introduction for its intended audience.
+Performance basics|Large assets and unnecessary code can slow a page. Match image dimensions and file formats to the display need.|List three optimization opportunities on a fictional page.
+Publishing concepts|A domain identifies a destination while hosting serves the site's files. Verify links and content after publication.|Draw the relationship between a domain, hosting, and browser.
+Page testing|Check navigation, form behavior, responsive layout, and accessibility. A screenshot alone cannot establish that interactions work.|Build a practical test plan with expected results.
+Portfolio project|An original portfolio should explain purpose, design choices, and tested behavior. Credit any permitted external assets.|Create a project outline and completion checklist for a simple page.
+
+Coding Foundations with JavaScript|javascript-foundations|Practice programming logic, data, functions, and debugging through small browser-safe exercises.
+Programs and instructions|A program follows explicit instructions rather than interpreting intent. Breaking a task into steps reveals missing assumptions.|Write step-by-step pseudocode for a simple score calculator.
+Variables and values|Variables refer to values that a program uses. Clear names communicate purpose and reduce confusion.|Name and initialize values for a fictional shopping list.
+Data types|Strings, numbers, and booleans serve different roles. Converting between them without checking can produce unexpected results.|Classify ten sample values and explain two type mismatches.
+Operators|Arithmetic and comparison operators answer different questions. Check the intended operation before interpreting a result.|Evaluate six simple expressions and state their purpose.
+Conditions|A condition selects behavior based on a test. Consider the false branch and boundary values as well as the expected case.|Write logic for a fictional age-category example with boundary checks.
+Arrays|An array organizes an ordered collection of values. Its indices refer to positions rather than labels.|Create an array of practice tasks and access the first and last items.
+Loops|A loop repeats instructions while a defined condition permits it. A missing exit condition can cause unintended repetition.|Trace a short loop and identify when it stops.
+Functions|A function groups a task with defined inputs and outputs. Keeping its purpose focused makes testing easier.|Write a function that converts a supplied count into a total.
+Objects|Objects organize named properties. They can describe one record without relying on separate variables for each field.|Create a fictional contact object and read two properties.
+Input validation|Inputs may be missing or in an unexpected form. Validate before using them in calculations or decisions.|Define checks for a fictional quantity field.
+DOM concepts|The document object model represents page elements that scripts can read or update. Use safe text updates for ordinary content.|Describe how a button could update a displayed practice counter.
+Events|An event reports an interaction or change. Handlers should respond only to the intended action and avoid duplicate work.|Trace a click event from a practice button to its handler.
+Debugging|Read errors, reproduce the issue, and check assumptions before rewriting everything. Small isolated tests reveal causes.|Diagnose a supplied off-by-one error using recorded values.
+Testing cases|A useful test covers normal, boundary, and invalid inputs. Expected results should follow the specification.|Write six cases for a simple calculator function.
+Coding project|A small working tool should have a clear purpose, validated inputs, and visible results. Explain its limits honestly.|Plan a browser-only practice checklist and its test cases.
+
+Data and Spreadsheet Skills|data-spreadsheets|Organize trustworthy data, analyze simple questions, and communicate findings without exposing personal information.
+Data questions|Start with a question that the available data can answer. A large dataset does not guarantee relevance or accuracy.|Write three answerable questions for a fictional attendance table.
+Rows and columns|One row should usually represent one record while columns represent consistent fields. Mixing totals into raw records complicates analysis.|Design a clean table for fictional workshop attendance.
+Field definitions|A field needs a clear meaning and permitted values. Ambiguous labels make comparisons unreliable.|Create a five-field data dictionary with examples.
+Data entry checks|Validation reduces missing or inconsistent entries. It cannot establish whether a plausible value is factually correct.|Design validation rules for dates and attendance statuses.
+Cleaning duplicates|A duplicate may be a repeated record or a legitimate repeated event. Confirm the intended unit of observation before deleting.|Classify duplicates in a supplied fictional dataset.
+Missing values|Missing information is not automatically zero. State how missing values are handled so results remain understandable.|Explain the effect of treating a missing score as zero.
+Useful formulas|Formulas should reflect the question and use the intended range. Verify a result with a small manual sample.|Calculate a fictional expense total and cross-check three entries.
+Conditional logic|Conditional formulas classify records using explicit rules. Document thresholds so readers understand the categories.|Define a status rule for a fictional task table.
+Lookup concepts|A lookup connects a key to another record. Duplicate or missing keys can produce incorrect matches.|Audit a sample lookup table for ambiguous identifiers.
+Pivot summaries|A grouped summary counts or aggregates records by category. Check that the source includes the complete intended data.|Summarize fictional attendance by week and location.
+Charts and scales|Chart type and axis choices influence interpretation. Label units and avoid cropping scales in ways that exaggerate small changes.|Choose a chart for three supplied questions and explain the scale.
+Percentages|A percentage depends on its denominator. Comparing rates without checking who is counted can mislead.|Calculate attendance rates using supplied counts and denominators.
+Privacy and minimization|Use only data needed for the task and restrict identifiers. De-identification requires more than removing names in some contexts.|Remove unnecessary personal fields from a fictional report.
+Findings and limits|A result describes the observed data; it does not automatically explain causation. State missing information and scope.|Write a finding with one clear limitation from sample data.
+Data project|A good project includes the question, cleaned data, method, result, and limitations. Reproducible steps support trust.|Create a short analysis report using fictional program data.
+
+Responsible AI and Digital Work|responsible-ai|Use AI tools for practical work while checking accuracy, protecting information, and retaining human judgment.
+What AI generates|A language model generates likely responses from patterns. Fluent wording does not establish that the response is true.|Identify three claims in a sample response that require verification.
+Task suitability|Drafting and brainstorming differ from high-stakes decisions. Choose tasks where you can evaluate the output competently.|Classify six proposed AI uses by how much verification they need.
+Clear prompts|A prompt should state task, audience, context, and output requirements. Unnecessary sensitive information should be omitted.|Rewrite a vague prompt for a fictional workplace message.
+Source verification|Check important claims against appropriate primary sources. A citation that looks plausible may still be inaccurate or nonexistent.|Create a verification checklist for a sample AI-generated claim.
+Privacy boundaries|Do not paste protected personal, customer, or employer information into an unapproved tool. Use fictional or minimized examples.|Rewrite a prompt to remove identifying details.
+Editing drafts|AI drafts still need review for facts, tone, and completeness. The person sending the message owns the final wording.|Edit a fictional draft against a stated checklist.
+Learning with AI|Ask for explanations and practice rather than outsourcing all thinking. Attempt a task yourself before comparing a generated solution.|Design a practice sequence that includes your own first attempt.
+Bias and assumptions|Outputs may reflect incomplete context or harmful assumptions. Inspect whose circumstances are missing before relying on the advice.|Find and revise assumptions in a supplied career suggestion.
+Job-search support|AI can help organize experience but should not invent credentials or employment. Verify every claim before submitting.|Review a fictional resume draft for unsupported claims.
+Spreadsheet assistance|Generated formulas need tests with known examples. A formula that runs may still calculate the wrong thing.|Create three test cases for a suggested spreadsheet formula.
+Creative rights|Permission, attribution, and usage terms matter when reusing content. AI generation does not automatically resolve those obligations.|Write a reuse checklist for a fictional promotional asset.
+Automation boundaries|Automation should have defined inputs, permissions, and failure handling. Human review belongs where errors could have material consequences.|Map an email-drafting workflow with a review step.
+Recognizing uncertainty|Ask what is known, assumed, and missing. Confidence should come from evidence rather than polished language.|Rewrite an overconfident answer to state its uncertainty.
+Output evaluation|Evaluate an output against the task's requirements and actual results. Similarity to your prompt is not a complete quality check.|Score a fictional output using a five-point rubric.
+Responsible workflow|A reliable workflow combines clear prompts, safe inputs, verification, and human approval where needed. Document what was checked.|Create a one-page AI-use procedure for a fictional small business.

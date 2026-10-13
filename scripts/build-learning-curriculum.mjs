@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import { build } from 'esbuild';
+const courses=[];const lessons=[];
+for (const category of ['trades','technology','reentry']) {
+ const blocks=fs.readFileSync(`scripts/curriculum-${category}.txt`,'utf8').trim().split(/\n\s*\n/);
+ for(const block of blocks){
+  const [header,...lines]=block.split('\n');const [title,slug,description]=header.split('|');
+  if(lines.length!==15) throw Error(`${slug}: ${lines.length} lessons`);
+  const outline=lines.map((line,i)=>{const [title,teaching,practice]=line.split('|');if(!title||!teaching||!practice)throw Error(slug);return {number:i+1,title}});
+  courses.push({slug,title,description,category,duration_minutes:225,lesson_count:15,outline,legacy_url:null});
+  lines.forEach((line,i)=>{
+   const [title,teaching,practice]=line.split('|');
+   const correct=teaching.split(/(?<=\.)\s+/)[0];
+   const options=[correct,'Skip verification and act on the first assumption.','Leave the task undocumented so mistakes cannot be traced.','Use the same approach in every situation without checking context.'];
+   // Stable varied answer positions, with a server-only correct index.
+   const rotation=i%4;const rotated=[...options.slice(rotation),...options.slice(0,rotation)];
+   lessons.push({course_slug:slug,number:i+1,title,content:{objective:`Apply ${title.toLowerCase()} to a realistic ${titleFor(category)} task.`,teaching,context:description,practice,reflection:`In your own words, explain ${title.toLowerCase()} and describe one situation where the idea would change your next action.`,actionPrompt:`Complete this practice: ${practice} Record your result, the information you checked, and one question you still need to resolve.`,question:`Which statement correctly applies the lesson on ${title.toLowerCase()}?`,options:rotated,correctIndex:rotated.indexOf(correct),feedback:`${correct} Check the lesson's conditions and verify your information before acting.`,minutes:15}});
+  });
+ }
+}
+function titleFor(c){return c==='trades'?'supervised workplace':c==='technology'?'digital-work':'return-home planning'}
+await build({entryPoints:['scripts/legacy-curriculum.ts'],bundle:true,platform:'node',format:'esm',outfile:'/tmp/tcf-legacy-curriculum.mjs'});
+const {legacyCourses,legacyLessons}=await import('/tmp/tcf-legacy-curriculum.mjs');
+courses.unshift(...legacyCourses);lessons.push(...legacyLessons);
+if(courses.length!==30||new Set(courses.map(c=>c.slug)).size!==30)throw Error('Exactly thirty unique courses required');
+fs.writeFileSync('lib/learning/catalog.json',JSON.stringify(courses,null,2)+'\n');
+fs.writeFileSync('scripts/learning-lessons.json',JSON.stringify(lessons,null,2)+'\n');
+console.log(`${courses.length} courses; ${lessons.length} lessons; all courses have at least 15 lessons.`);

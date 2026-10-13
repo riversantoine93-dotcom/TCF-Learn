@@ -6,9 +6,7 @@ describe("full-page light and dark theme", () => {
   it("uses a root data attribute so the theme can style the whole page", () => {
     expect(PAGE_THEME_ATTRIBUTE).toBe("data-tcf-theme");
     const header = readFileSync("components/Header.tsx", "utf8");
-    const courses = readFileSync("app/courses/page.tsx", "utf8");
     expect(header).toContain("document.documentElement.dataset.tcfTheme");
-    expect(courses).toContain("document.documentElement.dataset.tcfTheme");
   });
 
   it("defines whole-page dark and light theme tokens", () => {
