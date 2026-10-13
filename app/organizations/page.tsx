@@ -45,7 +45,7 @@ export default function OrganizationsPage(){
   return <main><Header/><section className="organization-page">
     <div className="organization-shell">
       <span className="eyebrow">ORGANIZATIONAL LEARNING</span>
-      <h1>Equip a full cohort with both TCF Learn courses.</h1>
+      <h1>Equip a full cohort with all 30 TCF Learn courses.</h1>
       <p className="organization-lead">Every learner seat includes <strong>Turning Forward</strong> and <strong>Thought to Freedom: Correcting Criminal Thinking Errors</strong>. The purchaser becomes the primary organization administrator and learner progress can be managed from one console.</p>
 
       <div className="organization-plan-grid">
@@ -63,7 +63,7 @@ export default function OrganizationsPage(){
       <form className="auth-card organization-enroll-card" onSubmit={submit}>
         <h2>{selectedPlan.salesMode==="contact"?"Contact for pricing":"Enroll your organization"}</h2>
         <label>Organization / institution name<input required value={organizationName} onChange={e=>setOrganizationName(e.target.value)} placeholder="Example: Common Good Atlanta"/></label>
-        <div className="notice"><strong>{selectedPlan.seats} learner logins + {selectedPlan.adminLicenses} primary admin login · {selectedPlan.displayPrice}</strong><br/>Includes both TCF Learn courses for every learner. The primary admin login is separate and does not consume one of the learner licenses.</div>
+        <div className="notice"><strong>{selectedPlan.seats} learner logins + {selectedPlan.adminLicenses} primary admin login · {selectedPlan.displayPrice}</strong><br/>Includes all 30 TCF Learn courses for every learner. The primary admin login is separate and does not consume one of the learner licenses.</div>
         {message&&<div className="notice" role="status">{message}</div>}
         <button className="button full" type="submit" disabled={busy}>{busy?"Opening secure checkout…":selectedPlan.salesMode==="contact"?"Contact for "+selectedPlan.seats+"-seat pricing":"Purchase "+selectedPlan.seats+"-seat license"}</button>
         <small>Already part of an organization? <Link href="/login?mode=user">User Login</Link> or <Link href="/login?mode=admin">Admin Login</Link>.</small>

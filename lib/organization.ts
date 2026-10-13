@@ -1,4 +1,4 @@
-import type { DashboardCourseSlug } from "./dashboard-enrollments";
+import learningCatalog from "./learning/catalog.json";
 
 export type OrganizationRole = "admin" | "co_admin" | "learner";
 export type OrganizationMemberStatus = "invited" | "active" | "removed";
@@ -22,7 +22,11 @@ export type OrganizationSummary = {
   status: string;
 };
 
-export const ORGANIZATION_COURSE_SLUGS: DashboardCourseSlug[] = ["turning-forward", "thought-to-freedom"];
+export const ORGANIZATION_COURSE_SLUGS: string[] = learningCatalog.map(course => course.slug);
+
+export function coursesForOrganizationRole(role: OrganizationRole, available: string[]) {
+  return role === "learner" ? available : available.filter(slug => ["turning-forward", "thought-to-freedom"].includes(slug));
+}
 
 export function learnerSeatsUsed(rows: Array<Pick<OrganizationMembership, "role" | "status">>) {
   return rows.filter((row) => row.role === "learner" && row.status !== "removed").length;

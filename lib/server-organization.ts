@@ -1,5 +1,5 @@
 import { getSupabaseAdmin } from "./supabase-admin";
-import { ORGANIZATION_COURSE_SLUGS } from "./organization";
+import { ORGANIZATION_COURSE_SLUGS, coursesForOrganizationRole, type OrganizationRole } from "./organization";
 import { isOrganizationPlanKey, ORGANIZATION_PLANS, type OrganizationPlanKey } from "./organization-plans";
 import { createSupabaseUser, deleteSupabaseUser, normalizeEmail } from "./server-payments";
 import { saveSecurityQuestions, validateSecurityAnswers } from "./server-security";
@@ -110,6 +110,12 @@ export async function activateOrganizationOwner(organizationId: string, userId: 
 
 export async function grantOrganizationCourseAccess(organizationId: string, userId: string) {
   const admin = getSupabaseAdmin();
+  const [organization, membership] = await Promise.all([
+    admin.from("organizations").select("status").eq("id", organizationId).eq("status", "active").maybeSingle(),
+    admin.from("organization_memberships").select("role").eq("organization_id", organizationId).eq("user_id", userId).eq("status", "active").maybeSingle(),
+  ]);
+  if (organization.error || membership.error) throw organization.error || membership.error;
+  if (!organization.data || !membership.data) throw new Error("An active organization membership is required.");
   const { data: courseRows, error: courseError } = await admin
     .from("organization_course_access")
     .select("course_slug")
@@ -117,14 +123,20 @@ export async function grantOrganizationCourseAccess(organizationId: string, user
     .eq("active", true);
   if (courseError) throw courseError;
 
-  const courseSlugs = (courseRows || []).map((row: any) => row.course_slug);
+  const courseSlugs = coursesForOrganizationRole(membership.data.role as OrganizationRole, (courseRows || []).map((row: any) => row.course_slug));
   if (!courseSlugs.length) return;
   const { data: existing, error: existingError } = await admin
     .from("enrollments")
     .select("course_slug,active")
     .eq("user_id", userId)
+    .eq("organization_id", organizationId)
     .in("course_slug", courseSlugs);
   if (existingError) throw existingError;
+  if ((existing || []).some((row: any) => !row.active)) {
+    const { error: reactivateError } = await admin.from("enrollments").update({ active: true })
+      .eq("user_id", userId).eq("organization_id", organizationId).in("course_slug", courseSlugs);
+    if (reactivateError) throw reactivateError;
+  }
   const existingSlugs = new Set((existing || []).map((row: any) => row.course_slug));
   const rows = courseSlugs.filter((courseSlug: string) => !existingSlugs.has(courseSlug)).map((courseSlug: string) => ({
     user_id: userId,

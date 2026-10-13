@@ -12,13 +12,13 @@ The connected Turning Forward Supabase project contains `learning_courses`, `lea
 
 The generated seed is reproducible with `node scripts/build-learning-curriculum.mjs` followed by `node scripts/build-learning-seed.mjs`. Schema source is `supabase/learning-catalog.sql`. Do not grant catalog-wide access or replace assignments implicitly.
 
-## Access decision still required
+## Approved activation
 
-Automatic approval review rejected bulk granting all catalog courses to existing organizations and members because that shared-access scope was not explicit. Current assignments remain unchanged. The new courses are available as catalog outlines until learner access is explicitly approved and applied. The existing two-course license defaults remain unchanged pending that decision.
+Antoine approved production publication and access to all 30 courses for current and future active organization learner seats on October 13, 2026. Activation is limited to active organizations and active learner memberships. Pending, removed, and inactive memberships and inactive organization licenses are not activated. Existing administrator lesson entitlements remain unchanged. All 30 courses are included in future organization learner grants.
 
 ## Deployment
 
-This change is prepared on an isolated GitHub branch and a Vercel preview. Production replacement is a separate action. Public Supabase configuration is enabled for preview using the same existing values. Server credentials remain in Vercel; no credentials are committed.
+The approved rebuild is published from the reviewed source branch to the production Vercel project. Public Supabase configuration is enabled for preview using the same existing values. Server credentials remain in Vercel; no credentials are committed.
 
 ## Verification
 
