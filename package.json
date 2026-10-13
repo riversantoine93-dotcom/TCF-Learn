@@ -10,15 +10,16 @@
     "test:watch": "vitest tests/*.test.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
     "next": "16.3.3",
     "react": "19.2.8",
-    "react-dom": "19.2.8",
-    "@supabase/supabase-js": "^2.57.4"
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@types/node": "22.18.0",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
+    "esbuild": "0.25.12",
     "typescript": "5.9.2",
     "vitest": "^3.2.4"
   },
