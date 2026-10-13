@@ -123,7 +123,7 @@ export async function grantOrganizationCourseAccess(organizationId: string, user
     .eq("active", true);
   if (courseError) throw courseError;
 
-  const courseSlugs = coursesForOrganizationRole(membership.data.role as OrganizationRole, (courseRows || []).map((row: any) => row.course_slug));
+  const courseSlugs = coursesForOrganizationRole(membership.data.role as OrganizationRole, (courseRows || []).map((row: any) => row.course_slug).filter((slug: string) => ORGANIZATION_COURSE_SLUGS.includes(slug)));
   if (!courseSlugs.length) return;
   const { data: existing, error: existingError } = await admin
     .from("enrollments")

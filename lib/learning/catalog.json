@@ -806,72 +806,72 @@
     "legacy_url": null
   },
   {
-    "slug": "warehouse-logistics",
-    "title": "Warehouse and Logistics Readiness",
-    "description": "Develop warehouse vocabulary, inventory accuracy, safe-work awareness, and entry-level logistics habits.",
+    "slug": "cdl-preparation",
+    "title": "CDL Training and Permit Preparation",
+    "description": "Prepare for a commercial driving career with CDL knowledge study, safety fundamentals, and a plan for registered instructor-led training. This is preparation, not certified ELDT or behind-the-wheel training.",
     "category": "trades",
     "duration_minutes": 225,
     "lesson_count": 15,
     "outline": [
       {
         "number": 1,
-        "title": "Warehouse flow"
+        "title": "CDL classes and career routes"
       },
       {
         "number": 2,
-        "title": "Hazard recognition"
+        "title": "Commercial learner permit preparation"
       },
       {
         "number": 3,
-        "title": "Receiving checks"
+        "title": "Entry-level driver training"
       },
       {
         "number": 4,
-        "title": "Item identification"
+        "title": "Vehicle inspection awareness"
       },
       {
         "number": 5,
-        "title": "Barcode concepts"
+        "title": "Controls and backing concepts"
       },
       {
         "number": 6,
-        "title": "Storage locations"
+        "title": "Seeing and communicating"
       },
       {
         "number": 7,
-        "title": "Picking accuracy"
+        "title": "Speed and space management"
       },
       {
         "number": 8,
-        "title": "Packing standards"
+        "title": "Road weather and terrain"
       },
       {
         "number": 9,
-        "title": "Shipping documents"
+        "title": "Air brake fundamentals"
       },
       {
         "number": 10,
-        "title": "Inventory counts"
+        "title": "Combination vehicle fundamentals"
       },
       {
         "number": 11,
-        "title": "FIFO and rotation"
+        "title": "Cargo and securement awareness"
       },
       {
         "number": 12,
-        "title": "Handling plans"
+        "title": "Hazards and emergency planning"
       },
       {
         "number": 13,
-        "title": "Equipment authorization"
+        "title": "Fatigue and driver readiness"
       },
       {
         "number": 14,
-        "title": "Exception reporting"
+        "title": "Hours of service and records"
       },
       {
         "number": 15,
-        "title": "Shift readiness"
+        "title": "Skills training and career action plan"
       }
     ],
     "legacy_url": null

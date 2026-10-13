@@ -25,3 +25,9 @@ The approved rebuild is published from the reviewed source branch to the product
 The application build and TypeScript checks pass. Tests cover the 30-course category counts, unique identifiers, lesson counts and numbering, original-course routes, lesson requirements, wrong-answer rejection, and sequential unlocking. Database checks confirm 474 actual lessons, no count mismatches, RLS on all new tables, and no authenticated direct progress writes.
 
 Browser visual testing was unavailable in this session. Course completion is not a trade license, degree, clinical service, or vocational certification. Estimated durations include practice and are not guaranteed contact hours.
+
+## CDL catalog update
+
+CDL Training and Permit Preparation replaces Warehouse and Logistics Readiness in the published trade catalog, retaining exactly 30 courses and 474 published lessons. The warehouse course, lesson content, and learner responses are archived rather than deleted. CDL preparation has 15 lessons and links to FMCSA registered training providers and Georgia's official CDL guide. It does not replace registered ELDT, behind-the-wheel training, state testing, or a CDL credential. Future learner grants filter archived slugs out of the active catalog.
+
+Sources checked October 13, 2026: https://tpr.fmcsa.dot.gov/FAQ/Topics/drivers%2Ctraining-requirements ; https://dds.georgia.gov/section-1-introduction ; https://dds.georgia.gov/section-5 ; https://dds.georgia.gov/section-6 ; https://www.fmcsa.dot.gov/regulations/hours-service/summary-hours-service-regulations .
