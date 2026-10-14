@@ -1,3 +1,4 @@
+import moduleContext from "../lib/learning/legacy-context.json" with {type:"json"};
 const sentence=s=>s.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(x=>x.trim()).filter(Boolean)||[s];
 const lower=s=>s.charAt(0).toLowerCase()+s.slice(1);
 const wrong={
@@ -10,7 +11,8 @@ export function selfPacedContent(row,course){
  const old=row.content,k=old.knowledge;const category=course.category;const title=row.title;const localTitle=title.includes(': ')?title.split(': ').slice(1).join(': '):title;
  const moduleIndex=Math.floor((row.number-1)/3);const moduleLesson=(row.number-1)%3;
  const blockText=(old.blocks||[]).filter(b=>b.type==='paragraph'||b.type==='key-idea').map(b=>b.text);
- const base=old.teaching||[old.intro,old.sectionBody,...blockText].filter(Boolean).join(' ')||old.objective;
+ const context=moduleContext[row.course_slug]?.[moduleIndex+1];
+ const base=old.teaching||[context?.definition,context?.keyIdea,old.intro,old.sectionBody,...blockText].filter(Boolean).join(' ')||old.objective;
  const core=sentence(base)[0];const tip=k.focus||k.tips[0];
  const judgment=category==='trades'?'the approved specification, task conditions, and your training and authorization':category==='technology'?'the actual inputs, intended result, source, and access permissions':'the facts, your responsibilities, available support, and the other people’s boundaries';
  const aim=category==='trades'?'reduce avoidable mistakes and recognize when qualified supervision is needed':category==='technology'?'work accurately, protect information, and explain the result you obtain':'make a considered choice, communicate clearly, and build dependable next steps';
