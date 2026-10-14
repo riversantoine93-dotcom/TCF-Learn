@@ -1,197 +1,36 @@
 "use client";
-
-import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
-import Header from "@/components/Header";
-import { supabase } from "@/lib/supabase";
-import "./facilitator.css";
-
-type CourseSlug="turning-forward"|"thought-to-freedom";
-
-type Guide={
-  id:string;
-  courseSlug:CourseSlug;
-  courseTitle:string;
-  moduleNumber:number;
-  moduleTitle:string;
-  lessonNumber:number;
-  lessonTitle:string;
-  overview:string;
-  facilitationGoal:string;
-  discussionPoints:string[];
-  facilitatorNotes:string[];
-  script:{
-    opening:string;
-    teaching:string;
-    discussion:string;
-    activity:string;
-    closing:string;
-  };
-};
-
+import {useEffect,useMemo,useState} from 'react';
+import Link from 'next/link';
+import Header from '@/components/Header';
+import {supabase} from '@/lib/supabase';
+import type {FacilitatorGuide,FacilitatorCourse} from '@/lib/facilitator-guides';
+import './facilitator.css';
 export default function FacilitatorGuidePage(){
-  const [course,setCourse]=useState<CourseSlug>("turning-forward");
-  const [guides,setGuides]=useState<Guide[]>([]);
-  const [selectedId,setSelectedId]=useState("");
-  const [message,setMessage]=useState("");
-  const [loading,setLoading]=useState(true);
-
-  async function authHeaders(){
-    if(!supabase)return null;
-    const {data:{session}}=await supabase.auth.getSession();
-    return session?.access_token?{Authorization:"Bearer "+session.access_token}:null;
-  }
-
-  async function load(nextCourse:CourseSlug){
-    setLoading(true);
-    setMessage("");
-    const headers=await authHeaders();
-    if(!headers){
-      window.location.href="/login?mode=admin";
-      return;
-    }
-
-    const res=await fetch("/api/organization/facilitator-guides?course="+encodeURIComponent(nextCourse),{
-      headers,
-      cache:"no-store",
-    });
-    const body=await res.json().catch(()=>({}));
-
-    if(!res.ok){
-      setMessage(body.error||"Unable to load facilitator guides.");
-      setGuides([]);
-      setLoading(false);
-      return;
-    }
-
-    const nextGuides=body.guides||[];
-    setGuides(nextGuides);
-    setSelectedId(nextGuides[0]?.id||"");
-    setLoading(false);
-  }
-
-  useEffect(()=>{load(course)},[course]);
-
-  const modules=useMemo(()=>{
-    const map=new Map<number,string>();
-    for(const guide of guides)map.set(guide.moduleNumber,guide.moduleTitle);
-    return Array.from(map.entries()).map(([number,title])=>({number,title}));
-  },[guides]);
-
-  const selected=guides.find(guide=>guide.id===selectedId)||guides[0]||null;
-  const moduleGuides=selected
-    ?guides.filter(guide=>guide.moduleNumber===selected.moduleNumber)
-    :[];
-
-  function chooseModule(moduleNumber:number){
-    const first=guides.find(guide=>guide.moduleNumber===moduleNumber);
-    if(first)setSelectedId(first.id);
-  }
-
-  return <main>
-    <Header/>
-    <section className="facilitator-page">
-      <div className="facilitator-heading">
-        <div>
-          <span className="eyebrow">ADMIN / CO-ADMIN ONLY</span>
-          <h1>Facilitator Guide</h1>
-          <p>Lesson overviews, discussion prompts, and word-for-word language for live classes and group discussions.</p>
-        </div>
-        <Link className="button" href="/organization/admin">Back to Admin Dashboard</Link>
-      </div>
-
-      <div className="facilitator-safety-note">
-        <strong>Facilitation standard</strong>
-        <span>Invite reflection without forcing disclosure. Keep accountability separate from shame. Learner written responses remain private.</span>
-      </div>
-
-      <div className="facilitator-course-tabs" role="tablist" aria-label="Choose course">
-        <button className={course==="turning-forward"?"active":""} onClick={()=>setCourse("turning-forward")}>Turning Forward</button>
-        <button className={course==="thought-to-freedom"?"active":""} onClick={()=>setCourse("thought-to-freedom")}>Thought to Freedom</button>
-      </div>
-
-      {message&&<div className="notice">{message}</div>}
-      {loading&&<div className="notice">Loading facilitator material…</div>}
-
-      {!loading&&selected&&<div className="facilitator-layout">
-        <aside className="facilitator-nav">
-          <label>
-            Module
-            <select value={selected.moduleNumber} onChange={event=>chooseModule(Number(event.target.value))}>
-              {modules.map(module=><option key={module.number} value={module.number}>
-                {module.number===0?"Orientation":"Module "+module.number}: {module.title}
-              </option>)}
-            </select>
-          </label>
-
-          <div className="facilitator-lesson-list">
-            {moduleGuides.map(guide=><button
-              type="button"
-              key={guide.id}
-              className={guide.id===selected.id?"active":""}
-              onClick={()=>setSelectedId(guide.id)}
-            >
-              <small>{guide.lessonNumber===0?"Orientation":"Lesson "+guide.lessonNumber}</small>
-              <strong>{guide.lessonTitle}</strong>
-            </button>)}
-          </div>
-        </aside>
-
-        <article className="facilitator-guide">
-          <header className="facilitator-guide-header">
-            <span>{selected.courseTitle} · {selected.moduleNumber===0?"Orientation":"Module "+selected.moduleNumber}</span>
-            <h2>{selected.lessonTitle}</h2>
-            <p>{selected.moduleTitle}</p>
-          </header>
-
-          <section className="facilitator-card">
-            <span className="facilitator-label">LESSON OVERVIEW</span>
-            <p>{selected.overview}</p>
-          </section>
-
-          <section className="facilitator-card">
-            <span className="facilitator-label">FACILITATION GOAL</span>
-            <p>{selected.facilitationGoal}</p>
-          </section>
-
-          <section className="facilitator-card">
-            <span className="facilitator-label">DISCUSSION POINTS</span>
-            <ol className="discussion-list">
-              {selected.discussionPoints.map((point,index)=><li key={index}>{point}</li>)}
-            </ol>
-          </section>
-
-          <section className="facilitator-card facilitator-notes-card">
-            <span className="facilitator-label">FACILITATOR NOTES</span>
-            <ul>
-              {selected.facilitatorNotes.map((note,index)=><li key={index}>{note}</li>)}
-            </ul>
-          </section>
-
-          <section className="facilitator-script-section">
-            <div className="script-heading">
-              <div>
-                <span className="facilitator-label">WORD-FOR-WORD FACILITATION SCRIPT</span>
-                <h3>Use as written or adapt to your voice.</h3>
-              </div>
-            </div>
-
-            {([
-              ["Opening",selected.script.opening],
-              ["Teaching / Framing",selected.script.teaching],
-              ["Group Discussion",selected.script.discussion],
-              ["Activity / Practice",selected.script.activity],
-              ["Closing",selected.script.closing],
-            ] as const).map(([title,text])=><div className="script-block" key={title}>
-              <div className="script-block-title">
-                <strong>{title}</strong>
-                <button type="button" className="secondary" onClick={()=>navigator.clipboard.writeText(text)}>Copy</button>
-              </div>
-              {text.split("\n\n").map((paragraph,index)=><p key={index}>{paragraph}</p>)}
-            </div>)}
-          </section>
-        </article>
-      </div>}
-    </section>
-  </main>;
+ const [course,setCourse]=useState(''),[courses,setCourses]=useState<FacilitatorCourse[]>([]),[guides,setGuides]=useState<FacilitatorGuide[]>([]),[selectedId,setSelectedId]=useState('');
+ const [message,setMessage]=useState(''),[loading,setLoading]=useState(true),[downloading,setDownloading]=useState(false),[search,setSearch]=useState(''),[copied,setCopied]=useState('');
+ useEffect(()=>{const p=new URLSearchParams(window.location.search);setCourse(p.get('course')||'default')},[]);
+ async function headers():Promise<Record<string,string>>{if(!supabase)throw Error('Administrator sign-in is required.');const {data,error}=await supabase.auth.getSession();if(error||!data.session)throw Error('Administrator sign-in is required.');return {Authorization:`Bearer ${data.session.access_token}`}}
+ useEffect(()=>{if(!course)return;const abort=new AbortController();setLoading(true);setMessage('');
+ (async()=>{const r=await fetch('/api/organization/facilitator-guides?course='+encodeURIComponent(course==='default'?'':course),{headers:await headers(),cache:'no-store',signal:abort.signal});const d=await r.json();if(!r.ok)throw Error(d.error||'Unable to load guides.');if(abort.signal.aborted)return;setCourses(d.courses);setGuides(d.guides);if(course==='default')setCourse(d.course);const n=Number(new URLSearchParams(window.location.search).get('lesson'));setSelectedId(d.guides.find((g:FacilitatorGuide)=>g.globalLessonNumber===n)?.id||d.guides[0]?.id||'');})().catch(e=>{if(!abort.signal.aborted){setMessage(e.message);setGuides([])}}).finally(()=>{if(!abort.signal.aborted)setLoading(false)});return()=>abort.abort();},[course]);
+ const selected=guides.find(g=>g.id===selectedId)||null;
+ const visible=useMemo(()=>guides.filter(g=>(g.lessonTitle+' '+g.moduleTitle).toLowerCase().includes(search.toLowerCase())),[guides,search]);
+ function choose(g:FacilitatorGuide){setSelectedId(g.id);window.history.replaceState(null,'',`?course=${encodeURIComponent(course)}&lesson=${g.globalLessonNumber}`)}
+ async function download(){setDownloading(true);setMessage('');try{const r=await fetch(`/api/organization/facilitator-guides?course=${encodeURIComponent(course)}&format=html`,{headers:await headers(),cache:'no-store'});if(!r.ok){const d=await r.json();throw Error(d.error)}const url=URL.createObjectURL(await r.blob());const a=document.createElement('a');a.href=url;a.download=`TCF-${course}-Facilitator-Guide.html`;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);}catch(e){setMessage(e instanceof Error?e.message:'Unable to download guide.')}finally{setDownloading(false)}}
+ async function copy(label:string,text:string){try{await navigator.clipboard.writeText(text);setCopied(label)}catch{setMessage('Copy is unavailable in this browser. Select the script text to copy it.')}}
+ return <main><Header/><section className="facilitator-page"><div className="facilitator-heading"><div><span className="eyebrow">ADMIN / CO-ADMIN ONLY</span><h1>Facilitator Guides</h1><p>Teaching, scenario coaching, and protected assessment keys for all 30 self-paced courses.</p></div><Link className="button" href="/organization/admin">Back to Admin Dashboard</Link></div>
+ <div className="facilitator-safety-note"><strong>Facilitation standard</strong><span>Invite participation without forcing personal disclosure. Learners may open any lesson. Only full-course completion earns a certificate. Keep answer keys and learner notes private.</span></div>
+ <div className="facilitator-toolbar"><label>Course<select value={course} onChange={e=>{setCourse(e.target.value);setSearch('');window.history.replaceState(null,'',`?course=${encodeURIComponent(e.target.value)}`)}}>{!courses.length&&<option value={course}>Loading courses…</option>}{(['trades','technology','reentry'] as const).map(category=><optgroup key={category} label={category==='trades'?'Trade skills':category==='technology'?'Technology':'Reentry & growth'}>{courses.filter(c=>c.category===category).map(c=><option key={c.slug} value={c.slug}>{c.title} · {c.lessonCount} lessons</option>)}</optgroup>)}</select></label><div><button className="button" type="button" disabled={loading||downloading||!guides.length} onClick={download}>{downloading?'Preparing…':'Download Full Course Guide'}</button><button className="button secondary" type="button" disabled={loading||!selected} onClick={()=>window.print()}>Print This Lesson</button></div></div>
+ <p className="facilitator-pack-note">Course downloads include every lesson, the facilitator scripts, sources, and all five answer keys per lesson. Open the downloaded guide and choose “Print / Save as PDF.” Suggested 35-minute group sessions are flexible; attendance and group pace do not control learner access.</p>
+ {message&&<div className="notice" role="alert">{message} <Link href="/login?mode=admin">Admin login</Link></div>}{loading&&<p role="status">Loading facilitator material…</p>}
+ {!loading&&selected&&<div className="facilitator-layout"><aside className="facilitator-nav"><label>Find a lesson<input type="search" value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search lesson titles"/></label><p>{guides.length} lesson guides · {guides.reduce((n,g)=>n+g.answerKey.length,0)} assessment answers</p><div className="facilitator-lesson-list">{visible.map(g=><button type="button" key={g.id} className={g.id===selected.id?'active':''} aria-current={g.id===selected.id?'page':undefined} onClick={()=>choose(g)}><small>Lesson {g.globalLessonNumber} · {g.moduleTitle}</small><strong>{g.lessonTitle}</strong></button>)}</div>{!visible.length&&<p>No lessons match this search.</p>}</aside>
+ <article className="facilitator-guide"><header className="facilitator-guide-header"><span>{selected.courseTitle} · Lesson {selected.globalLessonNumber}</span><h2>{selected.lessonTitle}</h2><p>{selected.moduleTitle}</p><Link href={selected.learnerUrl}>Open learner lesson →</Link></header>
+ <section className="facilitator-card"><span className="facilitator-label">OVERVIEW &amp; WHY IT MATTERS</span><p>{selected.overview}</p><p>{selected.why}</p><h3>Facilitation goal</h3><p>{selected.facilitationGoal}</p><h3>Learning outcomes</h3><ol>{selected.outcomes.map(t=><li key={t}>{t}</li>)}</ol></section>
+ <section className="facilitator-card"><span className="facilitator-label">SUGGESTED 35-MINUTE SESSION</span><div className="facilitator-table-wrap"><table><thead><tr><th>Time</th><th>Stage</th><th>Facilitator action</th></tr></thead><tbody>{selected.runOfShow.map(s=><tr key={s.stage}><td>{s.minutes} min</td><td>{s.stage}</td><td>{s.action}</td></tr>)}</tbody></table></div></section>
+ <section className="facilitator-card"><span className="facilitator-label">TEACH EACH TOPIC</span>{selected.teaching.map(t=><div className="facilitator-topic" key={t.title}><h3>{t.title}</h3>{t.explanation.map((p,i)=><p key={i}>{p}</p>)}<p className="facilitator-coach"><strong>Coach prompt:</strong> {t.coachPrompt}</p></div>)}</section>
+ <section className="facilitator-card"><span className="facilitator-label">SCENARIO · {selected.scenario.kind}</span><p>{selected.scenario.text}</p><h3>Discussion and reflection prompts</h3><ol className="discussion-list">{selected.discussionPoints.map(p=><li key={p}>{p}</li>)}</ol><h3>Suggested response</h3><p>{selected.scenario.modelResponse}</p><h3>What to listen for</h3><ul>{selected.scenario.lookFor.map(p=><li key={p}>{p}</li>)}</ul></section>
+ <section className="facilitator-card facilitator-notes-card"><span className="facilitator-label">FACILITATOR NOTES</span><ul>{selected.facilitatorNotes.map(n=><li key={n}>{n}</li>)}</ul>{selected.optionalReset&&<><h3>Optional focus reset</h3><p>{selected.optionalReset}</p></>}</section>
+ <section className="facilitator-card"><span className="facilitator-label">ASSESSMENT KEY · FACILITATOR ONLY</span><p>Use explanations after a learner’s attempt. The learner submits their own responses and may retry.</p>{selected.answerKey.map((q,i)=><div className="facilitator-answer" key={q.id}><h3>{i+1}. {q.prompt}</h3><ol type="A">{q.options.map((o,j)=><li key={j}>{o}</li>)}</ol><p className="facilitator-correct"><strong>Correct answer: {String.fromCharCode(65+q.correctIndex)}</strong> — {q.options[q.correctIndex]}</p><p>{q.explanation}</p><p><strong>Coaching:</strong> {q.coachingPrompt}</p></div>)}</section>
+ <section className="facilitator-script-section"><span className="facilitator-label">READ-ALOUD SCRIPT</span><h3>Use as written or adapt to your voice.</h3>{Object.entries(selected.script).map(([label,text])=><div className="script-block" key={label}><div className="script-block-title"><strong>{label.charAt(0).toUpperCase()+label.slice(1)}</strong><button type="button" className="secondary" onClick={()=>copy(label,text)}>{copied===label?'Copied ✓':'Copy'}</button></div>{text.split('\n\n').map((p,i)=><p key={i}>{p}</p>)}</div>)}</section>
+ {selected.sources.length>0&&<section className="facilitator-card"><span className="facilitator-label">REGULATIONS &amp; REFERENCES</span>{selected.sources.map(s=><div className="facilitator-source" key={s.id}><strong>{s.kind}</strong><p>{s.note}</p><a href={s.url} target="_blank" rel="noreferrer">{s.title} ↗</a><small>Source checked {s.checked}; confirm current scope and local requirements.</small></div>)}</section>}
+ </article></div>}</section></main>;
 }

@@ -1,195 +1,37 @@
-import { moduleContent, type CourseModuleContent, type LessonContent } from "./course-content";
-import { moduleOneContent } from "./module-one-content";
-import { thoughtToFreedomCourse } from "./courses/thought-to-freedom";
-import type { ContentBlock, CourseLesson, CourseModule } from "./courses/types";
-
-export type FacilitatorScript = {
-  opening: string;
-  teaching: string;
-  discussion: string;
-  activity: string;
-  closing: string;
+import catalog from './learning/catalog.json';
+import lessons from '../scripts/learning-lessons.json';
+import {knowledgeSources} from './knowledge-sources';
+import type {LearningContent} from './learning/types';
+import type {KnowledgeSource} from './lesson-knowledge';
+export type FacilitatorScript={opening:string;teaching:string;discussion:string;activity:string;closing:string};
+export type FacilitatorGuide={
+ id:string;courseSlug:string;courseTitle:string;category:string;moduleNumber:number;moduleTitle:string;lessonNumber:number;globalLessonNumber:number;lessonTitle:string;learnerUrl:string;
+ overview:string;why:string;facilitationGoal:string;outcomes:string[];discussionPoints:string[];facilitatorNotes:string[];
+ teaching:{title:string;explanation:string[];coachPrompt:string}[];
+ scenario:{kind:string;text:string;modelResponse:string;reflectionQuestions:string[];lookFor:string[]};
+ runOfShow:{minutes:number;stage:string;action:string}[];
+ answerKey:{id:string;prompt:string;options:string[];correctIndex:number;explanation:string;coachingPrompt:string}[];
+ sources:(KnowledgeSource&{note:string})[];optionalReset?:string;script:FacilitatorScript;
 };
-
-export type FacilitatorGuide = {
-  id: string;
-  courseSlug: "turning-forward" | "thought-to-freedom";
-  courseTitle: string;
-  moduleNumber: number;
-  moduleTitle: string;
-  lessonNumber: number;
-  lessonTitle: string;
-  overview: string;
-  facilitationGoal: string;
-  discussionPoints: string[];
-  facilitatorNotes: string[];
-  script: FacilitatorScript;
+export type FacilitatorCourse={slug:string;title:string;description:string;category:string;lessonCount:number;guideCount:number};
+export function getFacilitatorCourses():FacilitatorCourse[]{return catalog.map(c=>({slug:c.slug,title:c.title,description:c.description,category:c.category,lessonCount:c.lesson_count,guideCount:lessons.filter(l=>l.course_slug===c.slug).length}))}
+const domainNotes={
+ trades:['Use the written scenario and verbal explanation; no live equipment operation, field drawing, or practical trade task is required.','Use a suitably qualified specialist for regulated questions. This course and its completion certificate do not authorize trade work, registered ELDT, refrigerant handling, or professional practice.','Read the linked source and distinguish a regulation from guidance. Check jurisdiction, scope, conditions, and current requirements before discussing real work.'],
+ technology:['Use fictional examples and written reasoning. Never ask participants to share passwords, recovery codes, customer records, or private screens.','Demonstrate only on authorized practice data and systems. No installation, scan, account access, drawing, or file upload is required.','Separate a working result from a verified result. Ask what inputs, permissions, sources, and limitations the learner checked.'],
+ reentry:['Invite participation without forcing personal disclosure. A participant may discuss the supplied scenario, use a hypothetical, or pass on speaking.','Keep accountability separate from shame. Discuss choices and barriers without diagnosing, labeling, or asking for graphic personal history.','Any mindfulness reset is optional and used only when safely at rest. Eyes can remain open; normal breathing, an external focus, or skipping are acceptable. Stop if uncomfortable.'],
 };
-
-function sentence(value: string) {
-  const trimmed=value.trim();
-  return /[.!?]$/.test(trimmed)?trimmed:trimmed+".";
-}
-
-function quote(value: string) {
-  return "“"+value.replace(/[“”]/g,"").trim()+"”";
-}
-
-function tfDiscussionPoints(lesson:LessonContent){
-  const fields=lesson.fields.slice(0,3).map(field=>field.label.replace(/[.…]+$/g,""));
-  return [
-    `What stands out to you in this idea: ${quote(lesson.quote)}?`,
-    `Where have you seen ${lesson.sectionTitle.toLowerCase()} show up in your own decisions or routines?`,
-    ...fields.map(label=>`How would you answer this honestly today: ${label}?`),
-  ].slice(0,5);
-}
-
-function turningForwardGuide(module:CourseModuleContent,lesson:LessonContent):FacilitatorGuide{
-  const isFinalLesson=lesson.number===3;
-  const challenge=isFinalLesson?module.challenge:null;
-  const discussionPoints=tfDiscussionPoints(lesson);
-
-  return {
-    id:`turning-forward-m${module.number}-l${lesson.number}`,
-    courseSlug:"turning-forward",
-    courseTitle:"Turning Forward",
-    moduleNumber:module.number,
-    moduleTitle:module.title,
-    lessonNumber:lesson.number,
-    lessonTitle:lesson.title,
-    overview:`${sentence(lesson.intro)} ${sentence(lesson.sectionBody)}`,
-    facilitationGoal:`Help participants understand ${lesson.sectionTitle.toLowerCase()} and translate the lesson into one specific behavior they can practice.`,
-    discussionPoints,
-    facilitatorNotes:[
-      "Invite participation; do not force personal disclosure.",
-      "Keep the conversation focused on present choices, responsibility, and forward action rather than shame.",
-      "Ask one question at a time and allow silence before calling on anyone.",
-      challenge?`Use the module challenge—${challenge.title}—as the bridge from discussion to action.`:`Use the ${lesson.activityTitle} activity to move the group from insight to application.`,
-    ],
-    script:{
-      opening:`“Today we are working on ${lesson.title}. The purpose is not to pretend the past did not happen or to leave here with a motivational speech. The purpose is to understand one idea clearly enough that we can use it. Here is the starting point: ${lesson.intro}”`,
-      teaching:`“The main idea I want us to sit with is this: ${lesson.quote} ${lesson.sectionBody} As we talk, listen for the difference between what sounds good and what can actually be practiced.”`,
-      discussion:`“I’m going to give us a few questions. You can answer from your own experience, from something you have observed, or you can pass. First: ${discussionPoints[0]}”\n\n“Now let’s go one step deeper: ${discussionPoints[1]}”\n\n“Last discussion question before we practice: ${discussionPoints[2]||"What is one decision this lesson is asking you to make differently?"}”`,
-      activity:`“Now we move from talking to doing. Open the ${lesson.activityTitle} activity. Do not write what sounds impressive. Write what is true and useful. Take this one prompt at a time. If you get stuck, make the answer smaller and more specific.”`,
-      closing:challenge
-        ?`“Before we close, this module asks you to complete the challenge called ${challenge.title}. ${challenge.description} The commitment is: ${challenge.pledge} I want each person to leave with one action that can be seen, measured, or completed—not just an intention.”`
-        :`“Before we close, name one sentence, decision, or action from today that you can carry into the next twenty-four hours. The goal is not to agree with everything we discussed. The goal is to leave with one responsible next move.”`,
-    },
-  };
-}
-
-function getBlock<T extends ContentBlock["type"]>(lesson:CourseLesson,type:T){
-  return lesson.blocks.find(block=>block.type===type) as Extract<ContentBlock,{type:T}>|undefined;
-}
-
-function ttfDiscussionPoints(module:CourseModule,lesson:CourseLesson){
-  const reflection=getBlock(lesson,"reflection");
-  const decision=getBlock(lesson,"decision-point");
-  const catchBlock=getBlock(lesson,"catch-the-thought");
-  const activity=getBlock(lesson,"workbook-activity");
-
-  const points=[
-    module.coreQuestion,
-    reflection?.prompt,
-    decision?.prompt||catchBlock?.prompt,
-    activity?`What would make ${activity.title} useful in a real decision this week?`:undefined,
-    "What would a responsible replacement thought sound like in the same situation?",
-  ].filter(Boolean) as string[];
-
-  return points.slice(0,5);
-}
-
-function thoughtToFreedomGuide(module:CourseModule,lesson:CourseLesson):FacilitatorGuide{
-  const keyIdea=getBlock(lesson,"key-idea")?.text||module.keyIdea;
-  const paragraph=getBlock(lesson,"paragraph")?.text||module.description;
-  const reflection=getBlock(lesson,"reflection");
-  const decision=getBlock(lesson,"decision-point");
-  const catchBlock=getBlock(lesson,"catch-the-thought");
-  const activity=getBlock(lesson,"workbook-activity");
-  const discussionPoints=ttfDiscussionPoints(module,lesson);
-
-  let practiceScript="“Before we leave this lesson, write down one thought pattern you want to notice earlier and one different response you can practice.”";
-  if(decision){
-    practiceScript=`“Listen to this situation without rushing to judge the person in it: ${decision.scenario} Now ask yourself: ${decision.prompt} We are looking for the thought, the choice point, and the consequence—not just the behavior at the end.”`;
-  }else if(catchBlock){
-    practiceScript=`“Now we are going to catch the thought in real time. ${catchBlock.prompt} Listen for which statement keeps the old pattern going and which statement creates room for a different choice.”`;
-  }else if(activity){
-    practiceScript=`“Now we move from insight to practice. The activity is ${activity.title}. ${activity.instructions} Do not write the answer you think the room wants. Write the response you could actually use when this pattern shows up.”`;
-  }
-
-  return {
-    id:`thought-to-freedom-m${module.number}-l${lesson.number}`,
-    courseSlug:"thought-to-freedom",
-    courseTitle:"Thought to Freedom",
-    moduleNumber:module.number,
-    moduleTitle:module.title,
-    lessonNumber:lesson.number,
-    lessonTitle:lesson.title,
-    overview:`${sentence(lesson.objective)} ${sentence(module.description)}`,
-    facilitationGoal:`Help participants recognize ${module.title.toLowerCase()}, identify the decision point before action, and practice a more responsible replacement thought.`,
-    discussionPoints,
-    facilitatorNotes:[
-      "Do not use the thinking-error label as a permanent label for a person.",
-      "Acknowledge unfair circumstances without allowing them to erase personal choice or responsibility.",
-      "Participants may pass on personal disclosure; examples and hypotheticals are acceptable.",
-      "Redirect debates about who is 'bad' or 'good' back to the thought → choice → action → consequence chain.",
-    ],
-    script:{
-      opening:`“Today we are working on ${module.title}, specifically ${lesson.title}. This is not about labeling anybody. It is about catching a thinking pattern early enough to make a different choice. The core question for this module is: ${module.coreQuestion}”`,
-      teaching:`“Here is the key idea: ${keyIdea} ${paragraph} The point is not to argue with every feeling. The point is to slow the thought down before it becomes a choice, an action, and a consequence.”`,
-      discussion:`“Let’s discuss this without performing for the room. You can speak from your own life, from something you have observed, or you can pass. First question: ${discussionPoints[0]}”\n\n“Second question: ${discussionPoints[1]||"Where does this pattern usually show up first—in the thought, the feeling, or the reaction?"}”\n\n“Now bring it back to choice: ${discussionPoints[2]||"What is the earliest point where a different decision could be made?"}”`,
-      activity:practiceScript,
-      closing:`“The goal is not to promise that this thought will never show up again. The goal is to recognize it earlier, examine it honestly, interrupt the automatic response, replace it with a responsible thought, and practice the new response. Before we leave, name one place where you can use that process this week.”`,
-    },
-  };
-}
-
-function orientationGuide():FacilitatorGuide{
-  const lesson=thoughtToFreedomCourse.orientation!;
-  const keyIdea=getBlock(lesson,"key-idea")?.text||"Before the action comes the thought.";
-  const paragraph=getBlock(lesson,"paragraph")?.text||thoughtToFreedomCourse.description;
-  const reflection=getBlock(lesson,"reflection");
-
-  return {
-    id:"thought-to-freedom-orientation",
-    courseSlug:"thought-to-freedom",
-    courseTitle:"Thought to Freedom",
-    moduleNumber:0,
-    moduleTitle:"Orientation",
-    lessonNumber:0,
-    lessonTitle:lesson.title,
-    overview:`${sentence(lesson.objective)} ${sentence(paragraph)}`,
-    facilitationGoal:"Introduce the Thought → Choice → Action → Consequence chain and establish a non-shaming, accountability-centered group culture.",
-    discussionPoints:[
-      "Where do people usually notice a problem—at the thought, the choice, the action, or the consequence?",
-      "What becomes possible when a thought is caught before it becomes action?",
-      reflection?.prompt||"What recurring thought has led you toward a result you did not want?",
-      "What would make this group feel honest, accountable, and safe enough for real reflection?",
-    ],
-    facilitatorNotes:[
-      "Set expectations before asking for personal examples.",
-      "Make it explicit that participants may pass.",
-      "Do not diagnose, shame, or label participants.",
-      "Keep examples focused on choices and consequences rather than graphic details of past harm.",
-    ],
-    script:{
-      opening:`“Before we talk about specific thinking errors, we need one shared idea: before the action comes the thought. This course is not about attaching a label to a person. It is about finding the thought early enough to create another choice.”`,
-      teaching:`“The chain we will use is Thought → Choice → Action → Consequence. ${keyIdea} Throughout this course we are going to practice five moves: recognize the thought, examine it, interrupt the automatic response, replace it with a responsible thought, and practice the new response.”`,
-      discussion:"“Think about a decision that created a consequence you did not want. You do not have to tell us the details. Just ask yourself: how early in the chain could a different choice have been made?”\n\n“Now let’s discuss: what makes it hard to slow down a thought before reacting?”",
-      activity:"“Take a moment and write one recurring thought, one choice that often follows it, and one consequence that tends to come after that choice. We are not fixing it yet. We are learning to see the chain.”",
-      closing:"“For the rest of this course, we are going to practice catching the thought earlier. Accountability is not the same as shame. Accountability says: I can tell the truth about my thinking and still choose what I do next.”",
-    },
-  };
-}
-
-export function getFacilitatorGuides(courseSlug:"turning-forward"|"thought-to-freedom"){
-  if(courseSlug==="turning-forward"){
-    const modules=[moduleOneContent,...moduleContent];
-    return modules.flatMap(module=>module.lessons.map(lesson=>turningForwardGuide(module,lesson)));
-  }
-
-  return [
-    orientationGuide(),
-    ...thoughtToFreedomCourse.modules.flatMap(module=>module.lessons.map(lesson=>thoughtToFreedomGuide(module,lesson))),
-  ];
+export function getFacilitatorGuides(courseSlug:string):FacilitatorGuide[]{
+ const course=catalog.find(c=>c.slug===courseSlug);if(!course)return [];
+ return lessons.filter(l=>l.course_slug===courseSlug).map(row=>{
+  const c=row.content as LearningContent,k=c.knowledge!;const size=course.legacy_url?3:5;const moduleNumber=Math.floor((row.number-1)/size)+1,lessonNumber=(row.number-1)%size+1;
+  const moduleTitle=course.legacy_url?`Module ${moduleNumber}`:`Optional discussion block: lessons ${(moduleNumber-1)*size+1}–${Math.min(moduleNumber*size,course.lesson_count)}`;
+  const discussionPoints=[...c.reflectionQuestions!,`Which part of the teaching would help someone make a different decision about ${row.title.toLowerCase()}?`,`What can the scenario establish, and what remains uncertain or needs qualified input?`];
+  const modelResponse=`Start with the observable facts in the scenario rather than an assumption about the person's character or an unsupported diagnosis. ${k.tips[0]} ${k.focus?`A useful focus is: ${k.focus}`:''} Explain which detail supports that step, what you would verify, and how you would tell whether the response helped. Accept alternative responses when they are supported by the lesson and appropriate to the situation.`;
+  const teaching=c.topics!.map((topic,index)=>({title:topic.title,explanation:topic.paragraphs,coachPrompt:index===0?`Ask participants to explain ${row.title.toLowerCase()} in plain language and distinguish a fact from an assumption.`:index===1?`Use the worked example, then ask which detail justifies the recommended next step. Invite a different defensible response.`:`Ask what evidence would show the response helped, what it would not prove, and which limit or source needs checking.`}));
+  const answerKey=c.questions!.map(q=>({...q,explanation:q.feedback,coachingPrompt:`Ask the learner to explain the selected option using the teaching on ${row.title.toLowerCase()}. If it is incorrect, return to the relevant paragraph and compare the option's assumptions with the actual scenario; allow another attempt.`}));
+  const facilitatorNotes=[...domainNotes[course.category as keyof typeof domainNotes],'Lessons are self-paced and can be opened in any order. Do not make attendance, group participation, video viewing, or an earlier lesson a condition of access.','Learners complete their own scenario reflection, next-step response, and all five multiple-choice questions correctly to record a lesson as complete. Offer feedback and unlimited retries without answering on their behalf.','The platform generates a course certificate only after every required lesson is complete. Facilitators should not issue a certificate for attendance, one session, or the final lesson alone.','A spoken group contribution may be optional; explain the written completion requirements separately. Keep learner notes private and discuss only the supplied scenario unless permission is given.'];
+  const runOfShow=[{minutes:3,stage:'Welcome and purpose',action:`Introduce ${row.title}. Review the outcomes and explain why the lesson matters.`},{minutes:12,stage:'Teach the three topics',action:'Explain each listed outcome, use the worked example, and check understanding with the coach prompts.'},{minutes:8,stage:'Scenario discussion',action:`Read the ${c.scenario!.kind.toLowerCase()} scenario. Separate facts, assumptions, choices, and consequences.`},{minutes:6,stage:'Written reflection and next step',action:'Give quiet writing time. Use the three scenario questions and ask for a justified next step; no drawing or upload is needed.'},{minutes:5,stage:'Knowledge check and feedback',action:'Learners answer all five questions themselves. Use the protected answer key to explain reasoning after an attempt and support retries.'},{minutes:1,stage:'Close and next choice',action:'Invite one takeaway, remind learners they can choose any lesson, and explain full-course certificate eligibility.'}];
+  return {id:`${courseSlug}-lesson-${row.number}`,courseSlug,courseTitle:course.title,category:course.category,moduleNumber,moduleTitle,lessonNumber,globalLessonNumber:row.number,lessonTitle:row.title,learnerUrl:`/learn/${courseSlug}/${row.number}`,overview:c.overview!,why:c.why!,facilitationGoal:c.objective,outcomes:c.outcomes!,discussionPoints,facilitatorNotes,teaching,scenario:{kind:c.scenario!.kind,text:c.scenario!.text,modelResponse,reflectionQuestions:c.reflectionQuestions!,lookFor:[`Identifies a specific fact or missed condition from the supplied scenario.`,`Connects the choice to the lesson: ${k.focus||k.tips[0]}`,`Explains a practical next step, the reason for it, and what would be checked afterward.`]},runOfShow,answerKey,sources:k.references.map(r=>({...knowledgeSources[r.sourceId],note:r.note})),optionalReset:k.reset,
+  script:{opening:`Today we are exploring ${row.title}. ${c.overview} ${c.why} You may use the supplied example or pass on speaking; personal disclosure is not required.`,teaching:teaching.map((t,i)=>`Topic ${i+1}: ${t.title}\n${t.explanation.join('\n\n')}\nFacilitator prompt: ${t.coachPrompt}`).join('\n\n'),discussion:`Let's examine the supplied scenario rather than judge the person in it. ${discussionPoints.join('\n\n')} Ask one question at a time and allow thinking time.`,activity:`Read this ${c.scenario!.kind.toLowerCase()} scenario: ${c.scenario!.text}\n\nRespond in words to the reflection questions, then explain your next step and how you would check it. Use the lesson as evidence for your reasoning.`,closing:`Name one useful idea about ${row.title.toLowerCase()} and one action it supports. You can revisit this topic or open any other lesson. Your certificate becomes available after the complete course is finished, not simply because you attended this session.`}};
+ });
 }
