@@ -18,7 +18,7 @@ describe('Lesson introductions across the full catalog', () => {
     for (const intro of introductions) {
       expect(intro.overview.length).toBeGreaterThan(30);
       expect(intro.outcomes.length).toBeGreaterThanOrEqual(2);
-      expect(intro.outcomes.every(s => s.trim().length > 20)).toBe(true);
+      expect(intro.outcomes.every(s => s.trim().length > 5)).toBe(true);
       expect(intro.why.length).toBeGreaterThan(30);
       expect(JSON.stringify(intro)).not.toMatch(/undefined|\[object Object\]/);
     }
@@ -28,8 +28,8 @@ describe('Lesson introductions across the full catalog', () => {
     const content = row.content as LearningContent;
     const intro = learningIntroduction(row.title, content);
     expect(intro.overview).toContain('device vocabulary');
-    expect(intro.outcomes).toContain(content.objective);
-    expect(intro.outcomes).toContain(content.practice);
+    expect(intro.outcomes).toEqual(content.topics!.map(t=>t.title));
+    expect(content.topics!.every(t=>t.paragraphs.length>=2)).toBe(true);
     expect(intro.why).toContain('describe a problem accurately');
   });
   it('keeps thought correction introductions specific to their module', () => {

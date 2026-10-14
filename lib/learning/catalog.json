@@ -111,7 +111,7 @@
     "title": "Thought to Freedom",
     "description": "Correcting Criminal Thinking Errors. Recognize thought patterns, examine consequences, and practice responsible replacement thinking.",
     "category": "reentry",
-    "duration_minutes": 450,
+    "duration_minutes": 600,
     "lesson_count": 30,
     "outline": [
       {
@@ -242,7 +242,7 @@
     "title": "Construction Site Readiness",
     "description": "A practical foundation for entering construction work: site communication, hazard recognition, plans, and dependable work habits.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -313,7 +313,7 @@
     "title": "Carpentry Fundamentals",
     "description": "Learn carpentry vocabulary, measurement, layout, materials, and quality checks before supervised shop practice.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -384,7 +384,7 @@
     "title": "Electrical Trade Foundations",
     "description": "Understand electrical concepts, drawings, components, and career pathways through diagrams and de-energized training examples.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -455,7 +455,7 @@
     "title": "Plumbing Trade Foundations",
     "description": "Explore plumbing systems, materials, drawings, inspection vocabulary, and supervised learning pathways.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -526,7 +526,7 @@
     "title": "HVAC Trade Foundations",
     "description": "Build introductory knowledge of heating, cooling, airflow, service documentation, and technician training.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -597,7 +597,7 @@
     "title": "Painting and Drywall Basics",
     "description": "Learn surface assessment, product selection, preparation planning, finishing vocabulary, and quality documentation.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -668,7 +668,7 @@
     "title": "Masonry Fundamentals",
     "description": "Explore masonry materials, measurement, bond patterns, quality concepts, and supervised trade pathways.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -739,7 +739,7 @@
     "title": "Welding Career Foundations",
     "description": "Study welding terminology, drawings, process differences, safety awareness, and training preparation without live welding exercises.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -810,7 +810,7 @@
     "title": "CDL Training and Permit Preparation",
     "description": "Prepare for a commercial driving career with CDL knowledge study, safety fundamentals, and a plan for registered instructor-led training. This is preparation, not certified ELDT or behind-the-wheel training.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -881,7 +881,7 @@
     "title": "Facilities Maintenance Basics",
     "description": "Learn inspection, work orders, preventive maintenance, escalation, and customer communication for entry-level facilities work.",
     "category": "trades",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -952,7 +952,7 @@
     "title": "Digital Literacy Essentials",
     "description": "Build confidence with devices, files, everyday apps, accessible settings, and reliable digital habits.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1023,7 +1023,7 @@
     "title": "Email and Professional Communication",
     "description": "Write clear messages, manage attachments and calendars, and communicate professionally online.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1094,7 +1094,7 @@
     "title": "Office Documents and Presentations",
     "description": "Create readable documents, basic spreadsheets, and useful presentations for work and learning.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1165,7 +1165,7 @@
     "title": "IT Support Foundations",
     "description": "Learn help-desk habits, troubleshooting structure, device concepts, and service documentation.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1236,7 +1236,7 @@
     "title": "Networking Fundamentals",
     "description": "Understand network paths, addressing, connection troubleshooting, and responsible administration.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1307,7 +1307,7 @@
     "title": "Cybersecurity Everyday Practices",
     "description": "Protect accounts, recognize scams, handle information responsibly, and report security concerns.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1378,7 +1378,7 @@
     "title": "Web Design Foundations",
     "description": "Plan accessible pages, understand HTML and CSS, and build a simple original portfolio site.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1449,7 +1449,7 @@
     "title": "Coding Foundations with JavaScript",
     "description": "Practice programming logic, data, functions, and debugging through small browser-safe exercises.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1520,7 +1520,7 @@
     "title": "Data and Spreadsheet Skills",
     "description": "Organize trustworthy data, analyze simple questions, and communicate findings without exposing personal information.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1591,7 +1591,7 @@
     "title": "Responsible AI and Digital Work",
     "description": "Use AI tools for practical work while checking accuracy, protecting information, and retaining human judgment.",
     "category": "technology",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1662,7 +1662,7 @@
     "title": "Reentry Planning and Life Logistics",
     "description": "Create a workable return-home plan around documents, appointments, transport, support, and daily stability.",
     "category": "reentry",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1733,7 +1733,7 @@
     "title": "Employment Readiness and Job Search",
     "description": "Translate experience into honest applications, interviews, reliable work habits, and a focused job-search plan.",
     "category": "reentry",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1804,7 +1804,7 @@
     "title": "Personal Finance for a Fresh Start",
     "description": "Build a practical money plan around cash flow, bills, savings, credit awareness, and scam prevention.",
     "category": "reentry",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1875,7 +1875,7 @@
     "title": "Relationships Communication and Boundaries",
     "description": "Practice respectful communication, clear boundaries, gradual trust, and supportive relationship choices.",
     "category": "reentry",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -1946,7 +1946,7 @@
     "title": "Entrepreneurship and Small Business Basics",
     "description": "Test a practical business idea, understand costs, communicate value, and plan a responsible small launch.",
     "category": "reentry",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -2017,7 +2017,7 @@
     "title": "Housing and Community Stability",
     "description": "Plan a housing search, compare options, organize records, communicate clearly, and build practical support.",
     "category": "reentry",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -2088,7 +2088,7 @@
     "title": "Stress Management and Resilience Skills",
     "description": "Practice everyday coping, realistic routines, early support-seeking, and sustainable recovery from setbacks.",
     "category": "reentry",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {
@@ -2159,7 +2159,7 @@
     "title": "Purpose Accountability and Community Leadership",
     "description": "Turn lived experience into accountable action, service, practical goals, and reliable community contribution.",
     "category": "reentry",
-    "duration_minutes": 225,
+    "duration_minutes": 300,
     "lesson_count": 15,
     "outline": [
       {

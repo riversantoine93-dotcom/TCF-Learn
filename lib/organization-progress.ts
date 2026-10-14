@@ -1,3 +1,4 @@
+import catalog from "./learning/catalog.json";
 import { modules as turningForwardModules } from "./course";
 import { thoughtToFreedomCourse } from "./courses/thought-to-freedom";
 
@@ -19,7 +20,7 @@ export type ProgressModuleSummary = {
 };
 
 export type ProgressCourseSummary = {
-  courseSlug: "turning-forward" | "thought-to-freedom";
+  courseSlug: string;
   title: string;
   completed: number;
   total: number;
@@ -192,4 +193,21 @@ export function summarizeLearnerProgress(userId: string, rows: ProgressRow[]): L
     lastActivity,
     courses,
   };
+}
+
+export function summarizeCatalogProgress(userId:string,modern:{user_id:string;course_slug:string;lesson_number:number;updated_at?:string|null}[],historical:{user_id:string;course_slug:string;lesson_number:number}[]):LearnerProgressSummary {
+ const completedRows=[...modern.filter(r=>r.user_id===userId),...historical.filter(r=>r.user_id===userId)];
+ const courses:ProgressCourseSummary[]=catalog.map(c=>{
+  const done=new Set(completedRows.filter(r=>r.course_slug===c.slug).map(r=>r.lesson_number));
+  const groupSize=c.legacy_url?3:c.lesson_count;
+  const modules:ProgressModuleSummary[]=Array.from({length:Math.ceil(c.lesson_count/groupSize)},(_,index)=>{
+   const items=c.outline.slice(index*groupSize,(index+1)*groupSize).map(l=>({key:`${c.slug}:lesson${l.number}`,label:`Lesson ${l.number}: ${l.title}`,status:done.has(l.number)?'complete' as const:'not_started' as const}));
+   return {number:index+1,title:c.legacy_url?`Module ${index+1}`:'Course lessons',completed:items.filter(i=>i.status==='complete').length,total:items.length,items};
+  });
+  const completed=c.outline.filter(l=>done.has(l.number)).length;
+  const dates=modern.filter(r=>r.user_id===userId&&r.course_slug===c.slug&&r.updated_at).map(r=>r.updated_at!).sort();
+  return {courseSlug:c.slug,title:c.title,completed,total:c.lesson_count,percent:Math.round(completed/c.lesson_count*100),status:completed===c.lesson_count?'complete':completed?'in_progress':'not_started',currentItem:c.outline.find(l=>!done.has(l.number))?.title||null,lastActivity:dates.at(-1)||null,modules};
+ });
+ const completed=courses.reduce((n,c)=>n+c.completed,0),total=courses.reduce((n,c)=>n+c.total,0);
+ return {userId,completed,total,percent:Math.round(completed/total*100),status:completed===total?'complete':completed?'in_progress':'not_started',lastActivity:courses.map(c=>c.lastActivity).filter((d):d is string=>Boolean(d)).sort().at(-1)||null,courses};
 }

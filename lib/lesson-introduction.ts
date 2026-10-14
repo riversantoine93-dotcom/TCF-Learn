@@ -5,6 +5,7 @@ import type { CourseLesson } from "./courses/types";
 export type LessonIntroductionContent = { overview: string; outcomes: string[]; why: string };
 
 export function learningIntroduction(title: string, content: LearningContent): LessonIntroductionContent {
+  if(content.topics?.length)return {overview:content.overview||content.objective,outcomes:content.topics.map(t=>t.title),why:content.why||content.context};
   const sentences = content.teaching.match(/[^.!?]+[.!?]+(?:[”’"']|$)?|[^.!?]+$/g)?.map(s => s.trim()).filter(Boolean) || [content.teaching];
   return {
     overview: `This lesson focuses on ${title.toLowerCase()}. ${sentences[0]}`,

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { selfPacedContent } from './build-self-paced-lessons.mjs';
 import { build } from 'esbuild';
 import { lessonKnowledge, validateKnowledge, writeLegacyKnowledge } from './build-lesson-knowledge.mjs';
 const courses=[];const lessons=[];
@@ -25,6 +26,8 @@ const {legacyCourses,legacyLessons}=await import('/tmp/tcf-legacy-curriculum.mjs
 courses.unshift(...legacyCourses);lessons.push(...legacyLessons.map(l=>({...l,content:{...l.content,knowledge:lessonKnowledge(l.course_slug,l.number)}})));
 validateKnowledge(courses);writeLegacyKnowledge();
 if(courses.length!==30||new Set(courses.map(c=>c.slug)).size!==30)throw Error('Exactly thirty unique courses required');
+for(const lesson of lessons) lesson.content=selfPacedContent(lesson,courses.find(c=>c.slug===lesson.course_slug));
+for(const course of courses)course.duration_minutes=course.lesson_count*20;
 fs.writeFileSync('lib/learning/catalog.json',JSON.stringify(courses,null,2)+'\n');
 fs.writeFileSync('scripts/learning-lessons.json',JSON.stringify(lessons,null,2)+'\n');
 console.log(`${courses.length} courses; ${lessons.length} lessons; all courses have at least 15 lessons.`);

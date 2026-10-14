@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { requireAuthenticatedUser } from "@/lib/server-auth";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
-import { summarizeLearnerProgress } from "@/lib/organization-progress";
+import { summarizeCatalogProgress } from "@/lib/organization-progress";
 
 export async function GET(request: NextRequest) {
   try {
@@ -25,16 +25,16 @@ export async function GET(request: NextRequest) {
     if (memberError) throw memberError;
 
     const learnerUserIds=(members||[]).filter((m:any)=>m.role==="learner"&&m.status==="active"&&m.user_id).map((m:any)=>m.user_id);
-    let rawProgress:any[]=[];
+    let modern:any[]=[],historical:any[]=[];
     if(learnerUserIds.length){
-      const result=await admin.from("course_progress").select("user_id,course_slug,progress,updated_at").in("user_id",learnerUserIds);
-      if(result.error) throw result.error;
-      rawProgress=result.data||[];
+      const [a,b]=await Promise.all([
+       admin.from("learning_lesson_progress").select("user_id,course_slug,lesson_number,updated_at").in("user_id",learnerUserIds).not("completed_at","is",null),
+       admin.from("learning_legacy_completions").select("user_id,course_slug,lesson_number").in("user_id",learnerUserIds)
+      ]);
+      if(a.error||b.error)throw a.error||b.error;
+      modern=a.data||[];historical=b.data||[];
     }
-
-    const progressSummaries=learnerUserIds.map((userId:string)=>
-      summarizeLearnerProgress(userId, rawProgress.filter((row:any)=>row.user_id===userId))
-    );
+    const progressSummaries=learnerUserIds.map((userId:string)=>summarizeCatalogProgress(userId,modern,historical));
 
     return NextResponse.json({
       organization,
