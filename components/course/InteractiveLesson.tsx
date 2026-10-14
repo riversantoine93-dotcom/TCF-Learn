@@ -2,6 +2,8 @@
 
 import type { CourseLesson, CourseSlug } from "@/lib/courses/types";
 import type { ProgressData } from "@/lib/progress";
+import LessonKnowledgeContent from "../LessonKnowledgeContent";
+import { getLegacyKnowledge } from "@/lib/legacy-knowledge";
 import LessonIntroduction from "../LessonIntroduction";
 import { thoughtIntroduction } from "@/lib/lesson-introduction";
 import CatchTheThought from "./CatchTheThought";
@@ -16,7 +18,7 @@ export default function InteractiveLesson({ courseSlug, moduleNumber, moduleSlug
   const requirements: boolean[] = [];
   const content = lesson.blocks.map((block, index) => {
     if (block.type === "paragraph") return <p key={index}>{block.text}</p>;
-    if (block.type === "key-idea") return <aside className="ttf-key-idea" key={index}><span>KEY IDEA</span><p>{block.text}</p></aside>;
+    if (block.type === "key-idea") return null;
     if (block.type === "reflection") {
       const key = `${prefix}:${block.id}`; const value = String(progress[key] || ""); const complete = value.trim().length >= block.minChars; requirements.push(complete);
       return <section className="ttf-card" key={block.id}><span className="ttf-label">REFLECTION</span><label><strong>{block.prompt}</strong><textarea value={value} onChange={(event) => onProgressChange(key, event.target.value)} rows={6}/><small className={complete ? "requirement-met" : "requirement-pending"}>{complete ? "✓ Requirement met" : `${Math.max(0, block.minChars - value.trim().length)} more characters required`}</small></label></section>;
@@ -33,6 +35,7 @@ export default function InteractiveLesson({ courseSlug, moduleNumber, moduleSlug
     }
     return null;
   });
+  const keyIdea = lesson.blocks.find(block => block.type === "key-idea");
   const ready = requirements.length > 0 && requirements.every(Boolean); const done = Boolean(progress[lessonDoneKey(moduleNumber, lesson.number)]);
-  return <article className="ttf-lesson"><div className="ttf-lesson-heading"><span>LESSON {lesson.number}</span><h2>{lesson.title}</h2></div><LessonIntroduction {...thoughtIntroduction(lesson, introductionContext)}/>{content}{done ? <div className="ttf-complete"><strong>✓ Lesson complete</strong><p>Your work is saved. Continue when you are ready.</p></div> : <button type="button" className="button full" disabled={!ready} onClick={onComplete}>Complete Lesson {lesson.number} →</button>}{!ready && !done && <p className="ttf-requirement-summary">Complete the required written work and answer the Knowledge Check correctly to continue.</p>}</article>;
+  return <article className="ttf-lesson"><div className="ttf-lesson-heading"><span>LESSON {lesson.number}</span><h2>{lesson.title}</h2></div><LessonIntroduction {...thoughtIntroduction(lesson, introductionContext)}/><section className="ttf-key-idea"><h3>The key idea</h3><p>{introductionContext?.keyIdea || keyIdea?.text || lesson.objective}</p><LessonKnowledgeContent knowledge={getLegacyKnowledge(courseSlug,moduleNumber,lesson.number)}/></section>{content}{done ? <div className="ttf-complete"><strong>✓ Lesson complete</strong><p>Your work is saved. Continue when you are ready.</p></div> : <button type="button" className="button full" disabled={!ready} onClick={onComplete}>Complete Lesson {lesson.number} →</button>}{!ready && !done && <p className="ttf-requirement-summary">Complete the required written work and answer the Knowledge Check correctly to continue.</p>}</article>;
 }

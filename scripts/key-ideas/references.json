@@ -1,0 +1,441 @@
+{
+  "construction-readiness": [
+    {
+      "lessons": [
+        2,
+        3,
+        4,
+        5,
+        9,
+        12,
+        13
+      ],
+      "sourceId": "osha-focus",
+      "note": "OSHA's Focus Four training covers falls, struck-by, caught-in/between, and electrocution hazards. Use it to recognize hazards and ask for the site's required controls."
+    },
+    {
+      "lessons": [
+        2,
+        3
+      ],
+      "sourceId": "osha-falls",
+      "note": "For construction unprotected sides and edges within 29 CFR 1926.501(b)(1), the rule generally requires specified fall protection at 6 feet or more above a lower level. Other tasks have separate provisions; do not apply one threshold to every situation."
+    }
+  ],
+  "carpentry-fundamentals": [
+    {
+      "lessons": [
+        6,
+        7,
+        8,
+        10,
+        11,
+        12
+      ],
+      "sourceId": "osha-focus",
+      "note": "Use supervised training and the task-specific site controls. This reference is hazard-awareness guidance, not a structural design or operating procedure."
+    }
+  ],
+  "electrical-foundations": [
+    {
+      "lessons": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        11,
+        13,
+        14
+      ],
+      "sourceId": "osha-electrical",
+      "note": "In covered general-industry work, 29 CFR 1910.333 addresses deenergizing and work practices; only qualified persons may work on energized parts under its provisions. Construction work also has its own standards. Introductory study does not qualify a learner for live work."
+    }
+  ],
+  "plumbing-foundations": [
+    {
+      "lessons": [
+        1,
+        7,
+        11,
+        12,
+        15
+      ],
+      "sourceId": "osha-focus",
+      "note": "This reference supports jobsite hazard awareness. Actual plumbing design, permits, backflow protection, and licensing must be verified with the local authority and qualified supervisor; OSHA training is not a plumbing license."
+    }
+  ],
+  "hvac-foundations": [
+    {
+      "lessons": [
+        1,
+        3,
+        11,
+        12,
+        15
+      ],
+      "sourceId": "epa-608",
+      "note": "EPA Section 608 requires the appropriate certification for covered stationary-equipment work that could release refrigerants. Verify the activity and certification type; this course is not Section 608 certification."
+    },
+    {
+      "lessons": [
+        1,
+        7,
+        13
+      ],
+      "sourceId": "osha-energy",
+      "note": "General-industry servicing covered by 29 CFR 1910.147 requires a hazardous-energy control program, procedures, and training. The standard has exclusions; electrical hazards and construction may fall under other provisions. Follow the employer's applicable procedure."
+    }
+  ],
+  "painting-drywall": [
+    {
+      "lessons": [
+        1,
+        3,
+        7,
+        13,
+        14
+      ],
+      "sourceId": "epa-lead",
+      "note": "Paid work disturbing paint in covered pre-1978 housing or child-occupied facilities can trigger lead-safe certification, training, and work-practice requirements. Exceptions and authorized state programs matter; Georgia operates an authorized program. Verify before disturbing paint."
+    },
+    {
+      "lessons": [
+        2,
+        8,
+        11,
+        14
+      ],
+      "sourceId": "osha-construction-hazcom",
+      "note": "Construction hazard communication incorporates the requirements of 29 CFR 1910.1200. Use the actual chemical label, safety data sheet, and employer training; do not improvise mixtures or exposure controls."
+    }
+  ],
+  "masonry-fundamentals": [
+    {
+      "lessons": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10,
+        13,
+        15
+      ],
+      "sourceId": "osha-silica",
+      "note": "Covered construction tasks involving respirable crystalline silica require appropriate exposure controls under 29 CFR 1926.1153. Table 1 addresses specified tasks and conditions; otherwise the exposure-assessment route may apply. A generic dust mask or visible-dust check does not establish compliance."
+    }
+  ],
+  "welding-foundations": [
+    {
+      "lessons": [
+        1,
+        3,
+        6,
+        7,
+        8,
+        10,
+        11,
+        14
+      ],
+      "sourceId": "osha-welding",
+      "note": "29 CFR 1926.353 sets ventilation and protection requirements for covered construction welding, cutting, and heating, including material- and location-specific provisions. The employer must determine the controls; this lesson does not authorize hot work."
+    }
+  ],
+  "cdl-preparation": [
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        5,
+        9,
+        10,
+        15
+      ],
+      "sourceId": "fmcsa-eldt",
+      "note": "ELDT applies to specified first-time Class A or B licenses, upgrades, and certain endorsements. Verify applicability, registered provider requirements, and state prerequisites. TCF preparation is not registered ELDT or a license."
+    },
+    {
+      "lessons": [
+        3,
+        15
+      ],
+      "sourceId": "fmcsa-eldt-faq",
+      "note": "Applicable Class A/B and passenger/school-bus training includes theory and behind-the-wheel requirements through registered providers before the relevant state skills tests; state rules may add requirements."
+    },
+    {
+      "lessons": [
+        13,
+        14
+      ],
+      "sourceId": "fmcsa-hos",
+      "note": "For covered property-carrying operations, the basic limits include 11 driving hours after 10 consecutive hours off duty and a 14-hour driving window. A 30-minute interruption is generally required after 8 cumulative driving hours without such an interruption. Exceptions, weekly limits, and other provisions apply; passenger rules differ."
+    }
+  ],
+  "facilities-maintenance": [
+    {
+      "lessons": [
+        1,
+        5,
+        7,
+        8,
+        12,
+        13
+      ],
+      "sourceId": "osha-energy",
+      "note": "Covered general-industry servicing may require the employer's hazardous-energy control procedures under 29 CFR 1910.147. Determine the actual task, scope, and applicable standard; a maintenance title does not establish authorization."
+    },
+    {
+      "lessons": [
+        6,
+        10
+      ],
+      "sourceId": "osha-hazcom",
+      "note": "For covered workplaces, hazard communication addresses labels, safety data sheets, written programs, and employee information and training. Use the exact product information and the employer's applicable controls."
+    }
+  ],
+  "digital-literacy": [
+    {
+      "lessons": [
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+      ],
+      "sourceId": "nist-security",
+      "note": "NIST's small-business guidance supports securing accounts, devices, and data. Use approved tools and policies; guidance is not a guarantee that a device or transaction is safe."
+    },
+    {
+      "lessons": [
+        8,
+        9
+      ],
+      "sourceId": "cisa-mfa",
+      "note": "CISA recommends MFA and moving toward phishing-resistant methods. Availability and recovery options differ by service; never approve an unexpected authentication request."
+    }
+  ],
+  "email-communication": [
+    {
+      "lessons": [
+        1,
+        5,
+        6,
+        8,
+        10,
+        13,
+        15
+      ],
+      "sourceId": "nist-security",
+      "note": "Use approved channels, minimum necessary information, and verified recipients. NIST security guidance supports these habits; specific privacy and retention duties depend on the organization and data."
+    }
+  ],
+  "office-documents": [
+    {
+      "lessons": [
+        6,
+        7,
+        8,
+        9,
+        14,
+        15
+      ],
+      "sourceId": "excel-formulas",
+      "note": "Excel formulas use operators, references, and functions; an equals sign begins a formula. Check the exact ranges, reference behavior, and application version. Sample calculations here use invented values."
+    }
+  ],
+  "it-support": [
+    {
+      "lessons": [
+        1,
+        2,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "sourceId": "nist-security",
+      "note": "NIST guidance supports controlled access, secure configuration, and careful data handling. Follow the employer's authorization and incident procedures; a support request does not grant unlimited access."
+    }
+  ],
+  "networking-fundamentals": [
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15
+      ],
+      "sourceId": "mdn-web",
+      "note": "Use the client-server model to distinguish devices, requests, responses, and network services. This is a technical learning reference, not permission to scan or alter a live network."
+    },
+    {
+      "lessons": [
+        11,
+        12
+      ],
+      "sourceId": "nist-security",
+      "note": "Use approved network controls and access boundaries; do not disable protection or expand access as an undocumented troubleshooting shortcut."
+    }
+  ],
+  "cybersecurity-basics": [
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "sourceId": "nist-security",
+      "note": "Use NIST security guidance to build repeatable prevention and reporting habits. Security depends on implementation and context; no checklist guarantees immunity from compromise."
+    },
+    {
+      "lessons": [
+        3,
+        4,
+        14
+      ],
+      "sourceId": "cisa-mfa",
+      "note": "CISA recommends MFA, with phishing-resistant methods preferred where available. A second factor helps only when recovery and approval practices also remain secure."
+    }
+  ],
+  "web-design": [
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "sourceId": "mdn-core",
+      "note": "MDN core modules cover semantic HTML, CSS, layout, accessible interfaces, and related tools. Use these technical references alongside actual device, keyboard, and accessibility testing; documentation alone does not determine legal compliance."
+    },
+    {
+      "lessons": [
+        8,
+        14
+      ],
+      "sourceId": "wcag-contrast",
+      "note": "WCAG 2.2 SC 1.4.3 generally specifies at least 4.5:1 contrast for ordinary text and 3:1 for qualifying large text, with defined exceptions. Measure actual colors and consult the full criterion; WCAG is a standard, not a universal statement of law."
+    }
+  ],
+  "javascript-foundations": [
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "sourceId": "mdn-js",
+      "note": "MDN documents JavaScript language and browser behavior. Test sample code in a safe environment and validate assumptions; a working tutorial does not establish production security."
+    }
+  ],
+  "data-spreadsheets": [
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "sourceId": "excel-formulas",
+      "note": "Check formulas, references, source ranges, and expected results. Spreadsheet features differ by application and version; numeric scenarios in this lesson are illustrative rather than research or market data."
+    },
+    {
+      "lessons": [
+        13
+      ],
+      "sourceId": "nist-security",
+      "note": "Protect access and use the minimum necessary data. Applicable privacy, contractual, and retention duties depend on the data and organization; this lesson does not claim one law covers every dataset."
+    }
+  ],
+  "responsible-ai": [
+    {
+      "lessons": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "sourceId": "nist-ai",
+      "note": "NIST AI RMF is voluntary risk-management guidance addressing AI trustworthiness and risk. It does not certify a tool or replace applicable privacy, employment, consumer-protection, intellectual-property, or other law."
+    }
+  ],
+  "personal-finance": [
+    {
+      "lessons": [
+        9
+      ],
+      "sourceId": "cfpb-credit",
+      "note": "Use CFPB's official credit-report guidance and dispute resources to understand the process. Check the actual record and relevant provider instructions rather than relying on promises of guaranteed credit repair."
+    }
+  ]
+}

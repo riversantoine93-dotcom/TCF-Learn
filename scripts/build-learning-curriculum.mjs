@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import { build } from 'esbuild';
+import { lessonKnowledge, validateKnowledge, writeLegacyKnowledge } from './build-lesson-knowledge.mjs';
 const courses=[];const lessons=[];
 for (const category of ['trades','technology','reentry']) {
  const blocks=fs.readFileSync(`scripts/curriculum-${category}.txt`,'utf8').trim().split(/\n\s*\n/);
@@ -14,14 +15,15 @@ for (const category of ['trades','technology','reentry']) {
    const options=[correct,'Skip verification and act on the first assumption.','Leave the task undocumented so mistakes cannot be traced.','Use the same approach in every situation without checking context.'];
    // Stable varied answer positions, with a server-only correct index.
    const rotation=i%4;const rotated=[...options.slice(rotation),...options.slice(0,rotation)];
-   lessons.push({course_slug:slug,number:i+1,title,content:{objective:`Apply ${title.toLowerCase()} to a realistic ${titleFor(category)} task.`,teaching,context:description,practice,reflection:`In your own words, explain ${title.toLowerCase()} and describe one situation where the idea would change your next action.`,actionPrompt:`Complete this practice: ${practice} Record your result, the information you checked, and one question you still need to resolve.`,question:`Which statement correctly applies the lesson on ${title.toLowerCase()}?`,options:rotated,correctIndex:rotated.indexOf(correct),feedback:`${correct} Check the lesson's conditions and verify your information before acting.`,minutes:15}});
+   lessons.push({course_slug:slug,number:i+1,title,content:{knowledge:lessonKnowledge(slug,i+1),objective:`Apply ${title.toLowerCase()} to a realistic ${titleFor(category)} task.`,teaching,context:description,practice,reflection:`In your own words, explain ${title.toLowerCase()} and describe one situation where the idea would change your next action.`,actionPrompt:`Complete this practice: ${practice} Record your result, the information you checked, and one question you still need to resolve.`,question:`Which statement correctly applies the lesson on ${title.toLowerCase()}?`,options:rotated,correctIndex:rotated.indexOf(correct),feedback:`${correct} Check the lesson's conditions and verify your information before acting.`,minutes:15}});
   });
  }
 }
 function titleFor(c){return c==='trades'?'supervised workplace':c==='technology'?'digital-work':'return-home planning'}
 await build({entryPoints:['scripts/legacy-curriculum.ts'],bundle:true,platform:'node',format:'esm',outfile:'/tmp/tcf-legacy-curriculum.mjs'});
 const {legacyCourses,legacyLessons}=await import('/tmp/tcf-legacy-curriculum.mjs');
-courses.unshift(...legacyCourses);lessons.push(...legacyLessons);
+courses.unshift(...legacyCourses);lessons.push(...legacyLessons.map(l=>({...l,content:{...l.content,knowledge:lessonKnowledge(l.course_slug,l.number)}})));
+validateKnowledge(courses);writeLegacyKnowledge();
 if(courses.length!==30||new Set(courses.map(c=>c.slug)).size!==30)throw Error('Exactly thirty unique courses required');
 fs.writeFileSync('lib/learning/catalog.json',JSON.stringify(courses,null,2)+'\n');
 fs.writeFileSync('scripts/learning-lessons.json',JSON.stringify(lessons,null,2)+'\n');
