@@ -8,3 +8,5 @@
 
 .learn-teaching-topic{margin:24px 0;padding:20px;border-left:3px solid #a48138;background:#faf8f1;border-radius:0 8px 8px 0}.learn-teaching-topic h4{font-size:1.08rem;line-height:1.5;margin:0 0 14px}.learn-teaching-topic p+p{margin-top:14px}.learn-lesson ol{padding-left:24px;line-height:1.8}.learn-lesson ol li+li{margin-top:12px}.learn-certificate{margin:30px 0;padding:26px;background:#fff;border:1px solid #d3d7da;border-radius:12px}.learn-certificate p{margin:14px 0 20px}.learn-button:disabled{opacity:.55;cursor:not-allowed}@media(max-width:600px){.learn-teaching-topic{padding:16px}.learn-certificate{padding:20px}}
 .learn-earlier-notes{margin:25px 0;padding:20px;border:1px solid #d3d7da;border-radius:9px}.learn-earlier-notes summary{cursor:pointer;font-weight:700}.learn-earlier-notes div{margin-top:18px}.learn-earlier-notes p{white-space:pre-wrap}
+
+.learn-optional-video{margin:25px 0;padding:18px;border:1px solid #d3d7da;border-radius:9px}.learn-optional-video summary{cursor:pointer;font-weight:700}.learn-optional-video iframe{display:block;width:100%;aspect-ratio:16/9;border:0;margin-top:18px;background:#111}

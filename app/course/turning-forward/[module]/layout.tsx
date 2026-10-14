@@ -1,10 +1,3 @@
-"use client";
-
-import { useParams } from "next/navigation";
-import PaidCourseGate from "@/components/PaidCourseGate";
-import ModuleOpenerGate from "@/components/ModuleOpenerGate";
-
-export default function ModuleLayout({ children }: { children: React.ReactNode }) {
-  const params=useParams<{module:string}>();
-  return <PaidCourseGate moduleSlug={params.module}><ModuleOpenerGate moduleSlug={params.module}>{children}</ModuleOpenerGate></PaidCourseGate>;
-}
+import type {ReactNode} from 'react';
+// Legacy URLs redirect to the shared learner, whose API enforces course access.
+export default function ModuleLayout({children}:{children:ReactNode}){return children}
