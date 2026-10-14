@@ -2,6 +2,8 @@
 
 import type { CourseLesson, CourseSlug } from "@/lib/courses/types";
 import type { ProgressData } from "@/lib/progress";
+import LessonIntroduction from "../LessonIntroduction";
+import { thoughtIntroduction } from "@/lib/lesson-introduction";
 import CatchTheThought from "./CatchTheThought";
 import DecisionPointCard from "./DecisionPointCard";
 import WorkbookActivity from "./WorkbookActivity";
@@ -9,7 +11,7 @@ import WorkbookActivity from "./WorkbookActivity";
 const safeKey = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 export function lessonDoneKey(moduleNumber: number, lessonNumber: number) { return `m${moduleNumber}lesson${lessonNumber}`; }
 
-export default function InteractiveLesson({ courseSlug, moduleNumber, moduleSlug, lesson, progress, onProgressChange, onComplete }: { courseSlug: CourseSlug; moduleNumber: number; moduleSlug: string; lesson: CourseLesson; progress: ProgressData; onProgressChange: (key: string, value: string | boolean | number) => void; onComplete: () => void; }) {
+export default function InteractiveLesson({ courseSlug, moduleNumber, moduleSlug, lesson, progress, onProgressChange, onComplete, introductionContext }: { introductionContext?: { title: string; description: string; keyIdea: string }; courseSlug: CourseSlug; moduleNumber: number; moduleSlug: string; lesson: CourseLesson; progress: ProgressData; onProgressChange: (key: string, value: string | boolean | number) => void; onComplete: () => void; }) {
   const prefix = `${courseSlug}:${moduleSlug}:${lesson.slug}`;
   const requirements: boolean[] = [];
   const content = lesson.blocks.map((block, index) => {
@@ -32,5 +34,5 @@ export default function InteractiveLesson({ courseSlug, moduleNumber, moduleSlug
     return null;
   });
   const ready = requirements.length > 0 && requirements.every(Boolean); const done = Boolean(progress[lessonDoneKey(moduleNumber, lesson.number)]);
-  return <article className="ttf-lesson"><div className="ttf-lesson-heading"><span>LESSON {lesson.number}</span><h2>{lesson.title}</h2><p>{lesson.objective}</p></div>{content}{done ? <div className="ttf-complete"><strong>✓ Lesson complete</strong><p>Your work is saved. Continue when you are ready.</p></div> : <button type="button" className="button full" disabled={!ready} onClick={onComplete}>Complete Lesson {lesson.number} →</button>}{!ready && !done && <p className="ttf-requirement-summary">Complete the required written work and answer the Knowledge Check correctly to continue.</p>}</article>;
+  return <article className="ttf-lesson"><div className="ttf-lesson-heading"><span>LESSON {lesson.number}</span><h2>{lesson.title}</h2></div><LessonIntroduction {...thoughtIntroduction(lesson, introductionContext)}/>{content}{done ? <div className="ttf-complete"><strong>✓ Lesson complete</strong><p>Your work is saved. Continue when you are ready.</p></div> : <button type="button" className="button full" disabled={!ready} onClick={onComplete}>Complete Lesson {lesson.number} →</button>}{!ready && !done && <p className="ttf-requirement-summary">Complete the required written work and answer the Knowledge Check correctly to continue.</p>}</article>;
 }
