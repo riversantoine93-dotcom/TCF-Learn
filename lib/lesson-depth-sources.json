@@ -1,0 +1,476 @@
+[
+  [
+    "osha-worker",
+    "OSHA: Worker participation in safety and health programs",
+    "https://www.osha.gov/safety-management/worker-participation",
+    "Guidance"
+  ],
+  [
+    "fpl-wood",
+    "USDA Forest Products Laboratory: Wood Handbook (2021)",
+    "https://research.fs.usda.gov/treesearch/62200",
+    "Technical reference"
+  ],
+  [
+    "doe-electric",
+    "DOE: Electrical Science Fundamentals Handbook, Volume 1 (1992)",
+    "https://www.energy.gov/sites/default/files/2026-04/DOE-HDBK-1011-92_VOL1.pdf",
+    "Technical reference"
+  ],
+  [
+    "epa-cross",
+    "EPA: Cross-Connection Control Manual",
+    "https://www.epa.gov/sites/default/files/2015-09/documents/epa816r03002_0.pdf",
+    "Technical reference"
+  ],
+  [
+    "doe-hvac",
+    "DOE: Heating and Cooling fundamentals",
+    "https://www.energy.gov/topics/heating-cooling",
+    "Technical reference"
+  ],
+  [
+    "doe-filters",
+    "DOE: HVAC Proper Installation of Filters",
+    "https://bsesc.energy.gov/energy-basics/hvac-proper-installation-filters",
+    "Technical reference"
+  ],
+  [
+    "doe-ducts",
+    "ENERGY STAR: Duct Sealing and Distribution",
+    "https://www.energystar.gov/saveathome/heating-cooling/duct-sealing",
+    "Technical reference"
+  ],
+  [
+    "doe-maintenance",
+    "DOE FEMP: Operations and Maintenance Best Practices Guide",
+    "https://www.energy.gov/sites/prod/files/2020/04/f74/omguide_complete_w-eo-disclaimer.pdf",
+    "Technical reference"
+  ],
+  [
+    "usg-finish",
+    "USG: Finishing Drywall Systems",
+    "https://www.usg.com/content/dam/USG_Marketing_Communications/canada/product_promotional_materials/finished_assets/cgc-construction-handbook-ch05-finishing-drywall-systems-can-en.pdf",
+    "Technical reference"
+  ],
+  [
+    "cmha-manual",
+    "CMHA: Concrete Masonry Construction guidance",
+    "https://www.cmha.org/wp-content/uploads/2024/03/CMU-MAN-001-03.pdf",
+    "Technical reference"
+  ],
+  [
+    "cmha-cracks",
+    "CMHA: Crack Control Strategies for Concrete Masonry Construction",
+    "https://www.cmha.org/resource/cmu-tec-009/",
+    "Technical reference"
+  ],
+  [
+    "cement-basics",
+    "American Cement Association: Applications of Cement",
+    "https://www.cement.org/cement-concrete/applications-of-cement/",
+    "Technical reference"
+  ],
+  [
+    "aws-safety",
+    "American Welding Society: Free Safety and Health Resources",
+    "https://www.aws.org/standards-and-publications/free-resources/",
+    "Guidance"
+  ],
+  [
+    "aws-handbooks",
+    "American Welding Society: Welding Handbooks and Technical Guides",
+    "https://www.aws.org/Standards-and-Publications/Guides-and-Handbooks/",
+    "Technical reference"
+  ],
+  [
+    "ga-cdl-intro",
+    "Georgia DDS Commercial Manual: Introduction",
+    "https://dds.georgia.gov/section-1-introduction",
+    "Guidance"
+  ],
+  [
+    "ga-cdl-safety",
+    "Georgia DDS Commercial Manual: Driving Safety",
+    "https://dds.georgia.gov/section-2-driving-safety",
+    "Guidance"
+  ],
+  [
+    "ga-cdl-air",
+    "Georgia DDS Commercial Manual: Air Brakes",
+    "https://dds.georgia.gov/section-5",
+    "Guidance"
+  ],
+  [
+    "career-guide",
+    "CareerOneStop: Justice-Impacted Job Seekers",
+    "https://www.careeronestop.org/JusticeImpacted/default.aspx",
+    "Guidance"
+  ],
+  [
+    "career-prep",
+    "CareerOneStop: Job Search Preparation after Incarceration",
+    "https://www.careeronestop.org/JusticeImpacted/Help/ReEntry/job-search-prep.aspx",
+    "Guidance"
+  ],
+  [
+    "ms-windows",
+    "Microsoft: Windows Help and Learning",
+    "https://support.microsoft.com/en-us/windows",
+    "Technical reference"
+  ],
+  [
+    "ms-backup",
+    "Microsoft: Back up and Restore with Windows Backup",
+    "https://support.microsoft.com/en-us/windows/experience/backup-recovery/back-up-and-restore-with-windows-backup",
+    "Technical reference"
+  ],
+  [
+    "ms-accessibility",
+    "Microsoft: Discover Windows Accessibility Features",
+    "https://support.microsoft.com/en-us/accessibility/windows/discover-windows-accessibility-features",
+    "Technical reference"
+  ],
+  [
+    "ms-outlook",
+    "Microsoft: Basic Tasks in Outlook",
+    "https://support.microsoft.com/en-us/outlook/basic-tasks-in-outlook",
+    "Technical reference"
+  ],
+  [
+    "ms-attachments",
+    "Microsoft: Attach Files to Emails in Outlook",
+    "https://support.microsoft.com/en-us/outlook/mail/add-pictures-or-attach-files-to-emails-in-outlook",
+    "Technical reference"
+  ],
+  [
+    "ms-folders",
+    "Microsoft: Organize Email Using Folders in Outlook",
+    "https://support.microsoft.com/en-us/outlook/training/organize-email-by-using-folders-in-outlook",
+    "Technical reference"
+  ],
+  [
+    "ms-word-access",
+    "Microsoft: Make Word Documents Accessible",
+    "https://support.microsoft.com/en-us/accessibility/word/make-your-word-documents-accessible-to-people-with-disabilities",
+    "Technical reference"
+  ],
+  [
+    "ms-slides",
+    "Microsoft: Make PowerPoint Presentations Accessible",
+    "https://support.microsoft.com/en-us/accessibility/powerpoint/make-your-powerpoint-presentations-accessible-to-people-with-disabilities",
+    "Technical reference"
+  ],
+  [
+    "ms-excel-sort",
+    "Microsoft: Sort Data in an Excel Range or Table",
+    "https://support.microsoft.com/en-us/excel/sort-data-in-a-range-or-table-in-excel",
+    "Technical reference"
+  ],
+  [
+    "ms-pivot",
+    "Microsoft: Overview of PivotTables and PivotCharts",
+    "https://support.microsoft.com/en-us/excel/overview-of-pivottables-and-pivotcharts",
+    "Technical reference"
+  ],
+  [
+    "ms-lookups",
+    "Microsoft: XLOOKUP Function",
+    "https://support.microsoft.com/en-us/excel/functions/xlookup-function",
+    "Technical reference"
+  ],
+  [
+    "nist-quick",
+    "NIST SP 1300: Cybersecurity Framework 2.0 Small Business Quick-Start Guide",
+    "https://csrc.nist.gov/pubs/sp/1300/final",
+    "Guidance"
+  ],
+  [
+    "nist-genai",
+    "NIST AI 600-1: Generative AI Profile",
+    "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+    "Guidance"
+  ],
+  [
+    "rfc-private",
+    "IETF RFC 1918: Address Allocation for Private Internets",
+    "https://www.rfc-editor.org/rfc/rfc1918.html",
+    "Technical reference"
+  ],
+  [
+    "rfc-dhcp",
+    "IETF RFC 2131: Dynamic Host Configuration Protocol",
+    "https://www.rfc-editor.org/rfc/rfc2131.html",
+    "Technical reference"
+  ],
+  [
+    "rfc-dns",
+    "IETF RFC 1034: Domain Names, Concepts and Facilities",
+    "https://datatracker.ietf.org/doc/html/rfc1034",
+    "Technical reference"
+  ],
+  [
+    "rfc-http",
+    "IETF RFC 9110: HTTP Semantics",
+    "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "Technical reference"
+  ],
+  [
+    "mdn-js-guide",
+    "MDN: JavaScript Guide",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+    "Technical reference"
+  ],
+  [
+    "mdn-js-grammar",
+    "MDN: JavaScript Grammar and Types",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types",
+    "Technical reference"
+  ],
+  [
+    "mdn-js-operators",
+    "MDN: JavaScript Expressions and Operators",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators",
+    "Technical reference"
+  ],
+  [
+    "mdn-js-control",
+    "MDN: JavaScript Control Flow and Error Handling",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling",
+    "Technical reference"
+  ],
+  [
+    "mdn-js-arrays",
+    "MDN: JavaScript Indexed Collections",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections",
+    "Technical reference"
+  ],
+  [
+    "mdn-js-functions",
+    "MDN: JavaScript Functions",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+    "Technical reference"
+  ],
+  [
+    "mdn-js-objects",
+    "MDN: JavaScript Working with Objects",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects",
+    "Technical reference"
+  ],
+  [
+    "mdn-dom",
+    "MDN: Introduction to the DOM",
+    "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
+    "Technical reference"
+  ],
+  [
+    "mdn-events",
+    "MDN: Introduction to Events",
+    "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events",
+    "Technical reference"
+  ],
+  [
+    "w3c-images",
+    "W3C WAI: Images Tutorial",
+    "https://www.w3.org/WAI/tutorials/images/",
+    "Technical reference"
+  ],
+  [
+    "w3c-forms",
+    "W3C WAI: Forms Tutorial",
+    "https://www.w3.org/WAI/tutorials/forms/",
+    "Technical reference"
+  ],
+  [
+    "w3c-keyboard",
+    "W3C WAI: Keyboard Compatibility",
+    "https://www.w3.org/WAI/perspective-videos/keyboard/",
+    "Technical reference"
+  ],
+  [
+    "samhsa-reentry",
+    "SAMHSA: Intercept 4, Reentry Planning",
+    "https://www.samhsa.gov/communities/criminal-juvenile-justice/sequential-intercept-model/intercept-4",
+    "Guidance"
+  ],
+  [
+    "samhsa-recovery",
+    "SAMHSA: Working Definition and Guiding Principles of Recovery",
+    "https://library.samhsa.gov/sites/default/files/pep12-recdef.pdf",
+    "Guidance"
+  ],
+  [
+    "samhsa-anger",
+    "SAMHSA: Cognitive-Behavioral Anger Management Manual",
+    "https://library.samhsa.gov/sites/default/files/anger_management_manual_508_compliant.pdf",
+    "Guidance"
+  ],
+  [
+    "ssa-reentry",
+    "SSA: Supporting Reentry and Documentation",
+    "https://www.ssa.gov/reentry/correctional-institutions.html",
+    "Guidance"
+  ],
+  [
+    "nhs-thoughts",
+    "NHS Every Mind Matters: Reframing Unhelpful Thoughts",
+    "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/reframing-unhelpful-thoughts/",
+    "Guidance"
+  ],
+  [
+    "nhs-problem",
+    "NHS Every Mind Matters: Problem Solving",
+    "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/problem-solving/",
+    "Guidance"
+  ],
+  [
+    "nhs-relationships",
+    "NHS: Healthy Relationships and Mental Wellbeing",
+    "https://www.nhs.uk/every-mind-matters/lifes-challenges/maintaining-healthy-relationships-and-mental-wellbeing/",
+    "Guidance"
+  ],
+  [
+    "nimh-care",
+    "NIMH: Caring for Your Mental Health",
+    "https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health",
+    "Guidance"
+  ],
+  [
+    "va-assertive",
+    "VA: Assertive Communication Tips",
+    "https://www.veterantraining.va.gov/apps/aims/resources/documents/AssertiveCommunicationTips.pdf",
+    "Guidance"
+  ],
+  [
+    "cfpb-toolkit",
+    "CFPB: Your Money, Your Goals Financial Empowerment Toolkit",
+    "https://files-prod.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_financial-empowerment_toolkit.pdf",
+    "Guidance"
+  ],
+  [
+    "cfpb-cashflow",
+    "CFPB: Creating a Cash Flow Budget",
+    "https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_cash_flow_budget_tool_2018-11_ADA.pdf",
+    "Guidance"
+  ],
+  [
+    "cfpb-accounts",
+    "CFPB: Bank Accounts and Services",
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+    "Guidance"
+  ],
+  [
+    "cfpb-debt",
+    "CFPB: Debt Collection Resources",
+    "https://www.consumerfinance.gov/consumer-tools/debt-collection/",
+    "Guidance"
+  ],
+  [
+    "cfpb-interest",
+    "CFPB: Financial Terms and Consumer Tools",
+    "https://www.consumerfinance.gov/consumer-tools/",
+    "Guidance"
+  ],
+  [
+    "ftc-rent",
+    "FTC: Rental Listing Scams",
+    "https://consumer.ftc.gov/articles/rental-listing-scams",
+    "Guidance"
+  ],
+  [
+    "ftc-scams",
+    "FTC: Scams and Consumer Protection",
+    "https://consumer.ftc.gov/scams",
+    "Guidance"
+  ],
+  [
+    "hud-counsel",
+    "HUD: About Housing Counseling, Including Rental Counseling",
+    "https://www.hud.gov/hud-partners/single-family-about-housing-counseling",
+    "Guidance"
+  ],
+  [
+    "sba-plan",
+    "SBA: Plan Your Business",
+    "https://www.sba.gov/counseling/plan-your-business/",
+    "Guidance"
+  ],
+  [
+    "sba-market",
+    "SBA: Market Research and Competitive Analysis",
+    "https://legacy.sba.gov/business-guide/plan-your-business/market-research-competitive-analysis",
+    "Guidance"
+  ],
+  [
+    "sba-costs",
+    "SBA: Calculate Your Startup Costs",
+    "https://legacy.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs",
+    "Guidance"
+  ],
+  [
+    "sba-launch",
+    "SBA: Launch Your Business",
+    "https://www.sba.gov/counseling/launch-your-business/",
+    "Guidance"
+  ],
+  [
+    "americorps-volunteer",
+    "AmeriCorps: Engaging Volunteers, Comprehensive Literature Review",
+    "https://americorps.gov/sites/default/files/document/Literature%20Review%20for%20Volunteer%20Management_0.pdf",
+    "Guidance"
+  ],
+  [
+    "americorps-evaluation",
+    "AmeriCorps: Applicant-Determined Performance Measures (2026)",
+    "https://americorps.gov/sites/default/files/document/2026-01/2026-Applicant-Determined-Performance-Measures.pdf",
+    "Guidance"
+  ],
+  [
+    "wbdg-plumbing",
+    "DoD UFC 3-420-01: Plumbing Systems",
+    "https://www.wbdg.org/dod/ufc/ufc-3-420-01",
+    "Technical reference"
+  ],
+  [
+    "hud-rental-training",
+    "HUD: Housing Counselor Training Center, Rental Housing",
+    "https://hudhousingcounselors.hud.gov/training-center/",
+    "Guidance"
+  ],
+  [
+    "mdn-js-loops",
+    "MDN: JavaScript Loops and Iteration",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+    "Technical reference"
+  ],
+  [
+    "nist-stats",
+    "NIST/SEMATECH: e-Handbook of Statistical Methods",
+    "https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook",
+    "Technical reference"
+  ],
+  [
+    "doe-lighting",
+    "DOE: Consumer Guide to Energy-Efficient Lighting",
+    "https://www.energy.gov/sites/default/files/2021-08/ES-EE%20Lighting_080921_0.pdf",
+    "Technical reference"
+  ],
+  [
+    "sw-prep",
+    "Sherwin-Williams: Surface Preparation and Coating Compatibility",
+    "https://www.sherwin-williams.com/painting-contractors/resources/surface-preparation",
+    "Technical reference"
+  ],
+  [
+    "nist-causality",
+    "NIST: Experiments and Experimental Design",
+    "https://www.itl.nist.gov/div898/handbook/ppc/section1/ppc136.htm",
+    "Technical reference"
+  ],
+  [
+    "bm-cure",
+    "Benjamin Moore: Dry Time, Cure Time, and Painted-Surface Care",
+    "https://www.benjaminmoore.com/en-us/interior-exterior-paints-stains/how-to-advice/interiors/how-to-clean-freshly-painted-walls-and-cabinets",
+    "Technical reference"
+  ]
+]

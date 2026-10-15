@@ -1,4 +1,5 @@
 import type { KnowledgeSource } from './lesson-knowledge';
+import depthSources from './lesson-depth-sources.json';
 const checked = '2026-10-14';
 export const knowledgeSources: Record<string, KnowledgeSource> = Object.fromEntries(([
  ['osha-focus','OSHA: Construction Focus Four','https://www.osha.gov/training/outreach/construction/focus-four','Guidance'],
@@ -26,3 +27,8 @@ export const knowledgeSources: Record<string, KnowledgeSource> = Object.fromEntr
  ['nccih-mindfulness','NCCIH: Meditation and mindfulness effectiveness and safety','https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety','Guidance'],
  ['cfpb-credit','CFPB: Credit reports and scores','https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/','Guidance'],
 ] as const).map(([id,title,url,kind]) => [id,{id,title,url,kind,checked}]));
+
+for (const [id,title,url,kind] of depthSources) {
+  if (knowledgeSources[id]) throw new Error(`Duplicate knowledge source: ${id}`);
+  knowledgeSources[id]={id,title,url,kind:kind as KnowledgeSource['kind'],checked:'2026-10-15'};
+}

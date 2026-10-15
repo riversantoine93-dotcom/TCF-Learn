@@ -32,6 +32,6 @@ export function validateKnowledge(courses) {
  for (const course of courses) if (authored[course.slug]?.length !== course.lesson_count) throw Error(`Knowledge count differs: ${course.slug}`);
  if (Object.keys(authored).length !== courses.length) throw Error('Knowledge course set differs from catalog');
 }
-export function writeLegacyKnowledge() {
- fs.writeFileSync('lib/legacy-lesson-knowledge.json', JSON.stringify(Object.fromEntries(['turning-forward','thought-to-freedom'].map(slug=>[slug,authored[slug]])),null,2)+'\n');
+export function writeLegacyKnowledge(lessons=[]) {
+ fs.writeFileSync('lib/legacy-lesson-knowledge.json', JSON.stringify(Object.fromEntries(['turning-forward','thought-to-freedom'].map(slug=>[slug,lessons.length?lessons.filter(l=>l.course_slug===slug).sort((a,b)=>a.number-b.number).map(l=>l.content.knowledge):authored[slug]])),null,2)+'\n');
 }

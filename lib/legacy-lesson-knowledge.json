@@ -8,7 +8,14 @@
       "softSkill": "Identity with accountability",
       "focus": "describe who you are becoming using one observable action, not a demand that others forget the past.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "samhsa-recovery",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for you are not starting over. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "Before an interview, a learner writes 'I predict rejection' beside the facts 'I was invited and I can prepare'. The distinction informs the next step.",
@@ -18,7 +25,14 @@
       "softSkill": "Emotional awareness",
       "focus": "notice fear, examine evidence, and choose a responsible action without requiring fear to disappear.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for fear is information, not instruction. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner places tomorrow's documents by the door and schedules a short study block. Structure reduces the number of decisions required under pressure.",
@@ -28,7 +42,14 @@
       "softSkill": "Consistency",
       "focus": "choose a small routine with a clear time and place and a backup for disrupted days.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for the first discipline: structure. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner fears calling an agency but cannot name the exact danger. Writing 'I may not understand the requirements' leads to preparing questions.",
@@ -38,7 +59,14 @@
       "softSkill": "Risk evaluation",
       "focus": "distinguish an actual safety concern from uncertainty and identify what information would clarify it.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for name the real threat. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "An unanswered bill feels easier to ignore, but the learner maps the growing consequences and makes one verified call.",
@@ -48,7 +76,14 @@
       "softSkill": "Responsible action",
       "focus": "compare immediate relief with longer-term cost and choose an achievable first step.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for the avoidance tax. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner practices introducing herself with a trusted person, then at a small meeting, before a larger presentation.",
@@ -58,7 +93,14 @@
       "softSkill": "Gradual practice",
       "focus": "define manageable steps you control; do not force exposure to a situation that is unsafe.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for build a courage ladder. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A tired learner does five minutes of planned reading instead of abandoning the routine because a long session feels impossible.",
@@ -68,7 +110,14 @@
       "softSkill": "Self-management",
       "focus": "make the minimum action explicit before motivation drops.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for motivation is a visitor. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner's usual walk is interrupted by rain. An agreed accessible indoor alternative preserves the intended routine.",
@@ -78,7 +127,14 @@
       "softSkill": "Flexibility",
       "focus": "protect the purpose of the commitment without pretending every day can meet an ideal standard.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for design your minimum standard. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A calendar gives work, meals, family, rest, and a weekly review actual space. The learner adjusts an overloaded evening.",
@@ -88,7 +144,14 @@
       "softSkill": "Planning",
       "focus": "use a schedule as a tool to support responsibilities rather than a way to punish yourself for every delay.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "cfpb-cashflow",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for build your weekly operating system. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "An old friend repeatedly pressures a learner to miss appointments. The learner limits contact and spends more time with supportive people.",
@@ -98,7 +161,14 @@
       "softSkill": "Discernment",
       "focus": "evaluate present behavior and safety while respecting that you cannot control another person's choices.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for not everyone can follow you forward. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "'I am not available tonight; I can speak tomorrow at six' communicates a limit without a long defense.",
@@ -108,7 +178,14 @@
       "softSkill": "Assertiveness",
       "focus": "state the boundary and your next action calmly, then follow through safely.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for stop over-explaining. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner starts with a small shared responsibility and observes whether agreements are kept before granting wider access.",
@@ -118,7 +195,14 @@
       "softSkill": "Trust-building",
       "focus": "expand trust using consistent evidence, not pressure or a demand for immediate closeness.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-relationships",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for trust is built in layers. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner lists income dates, essential bills, and unknown balances before deciding which money question to address first.",
@@ -128,7 +212,14 @@
       "softSkill": "Financial honesty",
       "focus": "separate verified amounts from estimates and seek qualified help for unfamiliar obligations.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "cfpb-toolkit",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for face the numbers. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner postpones a status purchase to preserve transport money needed for work. The choice supports stability.",
@@ -138,7 +229,14 @@
       "softSkill": "Priority-setting",
       "focus": "compare a purchase with essential commitments rather than using appearance as evidence of progress.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "cfpb-cashflow",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for stability before appearance. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner sequences document recovery, verified banking questions, a bill calendar, and an affordable buffer instead of tackling everything at once.",
@@ -148,7 +246,14 @@
       "softSkill": "Patience",
       "focus": "choose dependencies and realistic steps; the right sequence depends on actual circumstances.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for create a rebuild sequence. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A speaker reflects on a painful experience and asks what practical need the audience has before deciding what to share.",
@@ -158,7 +263,14 @@
       "softSkill": "Meaning-making",
       "focus": "choose a useful contribution without assuming that suffering creates an obligation to disclose.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "samhsa-recovery",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for pain is material, not the mission. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner helps a neighbor complete a task they requested rather than giving an unsolicited speech about change.",
@@ -168,7 +280,14 @@
       "softSkill": "Service orientation",
       "focus": "ask what is useful, agree on scope, and respect the recipient's autonomy.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "americorps-volunteer",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for purpose requires usefulness. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A volunteer limits service to one reliable afternoon so work, family, and recovery remain supported.",
@@ -178,7 +297,14 @@
       "softSkill": "Sustainable boundaries",
       "focus": "helping others should not require neglecting your own essential responsibilities.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for serve without self-abandonment. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner who once stayed constantly alert practices asking questions and sharing information during a team task.",
@@ -188,7 +314,14 @@
       "softSkill": "Collaborative leadership",
       "focus": "notice when an old protective habit no longer serves the present role and choose a safer, useful response.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for survival is not the same as leadership. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "After missing a commitment, a leader acknowledges the impact, proposes repair, and changes the reminder system.",
@@ -198,7 +331,14 @@
       "softSkill": "Accountability without shame",
       "focus": "take responsibility for behavior while preserving the ability to learn and act differently.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for accountability without shame. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A leadership code says 'I check facts before repeating a claim' and names how the learner will correct an error.",
@@ -208,7 +348,14 @@
       "softSkill": "Integrity",
       "focus": "translate a value into a repeatable behavior and a clear repair when it is missed.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "americorps-volunteer",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for create your leadership code. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A difficult week feels unproductive, but the learner records two completed applications and one repaired agreement.",
@@ -218,7 +365,14 @@
       "softSkill": "Evidence-minded reflection",
       "focus": "feelings matter without being the only measure of progress.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for measure evidence, not emotion. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A 90-day plan includes one work goal, one stability goal, concrete actions, and weekly reviews.",
@@ -228,7 +382,14 @@
       "softSkill": "Intentional planning",
       "focus": "choose goals within your influence and adjust based on evidence and changing needs.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "career-guide",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for build a 90-day forward plan. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "After a missed routine, a learner uses a return plan: contact support, choose the smallest next action, and restart the schedule.",
@@ -238,7 +399,14 @@
       "softSkill": "Recovery from setbacks",
       "focus": "plan how to return rather than requiring yourself never to struggle.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for create a return plan. Use this as general educational background; service eligibility, individual needs, and applicable rules require their own verification. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     }
   ],
   "thought-to-freedom": [
@@ -250,7 +418,14 @@
       "softSkill": "Openness",
       "focus": "hear the specific information before deciding whether it is useful or accurate.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for the closed channel: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "During a discussion, a learner notices preparing a defense without hearing the other person. They summarize the feedback and ask one clarifying question.",
@@ -260,7 +435,14 @@
       "softSkill": "Active listening",
       "focus": "understanding feedback does not require agreeing with every interpretation.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for the closed channel: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "Instead of 'Nobody can tell me anything', a learner writes 'I can hear this, check the facts, and decide responsibly'.",
@@ -270,7 +452,14 @@
       "softSkill": "Cognitive flexibility",
       "focus": "practice a replacement thought and demonstrate it with one listening behavior.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for the closed channel: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner argues that being helpful on weekends cancels harm caused on Monday. Good actions and harmful actions can both be real.",
@@ -280,7 +469,14 @@
       "softSkill": "Balanced accountability",
       "focus": "recognize strengths without using them to excuse a separate harmful choice.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "samhsa-anger",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for viewing self as a good person: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "Someone says 'I'm a good person, so this rule should not apply'. Pause to examine the actual behavior and its effects.",
@@ -290,7 +486,14 @@
       "softSkill": "Honesty",
       "focus": "evaluate the decision itself instead of using a positive identity as an automatic defense.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for viewing self as a good person: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner replaces 'My good intentions should settle this' with 'I need to understand the impact and repair what I can'.",
@@ -300,7 +503,14 @@
       "softSkill": "Repair",
       "focus": "keep the useful parts of your identity while taking responsibility for the specific action.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for viewing self as a good person: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner blames every missed appointment on the system without acknowledging that they did not check the bus schedule.",
@@ -310,7 +520,14 @@
       "softSkill": "Agency",
       "focus": "recognize real barriers and identify the part of the next action you can influence.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for victimstance: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "An unfair delay triggers the thought 'Nothing I do matters'. The learner checks options and contacts the office about a new date.",
@@ -320,7 +537,14 @@
       "softSkill": "Problem-solving",
       "focus": "acknowledging unfairness and taking a practical next step can happen together.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for victimstance: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A replacement statement says 'This barrier is real; I can document it, ask for help, and choose my next response'.",
@@ -330,7 +554,14 @@
       "softSkill": "Self-advocacy",
       "focus": "avoid confusing responsibility for your response with blame for every circumstance.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for victimstance: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner postpones a short application because effort feels uncomfortable, then calls it impossible without testing the task.",
@@ -340,7 +571,14 @@
       "softSkill": "Willingness",
       "focus": "distinguish difficulty from impossibility and define the first manageable action.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for lack of effort: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner notices the urge to stop after reading one unfamiliar question. They ask what it means and continue with the next section.",
@@ -350,7 +588,14 @@
       "softSkill": "Persistence",
       "focus": "make a useful request for clarification instead of interpreting confusion as proof you cannot learn.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for lack of effort: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner replaces 'If it is hard, it is not for me' with 'I can try one step, review it, and get support'.",
@@ -360,7 +605,14 @@
       "softSkill": "Deliberate effort",
       "focus": "measure a realistic action and outcome rather than promising unlimited willpower.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for lack of effort: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A worker completes only the visible part of a task and ignores the agreed checks. Finishing quickly is not the same as responsible performance.",
@@ -370,7 +622,14 @@
       "softSkill": "Conscientiousness",
       "focus": "identify what completion actually requires and who depends on the result.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "americorps-volunteer",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for lack of interest in responsible performance: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner notices skipping the handover notes because no one is watching. They complete the agreed documentation.",
@@ -380,7 +639,14 @@
       "softSkill": "Reliability",
       "focus": "consider the downstream effect on another person, not only immediate convenience.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for lack of interest in responsible performance: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A replacement plan names the task standard, a check, a completion time, and who receives the result.",
@@ -390,7 +656,14 @@
       "softSkill": "Follow-through",
       "focus": "make responsible performance observable and ask for clarification when the standard is unclear.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "americorps-volunteer",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for lack of interest in responsible performance: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner treats a family member's disagreement as disobedience. The other person's autonomy is separate from the learner's preference.",
@@ -400,7 +673,14 @@
       "softSkill": "Respect",
       "focus": "connection does not create ownership over another person's decisions, time, or body.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for ownership attitude: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A person wants to monitor every message on a partner's phone. Pause and identify the controlling thought before acting.",
@@ -410,7 +690,14 @@
       "softSkill": "Consent and boundaries",
       "focus": "do not demand access as proof of loyalty; consider safety and seek appropriate support when needed.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-relationships",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for ownership attitude: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A replacement thought says 'I can state my need and choose my boundary; I cannot own another person's choice'.",
@@ -420,7 +707,14 @@
       "softSkill": "Autonomy",
       "focus": "practice a respectful request and a safe action you control.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for ownership attitude: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner calls an interview 'pointless' while privately fearing rejection. Naming the fear makes preparation possible.",
@@ -430,7 +724,14 @@
       "softSkill": "Emotional honesty",
       "focus": "acknowledge fear without treating it as proof that you must avoid the opportunity.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for fear of fear: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "Before canceling, the learner writes the feared result and one fact that can be checked, then asks for practice support.",
@@ -440,7 +741,14 @@
       "softSkill": "Courage",
       "focus": "choose a manageable step while respecting actual safety needs and limits.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for fear of fear: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner replaces 'I must never feel afraid' with 'I can feel afraid and still take a considered next step'.",
@@ -450,7 +758,14 @@
       "softSkill": "Self-compassion",
       "focus": "do not demand emotional perfection before responsible action.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for fear of fear: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A tempting purchase provides immediate relief but would leave a work-transport shortfall next week.",
@@ -460,7 +775,14 @@
       "softSkill": "Future perspective",
       "focus": "compare the immediate reward with a specific later consequence.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "cfpb-cashflow",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for lack of time perspective: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner pauses before sending an angry message and considers tomorrow's working relationship and desired outcome.",
@@ -470,7 +792,14 @@
       "softSkill": "Delay and evaluation",
       "focus": "create a small decision window before an avoidable action becomes difficult to undo.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for lack of time perspective: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A replacement plan asks 'What will this choice cost tomorrow, next month, and in the future I want?'.",
@@ -480,7 +809,14 @@
       "softSkill": "Long-term thinking",
       "focus": "connect a future goal to one action you can take today.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for lack of time perspective: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner turns a routine disagreement into a contest about who is stronger. Winning the exchange can damage the shared goal.",
@@ -490,7 +826,14 @@
       "softSkill": "Cooperation",
       "focus": "identify whether you are solving the problem or trying to dominate the person.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "samhsa-anger",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for power thrust: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A supervisor corrects a procedure and the learner feels an urge to intimidate. They pause and ask for the required standard.",
@@ -500,7 +843,14 @@
       "softSkill": "De-escalation",
       "focus": "authority over your response is more useful than escalating a power contest.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for power thrust: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A replacement response says 'I can be firm and respectful without needing the other person to lose'.",
@@ -510,7 +860,14 @@
       "softSkill": "Constructive assertiveness",
       "focus": "state the issue, request, and next step without threats.",
       "reset": "Pause in a safe place. Name what you can observe, distinguish it from a prediction, and identify the next action within your control. There is no need to clear your mind or eliminate a feeling. Stop if this increases discomfort.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for power thrust: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A learner says a rule is reasonable for everyone else but their situation should be exempt without review.",
@@ -520,7 +877,14 @@
       "softSkill": "Fairness",
       "focus": "personal circumstances can be relevant without automatically removing shared responsibilities.",
       "reset": "Choose a neutral object and notice its color, shape, and position for a few moments. If comfortable, return attention to one planned step. Use ordinary observation instead of inward attention if that suits you better; participation is optional.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-thoughts",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for uniqueness: recognize it. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A deadline feels inconvenient. The learner notices inventing an exception rather than requesting an authorized extension.",
@@ -530,7 +894,14 @@
       "softSkill": "Transparency",
       "focus": "ask directly for an adjustment and accept that only the appropriate person can approve it.",
       "reset": "If it feels comfortable, sit or stand safely and notice two neutral objects around you. Feel the support beneath your feet or body. Then choose one small next action. Keep your eyes open if you prefer; stop or switch activities if uncomfortable.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "nhs-problem",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for uniqueness: catch it in real life. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     },
     {
       "example": "A replacement thought says 'I can explain my circumstances honestly and follow the agreed process'.",
@@ -540,7 +911,14 @@
       "softSkill": "Shared accountability",
       "focus": "distinguish a legitimate accommodation request from silently deciding the rules do not apply.",
       "reset": "If comfortable, let your breathing stay natural and notice a few breaths without changing their depth or holding them. When attention wanders, gently return to the present task. You may keep your eyes open, use an external object instead, or skip the exercise.",
-      "references": []
+      "references": [
+        {
+          "sourceId": "va-assertive",
+          "lessonReading": true,
+          "baselineNote": null,
+          "note": "Background for uniqueness: correct the thought. These resources support general evidence-checking, problem-solving, or communication. They do not validate the course’s named thinking-pattern taxonomy or turn this lesson into clinical treatment. The worked application is an original TCF illustration, not a quotation or reported research result."
+        }
+      ]
     }
   ]
 }

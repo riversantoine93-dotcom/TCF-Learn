@@ -24,9 +24,10 @@ function titleFor(c){return c==='trades'?'supervised workplace':c==='technology'
 await build({entryPoints:['scripts/legacy-curriculum.ts'],bundle:true,platform:'node',format:'esm',outfile:'/tmp/tcf-legacy-curriculum.mjs'});
 const {legacyCourses,legacyLessons}=await import('/tmp/tcf-legacy-curriculum.mjs');
 courses.unshift(...legacyCourses);lessons.push(...legacyLessons.map(l=>({...l,content:{...l.content,knowledge:lessonKnowledge(l.course_slug,l.number)}})));
-validateKnowledge(courses);writeLegacyKnowledge();
+validateKnowledge(courses);
 if(courses.length!==30||new Set(courses.map(c=>c.slug)).size!==30)throw Error('Exactly thirty unique courses required');
 for(const lesson of lessons) lesson.content=selfPacedContent(lesson,courses.find(c=>c.slug===lesson.course_slug));
+writeLegacyKnowledge(lessons);
 for(const course of courses)course.duration_minutes=course.lesson_count*20;
 fs.writeFileSync('lib/learning/catalog.json',JSON.stringify(courses,null,2)+'\n');
 fs.writeFileSync('scripts/learning-lessons.json',JSON.stringify(lessons,null,2)+'\n');
