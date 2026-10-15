@@ -238,5 +238,89 @@
     "scope": "Organizational leadership principles adapted through original individual and community examples; no copied forms or evaluation instruments.",
     "pageCount": 36,
     "sha256": "d0b68b64be3dcc72127249dcf906796220fef9c1046518918a6190769a94a453"
+  },
+  {
+    "id": "pdf-construction",
+    "title": "Construction Pre-Job Briefing, A-6005-766 revision 6",
+    "uploadedFile": "construction site readiness.pdf",
+    "author": "Hanford Mission Integrity Solutions",
+    "kind": "Guidance",
+    "url": "",
+    "checked": "2026-10-15",
+    "scope": "Site-specific briefing form, not a universal safety standard. Local contacts, PPE listings, wind thresholds, permits, and internal procedures are not republished as general requirements.",
+    "pageCount": 3,
+    "sha256": "32d5ba47ca6dd079f414babc6a5c6664c4a084b5806ed5030b1dc9362be2ae83"
+  },
+  {
+    "id": "pdf-carpentry",
+    "title": "Carpentry Skills Workbook, Student Edition (2012)",
+    "uploadedFile": "carpentry fundamentals.pdf",
+    "author": "Oklahoma Department of Career and Technology Education / CIMC",
+    "kind": "Technical reference",
+    "url": "",
+    "checked": "2026-10-15",
+    "scope": "Selected job sheets support fitting, layout, material, and supervised-work concepts. Original written examples replace publisher forms and hands-on assignments; product instructions and current approved plans govern actual work.",
+    "pageCount": 447,
+    "sha256": "1f7a1436e41448a85bb097f57c8289a744d64f97e6b6d525446509a9e559844d"
+  },
+  {
+    "id": "pdf-electrical",
+    "title": "Basic Electricity, first edition (2014)",
+    "uploadedFile": "Electrical trade foundations.pdf",
+    "author": "Technical Learning College (TLC)",
+    "kind": "Technical reference",
+    "url": "",
+    "checked": "2026-10-15",
+    "scope": "Historical introductory booklet with dated code statements and some inconsistent labels. Use verified basic theory only; current official safety rules, adopted code, and qualified supervision govern actual work. No live tests or repair procedures are assigned.",
+    "pageCount": 296,
+    "sha256": "d0b008cbe2589fe6558c87a644e1bed9eea0c81ec0c1e5ae04295d5c31e02745"
+  },
+  {
+    "id": "pdf-plumbing",
+    "title": "Basic Plumbing (January 13, 2020)",
+    "uploadedFile": "Plumbing Trade Foundations.pdf",
+    "author": "Technical Learning College (TLC)",
+    "kind": "Technical reference",
+    "url": "",
+    "checked": "2026-10-15",
+    "scope": "Hydraulic, component, and system concepts only. Old product, operating, historical, and regulatory statements are not treated as current requirements. Approved design, current instructions, local rules, and qualified supervision govern actual work.",
+    "pageCount": 212,
+    "sha256": "f23d3db4f1aaf08b55b8e0797c84d74c59635337f6b51ce38e71b0969d5617c5"
+  },
+  {
+    "id": "pdf-hvac",
+    "title": "Fundamentals of HVAC Systems (2006)",
+    "uploadedFile": "HVAC Trade Foundations.pdf",
+    "author": "Robert McDowall / ASHRAE and Elsevier",
+    "kind": "Technical reference",
+    "url": "",
+    "checked": "2026-10-15",
+    "scope": "Foundational system, comfort, airflow, heat-transfer, and control concepts. Historic standards, refrigerant statements, filter classifications, and design values are not presented as current guidance. Current equipment instructions and official rules govern practice.",
+    "pageCount": 235,
+    "sha256": "dd83e6697919dcb1abcf6c427a21ea01c28bdab99c3c6ddaa82c359857b87184"
+  },
+  {
+    "id": "pdf-drywall",
+    "title": "Finishing Drywall Systems, Chapter 5 (supplied CGC/USG handbook excerpt)",
+    "uploadedFile": "Painting and Drywall Basics.pdf",
+    "author": "CGC / USG",
+    "kind": "Technical reference",
+    "url": "",
+    "checked": "2026-10-15",
+    "scope": "Manufacturer-specific chapter with historic finish standards and product examples. Use conceptual preparation and staged-finishing principles; current product instructions, safety guidance, and project specifications govern actual work. Old mixing, equipment, respirator, and application values are not assigned.",
+    "pageCount": 42,
+    "sha256": "0394e1e6336f7d6c91081e0d40ede07e22eea19e26099565bed7c59aa1af508f"
+  },
+  {
+    "id": "pdf-cdl",
+    "title": "Model Commercial Driver License Manual, 2005 testing model, July 2010 version",
+    "uploadedFile": "CDL Training and Permit Preparation.pdf",
+    "author": "American Association of Motor Vehicle Administrators (AAMVA)",
+    "kind": "Guidance",
+    "url": "",
+    "checked": "2026-10-15",
+    "scope": "Historical model manual for vehicle and safety concepts, not the current state licensing manual or current federal rules. It predates modern ELDT. Use linked current FMCSA and state guidance for licensing, registered training, hours of service, securement, and actual practical procedures.",
+    "pageCount": 152,
+    "sha256": "ddb6bd247f9133815722dcbaf2974d133b6ed12e1f3ca0f07151f438c09114b2"
   }
 ]

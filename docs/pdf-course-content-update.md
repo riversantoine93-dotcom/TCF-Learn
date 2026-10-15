@@ -1,6 +1,6 @@
 # Uploaded readings: October 15, 2026
 
-All 20 supplied PDFs are represented in the 30-course, 474-lesson catalog. Twenty like-named courses receive 300 direct reading additions. The remaining ten courses receive 174 explicitly labeled supporting-skill additions. They retain their existing trade-specific or primary-source teaching; a facilities-management overview is never presented as electrical, welding, or CDL operating instruction.
+All 27 supplied PDFs are represented in the 30-course, 474-lesson catalog. Twenty-seven like-named courses receive 405 direct reading additions. The remaining three courses receive 69 explicitly labeled supporting-skill additions. They retain their existing trade-specific or primary-source teaching; a facilities-management overview is never presented as electrical, welding, or CDL operating instruction.
 
 Each lesson adds a short explanation, an original written practice task, a practical check, and recall-guide support inside the existing seven-step microlearning structure. Scenarios, reflections, five graded multiple-choice questions, open navigation, learner-controlled pace, and full-course certificate requirements retain their published behavior. Assessments and answer positions are unchanged so existing saved answers remain meaningful.
 
@@ -27,6 +27,14 @@ The learner reference panel and facilitator packs display the uploaded title, at
 
 The original lesson-depth, regulatory, consumer, and technical references remain present. New uploaded-source attribution describes its limited role rather than implying official endorsement or current legal authority.
 
+## Second trade batch
+
+The seven additional uploads replace the previous facilities-based supporting additions in Construction Site Readiness, Carpentry Fundamentals, Electrical Trade Foundations, Plumbing Trade Foundations, HVAC Trade Foundations, Painting and Drywall Basics, and CDL Training and Permit Preparation. Each of the 105 lessons now uses its own matched reading, with original explanation, short written practice, practical check, PDF page locations, and facilitator parity.
+
+Welding Career Foundations, Turning Forward, and Thought to Freedom retain their earlier supporting readings; no like-named PDF was supplied for these three courses.
+
+The Hanford construction form is site-specific, so its emergency numbers, internal document references, PPE prescriptions, and numerical weather triggers are not generalized. The carpentry workbook uses specific job sheets and older product examples, so training tasks remain written reasoning. The electrical booklet has dated code statements and inconsistent labels; basic formulas are checked and its informal safety procedures are not copied. The plumbing and HVAC texts supply stable concepts, with current design and qualified-service boundaries preserved. The drywall chapter is manufacturer-specific; old mixing, spraying, respirator, and application values are not turned into universal instructions. The 2010 CDL model manual predates modern ELDT and is not presented as current licensing, hours-of-service, or test-scoring authority. Existing current official references remain in place.
+
 ## Verification
 
-The PDF-reading tests cover all 474 mappings, 20 source identities, page bounds, course-title alignment, direct versus supporting labels, idempotent runtime enrichment, accessible source rendering, and facilitator parity. Existing checks cover the preserved assessment bank, navigation, completion rules, and certificate eligibility. Production builds run the complete test suite.
+The PDF-reading tests cover all 474 mappings, 27 source identities, page bounds, course-title alignment, direct versus supporting labels, idempotent runtime enrichment, accessible source rendering, and facilitator parity. Existing checks cover the preserved assessment bank, navigation, completion rules, and certificate eligibility. Production builds run the complete test suite.

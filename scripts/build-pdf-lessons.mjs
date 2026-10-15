@@ -15,18 +15,11 @@ export function buildPDFLessons(catalog,sources){
    });
   }
  }
- if(Object.keys(result).length!==20)throw Error('Expected twenty directly matched PDF courses');
- // The other ten courses have no like-named PDF. Add a clearly identified
+ if(Object.keys(result).length!==27)throw Error('Expected twenty-seven directly matched PDF courses');
+ // The other three courses have no like-named PDF. Add a clearly identified
  // supporting skill; retain their existing technical/primary-source teaching.
  const tradeMap={
-  'construction-readiness':[1,4,2,14,5,6,13,12,11,12,13,11,3,15,15],
-  'carpentry-fundamentals':[2,12,13,6,13,12,12,1,12,13,2,10,3,12,15],
-  'electrical-foundations':[1,2,13,2,13,12,4,13,5,8,2,3,3,12,15],
-  'plumbing-foundations':[1,2,12,13,12,13,4,9,2,9,3,4,12,12,15],
-  'hvac-foundations':[1,8,2,1,6,7,2,12,8,9,12,13,7,14,15],
-  'painting-drywall':[2,10,11,12,13,7,10,10,5,12,7,3,9,10,15],
   'welding-foundations':[1,12,12,13,13,5,11,4,4,10,12,2,13,15,15],
-  'cdl-preparation':[15,15,15,2,1,14,4,4,2,12,12,4,14,13,15],
  };
  for(const [slug,numbers] of Object.entries(tradeMap)){
   const course=catalog.find(c=>c.slug===slug);
@@ -48,6 +41,6 @@ export function buildPDFLessons(catalog,sources){
  }
  for(const course of catalog)if(result[course.slug]?.length!==course.lesson_count)throw Error(`Missing PDF coverage: ${course.slug}`);
  fs.writeFileSync('lib/learning/pdf-lessons.json',JSON.stringify(result,null,2)+'\n');
- console.log('20 PDF course matches; 10 supporting-skill matches; 474 lesson additions.');
+ console.log('27 PDF course matches; 3 supporting-skill matches; 474 lesson additions.');
  return result;
 }

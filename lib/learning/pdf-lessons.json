@@ -3682,6 +3682,1483 @@
       "check": "Keep credentials and identifying records out of examples."
     }
   ],
+  "construction-readiness": [
+    {
+      "number": 1,
+      "title": "Site roles",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1,
+        3
+      ],
+      "relationship": "matched-course",
+      "teaching": "A pre-job briefing identifies the supervisor, assigned tasks, communication methods, and people working nearby. Knowing who coordinates a task prevents conflicting instructions and unapproved scope changes.",
+      "practice": "A fictional learner receives different directions from two crews. Identify the assigned supervisor and clarify the agreed task before proceeding.",
+      "check": "A sign-in record does not itself authorize specialist work."
+    },
+    {
+      "number": 2,
+      "title": "Hazard recognition",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1,
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "Hazard review connects the planned activity with changing conditions, other work, materials, and equipment. A familiar task can have a different risk when its surroundings change.",
+      "practice": "A fictional delivery arrives in the planned work area after the briefing. Name the changed condition and request a review of the affected task.",
+      "check": "Identify the hazard and control before restarting."
+    },
+    {
+      "number": 3,
+      "title": "Protective equipment",
+      "sourceId": "pdf-construction",
+      "pages": [
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "Protective equipment is selected for the activity and its assessed hazards. A checklist of possible equipment is not proof that every listed item is required or sufficient on every site.",
+      "practice": "A fictional worker chooses gloves by appearance alone. Explain checking the task's hazard assessment, approved protection, and training requirements.",
+      "check": "Use current site requirements rather than copying this site's historic PPE list."
+    },
+    {
+      "number": 4,
+      "title": "Stop-work communication",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1
+      ],
+      "relationship": "matched-course",
+      "teaching": "A change in scope or an imminent danger calls for a stop and regroup through the site procedure. Clear communication should identify the task, location, changed condition, and help needed.",
+      "practice": "A fictional crew discovers an unplanned service line. Draft a concise stop-work message and identify who must reassess the work.",
+      "check": "Do not interpret an unanswered message as permission to continue."
+    },
+    {
+      "number": 5,
+      "title": "Hand-tool inspection",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1,
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "Pre-use inspections are part of preparation, and equipment categories have different checks. A damaged tool should not be treated as usable merely because it still operates.",
+      "practice": "A fictional hand tool has a loose component. Describe reporting and removing it from the task under the approved procedure rather than improvising a repair.",
+      "check": "Confirm the authorized replacement before resuming the task."
+    },
+    {
+      "number": 6,
+      "title": "Measuring accurately",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1,
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "The briefing links work steps with critical points and manufacturer instructions. Applied to measurement, this means checking the required dimension and tolerance before work advances beyond an inspection point.",
+      "practice": "A fictional opening measurement differs between a field note and the plan. Record both values and ask which approved reference governs.",
+      "check": "The briefing is not a measurement standard; retain the lesson's technical reference."
+    },
+    {
+      "number": 7,
+      "title": "Drawing scales",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1,
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "Work scope and inspection points should use a common approved reference. Drawing scale is a separate technical skill; a briefing helps identify which drawing and revision apply.",
+      "practice": "A fictional crew has two plan revisions with different dimensions. Draft the question needed to establish the current approved drawing before interpreting its scale.",
+      "check": "Do not take a scaled measurement as permission to override a stated dimension."
+    },
+    {
+      "number": 8,
+      "title": "Material identification",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1,
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "Material review includes chemical and hazardous-material information as well as task instructions. Identifying a product by its label and intended use is more dependable than its color or packaging shape.",
+      "practice": "A fictional container resembles a familiar product but has a different label. Describe checking the product identity and current safety data sheet.",
+      "check": "An unlabeled or unfamiliar substance needs clarification before use."
+    },
+    {
+      "number": 9,
+      "title": "Safe material storage",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1
+      ],
+      "relationship": "matched-course",
+      "teaching": "The briefing includes material handling and securing loads. Storage should preserve stable access and prevent material movement without interfering with other tasks or emergency arrangements.",
+      "practice": "A fictional delivery blocks a walkway and includes a shifting stack. Identify both concerns and the authorized person to arrange safe storage.",
+      "check": "Do not attempt an improvised lift or enter an unstable stack."
+    },
+    {
+      "number": 10,
+      "title": "Work sequencing",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1,
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "A task sequence should identify assignments, critical steps, and required hold points. A later step cannot be assumed ready simply because its materials have arrived.",
+      "practice": "A fictional crew wants to cover work before a required inspection. Identify the hold point and the person responsible for release.",
+      "check": "A schedule delay does not remove a required checkpoint."
+    },
+    {
+      "number": 11,
+      "title": "Quality checkpoints",
+      "sourceId": "pdf-construction",
+      "pages": [
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "A witness or hold point identifies when a qualified review is required. Recording what was observed is different from giving approval to conceal or continue the work.",
+      "practice": "A fictional learner notices an unresolved inspection notation. Describe recording its location and confirming the release status with the authorized reviewer.",
+      "check": "Only the appropriate role can accept the work."
+    },
+    {
+      "number": 12,
+      "title": "Jobsite housekeeping",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1
+      ],
+      "relationship": "matched-course",
+      "teaching": "Housekeeping is maintained during the shift, not only at the end. Waste, changing access, and nearby work can affect whether the original plan remains workable.",
+      "practice": "A fictional work area accumulates offcuts beside a route used by another crew. Describe a coordinated safe cleanup request.",
+      "check": "Review access again after the area changes."
+    },
+    {
+      "number": 13,
+      "title": "Reporting problems",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1,
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "Problem reporting should connect the observed condition with its location, affected work, immediate controls, and next contact. Shared communication methods reduce ambiguity when conditions change.",
+      "practice": "Draft a fictional report about an unexpected obstruction, distinguishing the observation from an unverified explanation of its cause.",
+      "check": "Confirm who received the report and what happens next."
+    },
+    {
+      "number": 14,
+      "title": "Entry-level career paths",
+      "sourceId": "pdf-construction",
+      "pages": [
+        2,
+        3
+      ],
+      "relationship": "matched-course",
+      "teaching": "The form separates equipment inspections, task qualifications, supervision, and crew sign-in. These categories show why entry-level participation does not establish operator or specialist qualification.",
+      "practice": "A fictional learner wants to operate equipment after signing in. Identify the separate training, authorization, and supervision questions to ask.",
+      "check": "Verify the current pathway with the employer or training provider."
+    },
+    {
+      "number": 15,
+      "title": "Readiness plan",
+      "sourceId": "pdf-construction",
+      "pages": [
+        1,
+        2
+      ],
+      "relationship": "matched-course",
+      "teaching": "A readiness plan can follow a short cycle: define the task, identify hazards, confirm controls, carry out authorized work, and review what changed. Planning is revisited when conditions change.",
+      "practice": "Create a fictional written readiness check naming the task, responsible person, one hazard, and the next confirmation needed.",
+      "check": "Use a written scenario; no live site activity is required."
+    }
+  ],
+  "carpentry-fundamentals": [
+    {
+      "number": 1,
+      "title": "Wood properties",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        134,
+        260
+      ],
+      "relationship": "matched-course",
+      "teaching": "The workbook connects lumber selection with stiffness, resistance to warping, and suitability for a particular assembly. Conditioning and product instructions matter because wood-based materials respond to their environment.",
+      "practice": "A fictional panel stored in different conditions no longer fits as expected. Identify material condition and the product instructions before assuming the layout alone is wrong.",
+      "check": "Do not treat one workbook conditioning time as universal."
+    },
+    {
+      "number": 2,
+      "title": "Lumber dimensions",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        25,
+        134
+      ],
+      "relationship": "matched-course",
+      "teaching": "A named lumber size, a measured piece, and a required opening are different references. The workbook repeatedly checks dimensions against the actual assembly and manufacturer instructions.",
+      "practice": "A fictional part name is used as its final cutting dimension. Explain checking the measured material and required finished size before making a cut plan.",
+      "check": "Use current product dimensions, not the label alone."
+    },
+    {
+      "number": 3,
+      "title": "Reading fractions",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        25,
+        90
+      ],
+      "relationship": "matched-course",
+      "teaching": "The workbook uses fractional-inch dimensions in fitting and layout tasks. Fractions must share a denominator before addition or subtraction; this arithmetic exercise is original TCF practice.",
+      "practice": "A fictional gap requires 3/4 inch minus 1/8 inch. Convert 3/4 to 6/8 and explain the resulting 5/8 inch.",
+      "check": "Keep the measurement unit and required precision explicit."
+    },
+    {
+      "number": 4,
+      "title": "Square and level",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        18,
+        25,
+        33
+      ],
+      "relationship": "matched-course",
+      "teaching": "Level describes a horizontal reference, plumb a vertical reference, and square a right-angle relationship. The workbook checks these separately when aligning a frame.",
+      "practice": "A fictional door frame is level across the top but not square. Explain why the successful level check does not establish every alignment condition.",
+      "check": "Name which relationship each check addresses."
+    },
+    {
+      "number": 5,
+      "title": "Layout marks",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        75,
+        88,
+        94
+      ],
+      "relationship": "matched-course",
+      "teaching": "Layout marks transfer a defined reference to repeated components. An inaccurate first pattern can repeat the same mistake through an entire group of pieces.",
+      "practice": "A fictional pattern is copied before its dimensions are checked. Describe verifying the reference and clearly identifying the approved pattern first.",
+      "check": "Confirm which side of the mark defines the intended piece."
+    },
+    {
+      "number": 6,
+      "title": "Fastener selection",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        245,
+        290,
+        291
+      ],
+      "relationship": "matched-course",
+      "teaching": "Fasteners and their tools must suit the assembly and current manufacturer instructions. Tool power or a familiar fastener does not establish the right connection for every material.",
+      "practice": "A fictional worker proposes using a convenient nail in a specified screw connection. Identify the approved fastening information that should be checked.",
+      "check": "No fastener operation is required for this written exercise."
+    },
+    {
+      "number": 7,
+      "title": "Joinery concepts",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        18,
+        245
+      ],
+      "relationship": "matched-course",
+      "teaching": "A connection must bring the intended pieces together while preserving alignment and an appropriate load path. The workbook's fitting examples show why a secure-looking connection can still be misaligned.",
+      "practice": "A fictional cabinet connection pulls adjoining units out of alignment. Describe the fit and approved connection details to review before tightening further.",
+      "check": "Appearance alone cannot establish connection adequacy."
+    },
+    {
+      "number": 8,
+      "title": "Framing vocabulary",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        128,
+        134,
+        137
+      ],
+      "relationship": "matched-course",
+      "teaching": "Studs, headers, trimmers, and other framing members have distinct locations and functions. Knowing a name does not supply the design loads or authorization to alter it.",
+      "practice": "A fictional learner proposes removing a member beside an opening because it looks like a duplicate stud. Identify the member and seek the approved drawing and qualified review.",
+      "check": "Do not infer structural redundancy from appearance."
+    },
+    {
+      "number": 9,
+      "title": "Sheet materials",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        120,
+        162,
+        200
+      ],
+      "relationship": "matched-course",
+      "teaching": "Sheathing and underlayment are selected for their role within an assembly, not merely because they are flat sheets. Material identity, required support, and product instructions determine suitability.",
+      "practice": "A fictional leftover panel is offered as a substitute for specified sheathing. List the identity and assembly questions that need checking.",
+      "check": "A matching thickness does not establish interchangeability."
+    },
+    {
+      "number": 10,
+      "title": "Cut planning",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        90,
+        91,
+        94,
+        200
+      ],
+      "relationship": "matched-course",
+      "teaching": "Cut planning begins with the approved dimensions, material orientation, and a checked pattern. Repeated pieces should be planned from a verified reference rather than an unchecked first attempt.",
+      "practice": "A fictional cut list has four equal pieces but does not identify the reference edge. Explain clarifying orientation and dimensions before estimating the layout.",
+      "check": "Include cutting losses when planning material use."
+    },
+    {
+      "number": 11,
+      "title": "Sanding concepts",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        260
+      ],
+      "relationship": "matched-course",
+      "teaching": "The underlayment job sheet identifies surface preparation and sanding equipment. It does not provide a universal sanding schedule; preparation depends on the material and intended finish.",
+      "practice": "A fictional surface has an uneven joint and intact surrounding material. Describe checking the preparation requirements rather than removing material until it looks smooth.",
+      "check": "Do not sand an unidentified coating or material."
+    },
+    {
+      "number": 12,
+      "title": "Surface finishing",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        260,
+        261
+      ],
+      "relationship": "matched-course",
+      "teaching": "The supplied flooring job sheet emphasizes base preparation and compatible materials; it is not a paint or stain guide. A later surface finish cannot compensate for an unresolved fit or substrate problem.",
+      "practice": "A fictional learner wants to hide a raised panel edge with a finish layer. Identify the underlying condition to resolve before finishing.",
+      "check": "Check the actual finishing product's current instructions."
+    },
+    {
+      "number": 13,
+      "title": "Troubleshooting fit",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        18,
+        25,
+        419
+      ],
+      "relationship": "matched-course",
+      "teaching": "Fit problems can involve opening size, alignment, shimming, or the product itself. Changing several conditions at once makes it harder to identify the cause.",
+      "practice": "A fictional door rubs after installation. Describe recording where it contacts and comparing the opening and alignment with the approved instructions.",
+      "check": "Do not remove material before identifying the condition that needs correction."
+    },
+    {
+      "number": 14,
+      "title": "Estimating materials",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        120,
+        134,
+        200
+      ],
+      "relationship": "matched-course",
+      "teaching": "A material estimate connects dimensions, repeated quantities, sheet or stock sizes, and a planned allowance. Count requirements from the approved work rather than copying another project's order.",
+      "practice": "For a fictional exercise needing six equal pieces, identify their lengths and stock constraints before estimating purchases.",
+      "check": "Label assumptions about waste and cutting losses."
+    },
+    {
+      "number": 15,
+      "title": "Carpentry portfolio",
+      "sourceId": "pdf-carpentry",
+      "pages": [
+        12,
+        25,
+        134
+      ],
+      "relationship": "matched-course",
+      "teaching": "The workbook uses job sheets with task, equipment, checks, and review. A learning portfolio can show this reasoning without reproducing publisher forms or requiring live construction.",
+      "practice": "Write a fictional entry naming the task, references checked, one observed discrepancy, and the authorized next step.",
+      "check": "Separate a practice record from proof of trade qualification."
+    }
+  ],
+  "electrical-foundations": [
+    {
+      "number": 1,
+      "title": "Electrical safety boundaries",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        56,
+        240,
+        241
+      ],
+      "relationship": "matched-course",
+      "teaching": "Electrical hazards depend on exposure and task conditions, not personal confidence. The older booklet's informal safety language does not replace the linked official requirements for qualified work and energy control.",
+      "practice": "A fictional learner is asked to open an unfamiliar panel because it appears switched off. Identify the qualification and verified safe-condition questions instead of treating the switch position as proof.",
+      "check": "Do not perform a live test or open equipment in this course exercise."
+    },
+    {
+      "number": 2,
+      "title": "Voltage current resistance",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        18,
+        33,
+        85,
+        95
+      ],
+      "relationship": "matched-course",
+      "teaching": "Voltage is a potential difference, current is charge flow, and resistance relates voltage to current under the stated circuit conditions. They use volts, amperes, and ohms, respectively.",
+      "practice": "Match a fictional 12 V source, 2 A current, and 6 ohm resistance with their quantities and units.",
+      "check": "A voltage value alone does not give the current through an unknown load."
+    },
+    {
+      "number": 3,
+      "title": "Ohm's law",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        33,
+        95,
+        111
+      ],
+      "relationship": "matched-course",
+      "teaching": "For an ideal resistive example, Ohm's law is V = I × R. Rearranging the relationship is useful only when the variables and units describe the same circuit condition.",
+      "practice": "A fictional 12-volt source is applied across a 6-ohm ideal resistor. Explain I = 12/6 = 2 amperes without building the circuit.",
+      "check": "This calculation is not a wiring or component-selection instruction."
+    },
+    {
+      "number": 4,
+      "title": "Series and parallel",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        111,
+        112,
+        135,
+        139
+      ],
+      "relationship": "matched-course",
+      "teaching": "Series components share one current path; parallel branches share the voltage across their common nodes. Equivalent resistance is calculated differently for those arrangements.",
+      "practice": "Compare two fictional 6-ohm resistors: series gives 12 ohms; parallel gives 3 ohms. Explain which path arrangement produces each result.",
+      "check": "Trace the connections rather than trusting a diagram caption alone."
+    },
+    {
+      "number": 5,
+      "title": "Circuit diagrams",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        32,
+        34,
+        98,
+        180
+      ],
+      "relationship": "matched-course",
+      "teaching": "A circuit diagram describes connections using symbols. Position on the page is not the same as electrical connection, and a symbol legend identifies the intended component.",
+      "practice": "A fictional drawing places two lines near each other. Explain checking the junction notation and legend before declaring them connected.",
+      "check": "Confirm the drawing's actual convention and revision."
+    },
+    {
+      "number": 6,
+      "title": "Grounding and bonding",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        14,
+        195
+      ],
+      "relationship": "matched-course",
+      "teaching": "Grounding and bonding address different relationships within an electrical system. A grounded circuit conductor and an equipment-grounding conductor are not interchangeable simply because both relate to ground.",
+      "practice": "A fictional learner proposes joining conductors based only on a familiar color. Identify the system information and qualified review needed first.",
+      "check": "Use the approved design and current applicable rules."
+    },
+    {
+      "number": 7,
+      "title": "Overcurrent protection",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        13,
+        241,
+        242
+      ],
+      "relationship": "matched-course",
+      "teaching": "Overcurrent protection interrupts a circuit under specified current conditions. Repeated tripping is a symptom to investigate, not permission to fit a larger protective device.",
+      "practice": "A fictional circuit trips again after being reset. Describe recording the affected load and escalating rather than bypassing protection.",
+      "check": "A replacement rating requires an authorized determination."
+    },
+    {
+      "number": 8,
+      "title": "Conductor identification",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        14,
+        15,
+        219,
+        256
+      ],
+      "relationship": "matched-course",
+      "teaching": "Conductors have different roles, materials, insulation, and identification conventions. Their identity must be established for the actual system rather than inferred from appearance alone.",
+      "practice": "A fictional cable has faded markings. Explain asking for verified identification instead of assigning function by a guessed color.",
+      "check": "Do not handle or alter unidentified conductors."
+    },
+    {
+      "number": 9,
+      "title": "Meters and measurement",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        18,
+        33,
+        85
+      ],
+      "relationship": "matched-course",
+      "teaching": "A measurement must identify the quantity, units, reference points, and suitable instrument. Understanding a meter display is different from being qualified to connect a meter to equipment.",
+      "practice": "A fictional record says meter reads 12 without units or reference points. List the missing context needed to interpret the observation.",
+      "check": "Do not carry out a live measurement as part of this written lesson."
+    },
+    {
+      "number": 10,
+      "title": "Loads and power",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        33,
+        55,
+        127
+      ],
+      "relationship": "matched-course",
+      "teaching": "Power is a rate of energy transfer. In the stated ideal DC resistive example, P = V × I; a watt-hour describes energy over time rather than instantaneous power.",
+      "practice": "Calculate 12 V × 2 A = 24 W, then explain that one hour at a steady 24 W uses 24 Wh.",
+      "check": "Do not apply the simplified relationship indiscriminately to AC loads."
+    },
+    {
+      "number": 11,
+      "title": "Switching concepts",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        135,
+        139,
+        180
+      ],
+      "relationship": "matched-course",
+      "teaching": "An open path interrupts current through that path, while a closed path permits current when the other circuit conditions support it. Switching one branch does not necessarily isolate an entire system.",
+      "practice": "A fictional parallel circuit has a switch in only one branch. Explain which branch changes and why the others may remain energized.",
+      "check": "An ordinary control switch is not proof of safe isolation."
+    },
+    {
+      "number": 12,
+      "title": "Lighting terminology",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        14,
+        55,
+        274
+      ],
+      "relationship": "matched-course",
+      "teaching": "A lamp produces light, while its power rating describes energy use per unit time. Comparing lighting also requires appropriate output and application information, not wattage alone.",
+      "practice": "A fictional buyer assumes two lamps with equal wattage must provide equal useful light. Identify the additional product information needed.",
+      "check": "Verify ratings and suitability from the actual current product label."
+    },
+    {
+      "number": 13,
+      "title": "Fault recognition",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        56,
+        241,
+        242
+      ],
+      "relationship": "matched-course",
+      "teaching": "Fault recognition starts with observable symptoms and safe escalation. A trip, unusual heat, damage, or odor does not establish a single cause that an unqualified learner should repair.",
+      "practice": "A fictional device has visible damage and a recurring trip. Draft a factual report and identify the authorized response rather than another reset.",
+      "check": "Do not bypass a protective device to continue work."
+    },
+    {
+      "number": 14,
+      "title": "Codes and permits",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        6,
+        13,
+        56
+      ],
+      "relationship": "matched-course",
+      "teaching": "The uploaded booklet is historical background, not the current adopted electrical code or a permit decision. The applicable authority, work scope, and current rules need separate confirmation.",
+      "practice": "A fictional project cites the booklet as permission for an installation. Describe checking the local authority and required qualified involvement.",
+      "check": "A course completion certificate does not authorize electrical work."
+    },
+    {
+      "number": 15,
+      "title": "Apprenticeship readiness",
+      "sourceId": "pdf-electrical",
+      "pages": [
+        6,
+        18,
+        56
+      ],
+      "relationship": "matched-course",
+      "teaching": "Electrical career preparation combines foundational quantities, clear records, safety boundaries, and supervised practical learning. Written theory does not establish occupational qualification.",
+      "practice": "Plan a fictional learning record explaining one circuit calculation and one question to ask an apprenticeship provider.",
+      "check": "Verify current entry and training requirements directly."
+    }
+  ],
+  "cdl-preparation": [
+    {
+      "number": 1,
+      "title": "CDL classes and career routes",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        5,
+        6
+      ],
+      "relationship": "matched-course",
+      "teaching": "License class, vehicle combination, passenger use, and endorsements address different qualifications. The supplied model manual introduces these distinctions but does not establish every current federal or state requirement.",
+      "practice": "A fictional learner compares a straight truck, a tractor-trailer, and passenger work. List the class and endorsement questions to confirm with the licensing authority.",
+      "check": "Use the current state manual and official requirements before choosing a pathway."
+    },
+    {
+      "number": 2,
+      "title": "Commercial learner permit preparation",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        5,
+        6
+      ],
+      "relationship": "matched-course",
+      "teaching": "The manual separates knowledge tests from vehicle-control and road skills. Permit preparation should identify the intended vehicle and required study areas rather than assume one test covers every role.",
+      "practice": "A fictional learner studies only general knowledge for a planned combination-vehicle role. Identify the additional test and vehicle questions to check.",
+      "check": "The older manual does not determine today's permit documents, fees, or timing rules."
+    },
+    {
+      "number": 3,
+      "title": "Entry-level driver training",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        5,
+        6
+      ],
+      "relationship": "matched-course",
+      "teaching": "The older manual explains testing categories, but it predates the current entry-level driver training framework. Applicable ELDT is a separate registered-provider requirement, not something completed by reading this course.",
+      "practice": "A fictional learner believes passing the platform quiz replaces registered training. Explain checking applicability, the official Training Provider Registry, and the actual training provider.",
+      "check": "Keep the linked current FMCSA guidance in control; this course is not registered ELDT."
+    },
+    {
+      "number": 4,
+      "title": "Vehicle inspection awareness",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        13,
+        15,
+        17,
+        18
+      ],
+      "relationship": "matched-course",
+      "teaching": "Inspection awareness connects observed conditions with the need for further action. Tire damage, loose components, or unsecured cargo should be identified without declaring a vehicle roadworthy from a picture.",
+      "practice": "In the supplied illustration, identify the damaged tire and unsecured item. Explain which observations should be reported to the qualified trainer before any readiness decision.",
+      "check": "A written observation or illustration cannot establish vehicle fitness for use."
+    },
+    {
+      "number": 5,
+      "title": "Controls and backing concepts",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        20,
+        21,
+        141
+      ],
+      "relationship": "matched-course",
+      "teaching": "Backing and vehicle controls require trained practice because visibility and vehicle movement differ from ordinary forward travel. A written lesson can identify planning questions but cannot assess control skill.",
+      "practice": "A fictional learner proposes backing into an area they have not checked. Identify visibility, route, communication, and trainer-supervision concerns.",
+      "check": "Use current practical instruction; do not copy the old manual's test scoring rules."
+    },
+    {
+      "number": 6,
+      "title": "Seeing and communicating",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        22,
+        23,
+        24
+      ],
+      "relationship": "matched-course",
+      "teaching": "Seeing and communicating work together: a driver gathers information and signals an intended action, while still checking whether the path is safe. A signal does not create a right to move into occupied space.",
+      "practice": "A fictional driver signals but has not checked a nearby vehicle's position. Explain the information still needed before the maneuver.",
+      "check": "Do not assume another road user understood or will cooperate."
+    },
+    {
+      "number": 7,
+      "title": "Speed and space management",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "relationship": "matched-course",
+      "teaching": "Stopping needs perception, reaction, and braking distance, while available space changes with speed, load, and road conditions. One fixed following gap cannot establish safety for every situation.",
+      "practice": "A fictional vehicle's speed rises while its gap stays unchanged. Explain why the time and distance available to respond need reassessment.",
+      "check": "Use current training and actual conditions rather than a universal numeric rule."
+    },
+    {
+      "number": 8,
+      "title": "Road weather and terrain",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        27,
+        28,
+        36,
+        38,
+        39
+      ],
+      "relationship": "matched-course",
+      "teaching": "Weather, visibility, surface conditions, and terrain can change both the hazard and the available response. Familiarity with a route does not make its current conditions predictable.",
+      "practice": "A fictional driver encounters reduced visibility on a previously easy route. Identify the changed condition and the need for a safe revised plan.",
+      "check": "Do not treat schedule pressure as evidence that travel remains appropriate."
+    },
+    {
+      "number": 9,
+      "title": "Air brake fundamentals",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        65,
+        66,
+        67,
+        68
+      ],
+      "relationship": "matched-course",
+      "teaching": "An air-brake system uses compressed air and contains components with distinct functions, including storage, control, and warning devices. Knowing the vocabulary does not establish safe pressure, adjustment, or inspection procedure for an actual vehicle.",
+      "practice": "Match a fictional reservoir, control, and warning indication with their roles, then identify what information requires a qualified practical trainer.",
+      "check": "Do not perform a brake test or adjustment from this written example."
+    },
+    {
+      "number": 10,
+      "title": "Combination vehicle fundamentals",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        75,
+        76,
+        77
+      ],
+      "relationship": "matched-course",
+      "teaching": "A combination vehicle has linked units whose paths and stability interact. The trailer does not necessarily follow the tractor's exact path through a turn.",
+      "practice": "A fictional learner watches only the tractor's clearance. Explain why trailer path, surrounding space, and the vehicle's actual configuration also matter.",
+      "check": "Coupling, uncoupling, and maneuvering require qualified practical instruction."
+    },
+    {
+      "number": 11,
+      "title": "Cargo and securement awareness",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        15,
+        57,
+        58,
+        59
+      ],
+      "relationship": "matched-course",
+      "teaching": "Cargo condition, distribution, and restraint affect control and safety. A closed door or covered load does not prove the contents are adequately secured.",
+      "practice": "A fictional delivery includes a loose item beside other cargo. Identify movement and restraint concerns and the relevant load information to verify.",
+      "check": "Current securement rules and qualified inspection govern actual acceptance."
+    },
+    {
+      "number": 12,
+      "title": "Hazards and emergency planning",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        31,
+        32,
+        38,
+        39
+      ],
+      "relationship": "matched-course",
+      "teaching": "Early hazard recognition gives more opportunity to make a safe plan. Emergency response depends on the vehicle, location, and immediate conditions rather than one memorized action for every event.",
+      "practice": "A fictional route has a new obstruction near a stopping area. Identify what has changed and which information should reach the trainer or dispatcher.",
+      "check": "Keep the exercise to planning and communication, not emergency vehicle operation."
+    },
+    {
+      "number": 13,
+      "title": "Fatigue and driver readiness",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        36,
+        52,
+        53
+      ],
+      "relationship": "matched-course",
+      "teaching": "Fatigue can reduce attention and performance. A driver who is sleepy needs an appropriate safe response; determination, caffeine, or open windows do not establish readiness to continue.",
+      "practice": "A fictional learner reports difficulty staying alert before a planned drive. Explain reporting the condition and following the approved safe plan instead of trying to prove toughness.",
+      "check": "Seek qualified help for persistent sleep difficulties; the lesson does not diagnose them."
+    },
+    {
+      "number": 14,
+      "title": "Hours of service and records",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        52,
+        53
+      ],
+      "relationship": "matched-course",
+      "teaching": "Readiness and hours-of-service compliance are separate checks. The manual's fatigue material supports alertness awareness but does not supply the current duty-time and recordkeeping rules.",
+      "practice": "A fictional driver has time remaining under a limit but feels sleepy. Explain why remaining time is not proof of fitness and why duty records still need accurate review.",
+      "check": "Use the linked current FMCSA rules for the applicable operation and exceptions."
+    },
+    {
+      "number": 15,
+      "title": "Skills training and career action plan",
+      "sourceId": "pdf-cdl",
+      "pages": [
+        5,
+        6,
+        138,
+        141
+      ],
+      "relationship": "matched-course",
+      "teaching": "The model manual distinguishes inspection, control, and road skills. A career plan should connect those areas with current permit requirements, applicable registered training, and supervised practice.",
+      "practice": "Create a fictional checklist naming the intended role, official state information, registered-provider check where applicable, and one question for the practical trainer.",
+      "check": "A platform completion certificate is not a CDL, permit, endorsement, or skills-test pass."
+    }
+  ],
+  "plumbing-foundations": [
+    {
+      "number": 1,
+      "title": "System boundaries",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        37,
+        50,
+        129
+      ],
+      "relationship": "matched-course",
+      "teaching": "Water supply and drain-waste-vent systems serve different purposes. Potable-water protection also depends on keeping drinking water separated from possible contamination sources.",
+      "practice": "A fictional learner assumes every nearby pipe carries clean water. Explain identifying the system and approved layout before suggesting any connection.",
+      "check": "Do not infer a pipe's purpose from its location alone."
+    },
+    {
+      "number": 2,
+      "title": "Pressure and flow",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        23,
+        29,
+        30,
+        31
+      ],
+      "relationship": "matched-course",
+      "teaching": "Pressure describes force per area; flow rate describes volume per time. A pressure reading does not by itself establish how much water a fixture receives under demand.",
+      "practice": "A fictional report lists 40 psi but no measured flow condition. Identify what additional information is needed to discuss delivery.",
+      "check": "Keep pressure, flow rate, and velocity distinct."
+    },
+    {
+      "number": 3,
+      "title": "Pipe materials",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        83,
+        85
+      ],
+      "relationship": "matched-course",
+      "teaching": "Copper, CPVC, PVC, and other piping products have different applications and joining systems. Similar diameter or appearance does not establish compatibility or suitability for drinking water.",
+      "practice": "A fictional replacement fitting appears to fit an existing pipe. List the material, service, and approved product information to verify.",
+      "check": "Follow actual product listings and current project requirements."
+    },
+    {
+      "number": 4,
+      "title": "Pipe sizing",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        30,
+        31
+      ],
+      "relationship": "matched-course",
+      "teaching": "Pipe sizing depends on required delivery, pressure conditions, friction, and the system layout. A larger-looking pipe is not a substitute for an approved sizing method.",
+      "practice": "Two fictional routes have different lengths and fittings. Explain why matching only their outlet sizes does not establish equal performance.",
+      "check": "Do not size an actual system from this conceptual example."
+    },
+    {
+      "number": 5,
+      "title": "Fitting vocabulary",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        83,
+        85,
+        137
+      ],
+      "relationship": "matched-course",
+      "teaching": "Fittings connect, redirect, adapt, or control parts of a system. Function and compatibility should be identified separately from the shape of a component.",
+      "practice": "A fictional materials list says connector with no further detail. Ask for its intended function, material, size basis, and approved specification.",
+      "check": "A similar shape does not establish the same service rating."
+    },
+    {
+      "number": 6,
+      "title": "Reading layouts",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        129,
+        179
+      ],
+      "relationship": "matched-course",
+      "teaching": "A layout connects component locations with system function and reference points. The source's recordkeeping examples show why a valve location needs more than a memory of where it was seen.",
+      "practice": "Describe a fictional layout note identifying a valve relative to a fixed reference and the system section it serves.",
+      "check": "Use the actual drawing legend and approved revision."
+    },
+    {
+      "number": 7,
+      "title": "Valves and isolation",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        135,
+        137
+      ],
+      "relationship": "matched-course",
+      "teaching": "A shutoff valve can take a defined part of a system out of service. Identifying the correct valve and consequences is essential before an authorized isolation procedure.",
+      "practice": "A fictional learner proposes closing the nearest valve to stop a leak. Explain confirming which area it serves and who authorizes the isolation.",
+      "check": "Do not operate unfamiliar valves in this written exercise."
+    },
+    {
+      "number": 8,
+      "title": "Drainage concepts",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        125,
+        129
+      ],
+      "relationship": "matched-course",
+      "teaching": "Drain-waste-vent piping removes used water while controlling air movement and maintaining separation from sewer gases. It is not simply a second pressurized water-supply network.",
+      "practice": "A fictional drain problem is described as low supply pressure. Distinguish the two system functions and the observations needed.",
+      "check": "Identify the affected system before proposing a cause."
+    },
+    {
+      "number": 9,
+      "title": "Venting concepts",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        125,
+        129
+      ],
+      "relationship": "matched-course",
+      "teaching": "Venting supports drainage behavior and helps protect trap seals from pressure effects. An unfamiliar opening or pipe cannot safely be treated as unnecessary because it carries no visible water.",
+      "practice": "A fictional learner suggests capping a vent to remove an odor. Explain why the system's intended air path and qualified assessment matter.",
+      "check": "Do not alter a vent to hide a symptom."
+    },
+    {
+      "number": 10,
+      "title": "Trap seals",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        125,
+        128,
+        129
+      ],
+      "relationship": "matched-course",
+      "teaching": "A water-filled trap forms a barrier to sewer gases. An infrequently used drain can lose its seal through evaporation, but an odor alone does not establish that this is the cause.",
+      "practice": "A fictional unused room develops an odor near a floor drain. Record location, use history, and other observations for authorized assessment.",
+      "check": "Do not enter a suspected hazardous atmosphere or diagnose it from smell."
+    },
+    {
+      "number": 11,
+      "title": "Leak documentation",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        125,
+        179,
+        180
+      ],
+      "relationship": "matched-course",
+      "teaching": "An observation record should identify location, timing, visible evidence, and affected service. A wet surface or difficult valve can have more than one explanation.",
+      "practice": "Draft a fictional report of moisture beside a fitting, stating what is visible and what remains unconfirmed.",
+      "check": "A record of moisture is not proof of a specific failed component."
+    },
+    {
+      "number": 12,
+      "title": "Cross-connection awareness",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        35,
+        37,
+        50,
+        51,
+        55
+      ],
+      "relationship": "matched-course",
+      "teaching": "A cross-connection links potable water with a possible contamination source. Backflow can occur when pressure conditions reverse the intended direction, so protection must suit the actual hazard and system.",
+      "practice": "A fictional hose end rests in a chemical container. Explain the contamination pathway and the need for approved protection and qualified review.",
+      "check": "Do not improvise a device or assume every check valve is adequate."
+    },
+    {
+      "number": 13,
+      "title": "Fixture specifications",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        83,
+        85,
+        89
+      ],
+      "relationship": "matched-course",
+      "teaching": "A fixture or fitting must match its intended service and the manufacturer's requirements. Material compatibility, connections, and maintenance conditions matter beyond its advertised appearance.",
+      "practice": "A fictional replacement faucet has unfamiliar connections. Identify the model and installation information needed before confirming suitability.",
+      "check": "The older booklet does not establish a current product's rating."
+    },
+    {
+      "number": 14,
+      "title": "Estimating and inventory",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        31,
+        83,
+        85
+      ],
+      "relationship": "matched-course",
+      "teaching": "Inventory and estimates need a consistent size basis, material identity, component function, and quantity. An incomplete description can produce an apparently suitable but unusable order.",
+      "practice": "Prepare a fictional request for three specified fittings, naming the missing size and material information before assigning a price.",
+      "check": "Label assumptions and confirm substitutions with the authorized person."
+    },
+    {
+      "number": 15,
+      "title": "Plumbing career pathway",
+      "sourceId": "pdf-plumbing",
+      "pages": [
+        15,
+        37,
+        129
+      ],
+      "relationship": "matched-course",
+      "teaching": "The workbook introduces hydraulics, components, contamination protection, and drainage. These topics prepare a learner for supervised training rather than authorize plumbing work or code interpretation.",
+      "practice": "Choose one supply-system concept and one drainage concept to explain to a trainer, with a question about entry-level responsibilities.",
+      "check": "Verify local training, licensing, and apprenticeship requirements separately."
+    }
+  ],
+  "hvac-foundations": [
+    {
+      "number": 1,
+      "title": "Service safety boundaries",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        131,
+        145,
+        148
+      ],
+      "relationship": "matched-course",
+      "teaching": "HVAC systems can involve electricity, hot surfaces, pressure, moving parts, and refrigerants. Knowing a system diagram does not authorize opening equipment, defeating controls, or servicing a circuit.",
+      "practice": "A fictional learner is asked to inspect inside an unfamiliar operating unit. Identify the hazard and qualified-service questions before proceeding.",
+      "check": "Keep this task to written reasoning and the approved service procedure."
+    },
+    {
+      "number": 2,
+      "title": "Heat transfer",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        87,
+        88,
+        148
+      ],
+      "relationship": "matched-course",
+      "teaching": "Heat transfer involves a source, a receiving condition, and a transfer path. Heating and cooling equipment move or supply heat rather than create a universal comfortable temperature independent of conditions.",
+      "practice": "A fictional hot-water coil warms an air stream. Identify the water, coil surface, and air as parts of the heat-transfer path.",
+      "check": "A warm coil alone does not prove the required airflow or output."
+    },
+    {
+      "number": 3,
+      "title": "Refrigeration cycle",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        86,
+        87,
+        88
+      ],
+      "relationship": "matched-course",
+      "teaching": "In a basic vapor-compression cycle, the evaporator absorbs heat, the compressor adds work, the condenser rejects heat, and the expansion device controls refrigerant flow into the low-pressure side.",
+      "practice": "Trace those four functions in a fictional cooling diagram, explaining why the condenser rejects more than the heat absorbed indoors alone.",
+      "check": "Use the conceptual diagram; no refrigerant handling is required."
+    },
+    {
+      "number": 4,
+      "title": "Heating systems",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        115,
+        116,
+        131,
+        147,
+        148
+      ],
+      "relationship": "matched-course",
+      "teaching": "Heating can be delivered through different systems, including hydronic distribution and air-handling equipment. The heat source, distribution medium, and room-level delivery are separate parts to identify.",
+      "practice": "A fictional room uses a hot-water terminal. Distinguish the boiler, water loop, and terminal rather than calling all three a furnace.",
+      "check": "Actual equipment and controls determine the service procedure."
+    },
+    {
+      "number": 5,
+      "title": "Airflow basics",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        81,
+        82,
+        83
+      ],
+      "relationship": "matched-course",
+      "teaching": "Supply, return, outdoor, relief, and exhaust air have different roles. Recirculating indoor air does not by itself provide the required outdoor ventilation.",
+      "practice": "A fictional air-handler diagram shows return air mixing with outdoor air. Identify what enters the building and what circulates within it.",
+      "check": "Trace each air path instead of assuming every duct carries fresh air."
+    },
+    {
+      "number": 6,
+      "title": "Filtration",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        59,
+        60,
+        61,
+        63
+      ],
+      "relationship": "matched-course",
+      "teaching": "A filter's effectiveness depends on its media and operating conditions. Filtration can add resistance to airflow; the most restrictive available filter is not automatically suitable for a system.",
+      "practice": "A fictional learner proposes a higher-rated filter without checking the unit. Identify fit, approved rating, airflow, and maintenance information to confirm.",
+      "check": "Use current equipment guidance; do not copy the older book's filter classifications uncritically."
+    },
+    {
+      "number": 7,
+      "title": "Thermostat concepts",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        76,
+        77,
+        78
+      ],
+      "relationship": "matched-course",
+      "teaching": "A thermostat senses conditions at its location, which may differ from the area people occupy. Sunlight, nearby openings, and unwanted air paths can distort that local reading.",
+      "practice": "A fictional thermostat receives direct sun while the occupied space feels cold. Explain why sensor location belongs in the observation record.",
+      "check": "Changing the setpoint does not establish the cause of the comfort complaint."
+    },
+    {
+      "number": 8,
+      "title": "Ductwork vocabulary",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        83,
+        106,
+        107
+      ],
+      "relationship": "matched-course",
+      "teaching": "Ductwork connects air paths with zones and control devices. A damper, branch, or terminal can change distribution, so a single room complaint does not establish a whole-system failure.",
+      "practice": "A fictional room receives weak airflow while adjacent rooms do not. Identify the relevant path and zone information for a qualified review.",
+      "check": "Do not adjust unfamiliar dampers as a trial-and-error fix."
+    },
+    {
+      "number": 9,
+      "title": "Insulation and air sealing",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        183,
+        184,
+        185
+      ],
+      "relationship": "matched-course",
+      "teaching": "The building envelope affects heating and cooling demand through insulation, air leakage, glazing, and other conditions. Equipment output and unwanted heat transfer must be considered together.",
+      "practice": "A fictional room near a leaky opening remains uncomfortable. Describe the envelope observation instead of immediately recommending a larger unit.",
+      "check": "A conceptual observation is not an approved envelope redesign."
+    },
+    {
+      "number": 10,
+      "title": "Humidity and condensation",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "relationship": "matched-course",
+      "teaching": "Relative humidity depends on temperature as well as moisture content. Condensation can occur when a surface is below the air's dew-point temperature, even without a leaking pipe.",
+      "practice": "A fictional cold surface becomes wet in humid air. Distinguish a condensation possibility from a confirmed water leak.",
+      "check": "Record conditions and seek qualified assessment before choosing a cause."
+    },
+    {
+      "number": 11,
+      "title": "Refrigerant responsibility",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        86,
+        87,
+        88
+      ],
+      "relationship": "matched-course",
+      "teaching": "Refrigerant carries heat through controlled changes of pressure and state. The cycle explanation does not establish permission to attach gauges, open a circuit, add refrigerant, or vent it.",
+      "practice": "A fictional learner is asked to top up an unfamiliar system. Identify the actual refrigerant, equipment, and qualified-service requirements before any work is considered.",
+      "check": "Current EPA requirements and authorized training govern refrigerant work."
+    },
+    {
+      "number": 12,
+      "title": "Reading service labels",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        93,
+        94,
+        160
+      ],
+      "relationship": "matched-course",
+      "teaching": "Equipment selection and control behavior depend on the specified unit and application. Product identity and ratings are necessary context for a service record or complaint.",
+      "practice": "A fictional service note names only a brand. List the model, relevant label information, symptom, and operating conditions needed for review.",
+      "check": "Do not infer capacity or refrigerant from brand alone."
+    },
+    {
+      "number": 13,
+      "title": "Preventive maintenance records",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        93,
+        145,
+        146
+      ],
+      "relationship": "matched-course",
+      "teaching": "Maintenance requirements vary with equipment, accessibility, and operating conditions. A useful record connects the actual asset with scheduled checks, observed changes, and authorized follow-up.",
+      "practice": "A fictional unit was replaced but its old record remains. Explain updating its identity and current manufacturer-based maintenance information.",
+      "check": "Do not apply one system's service interval to every unit."
+    },
+    {
+      "number": 14,
+      "title": "Customer communication",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        16,
+        19,
+        46,
+        77
+      ],
+      "relationship": "matched-course",
+      "teaching": "Comfort involves the environment, activity, individual conditions, and expectations. Clear customer communication gathers location, timing, and effects without dismissing the complaint or promising a diagnosis.",
+      "practice": "A fictional occupant says the room is always cold. Draft questions about when, where, and under which conditions the problem occurs.",
+      "check": "Separate the person's experience from an unverified equipment explanation."
+    },
+    {
+      "number": 15,
+      "title": "HVAC career preparation",
+      "sourceId": "pdf-hvac",
+      "pages": [
+        12,
+        226
+      ],
+      "relationship": "matched-course",
+      "teaching": "The text introduces systems, controls, comfort, and energy concepts as a foundation for further study. Current credentials and practical responsibilities need separate confirmation.",
+      "practice": "Plan a fictional learning record explaining an air path and one question for an HVAC training provider about supervised experience.",
+      "check": "A platform certificate is not a refrigerant or trade license."
+    }
+  ],
+  "painting-drywall": [
+    {
+      "number": 1,
+      "title": "Surface assessment",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        2,
+        4,
+        14
+      ],
+      "relationship": "matched-course",
+      "teaching": "The finished appearance depends on framing, panel attachment, joint alignment, and the intended decoration. A high-quality topcoat cannot reliably hide an unresolved substrate problem.",
+      "practice": "A fictional wall has one panel edge standing proud. Describe the alignment issue and the reference to check before proposing more compound or paint.",
+      "check": "Identify the substrate condition before choosing a cosmetic remedy."
+    },
+    {
+      "number": 2,
+      "title": "Product labels",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        6,
+        15,
+        16,
+        27
+      ],
+      "relationship": "matched-course",
+      "teaching": "Joint compounds and primers have product-specific preparation, application, and drying requirements. Setting-type and drying-type products cannot be assumed to behave identically.",
+      "practice": "A fictional learner applies instructions from a different compound to an unfamiliar tub. Identify the actual product and current label information to review.",
+      "check": "Do not transfer old brand-specific timings or mixing ratios to another product."
+    },
+    {
+      "number": 3,
+      "title": "Containment and protection",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        18,
+        19,
+        35
+      ],
+      "relationship": "matched-course",
+      "teaching": "Finishing can create dust, splatter, and contact with nearby surfaces. Protection and cleanup belong in the plan, with current product safety information and task-appropriate controls.",
+      "practice": "A fictional work area has unprotected occupied space beside sanding. Identify the exposure and coordination questions before work starts.",
+      "check": "Use current safety guidance rather than the chapter's old respirator wording."
+    },
+    {
+      "number": 4,
+      "title": "Drywall components",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        14,
+        16,
+        17,
+        18
+      ],
+      "relationship": "matched-course",
+      "teaching": "Panels, joint tape, compound, fasteners, beads, and trim serve distinct roles. Joint treatment covers different features and must preserve a smooth transition to the board surface.",
+      "practice": "A fictional learner treats tape and a corner bead as interchangeable. Explain their different locations and purposes in a finishing assembly.",
+      "check": "Check the specified assembly rather than judging components by appearance."
+    },
+    {
+      "number": 5,
+      "title": "Measuring surfaces",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        22,
+        24,
+        27
+      ],
+      "relationship": "matched-course",
+      "teaching": "Area, joint length, layer thickness, and product coverage are different quantities. Estimating requires choosing the quantity the actual product's instructions use.",
+      "practice": "A fictional wall measures 10 feet by 8 feet. Explain its 80-square-foot face area before accounting for openings or additional coats.",
+      "check": "Do not use wall area as though it were joint length."
+    },
+    {
+      "number": 6,
+      "title": "Joint finishing stages",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        16,
+        17,
+        18,
+        21
+      ],
+      "relationship": "matched-course",
+      "teaching": "Joint finishing proceeds through distinct application stages, with conditions checked before later layers. Setting can allow a later step for certain products without meaning that all moisture has left.",
+      "practice": "A fictional learner wants to apply another layer simply because the surface feels firm. Identify the product type and stage requirements first.",
+      "check": "Do not replace product instructions with a fixed universal waiting time."
+    },
+    {
+      "number": 7,
+      "title": "Surface preparation",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        14,
+        18,
+        28,
+        29
+      ],
+      "relationship": "matched-course",
+      "teaching": "A sound, clean, properly prepared surface supports the later finish. Loose contamination, raised defects, and unresolved damage should be addressed according to the actual substrate and product.",
+      "practice": "A fictional learner wants to coat a dusty, uneven area immediately. Describe the conditions to verify before finishing.",
+      "check": "Do not sand or disturb an unidentified older coating."
+    },
+    {
+      "number": 8,
+      "title": "Primer purpose",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        4,
+        5,
+        6,
+        25
+      ],
+      "relationship": "matched-course",
+      "teaching": "A drywall primer helps prepare surfaces with different absorption characteristics for decoration. It has a different role from joint compound and should match the finishing system.",
+      "practice": "A fictional wall shows patch areas through its finish. Explain why substrate preparation and primer suitability need review rather than assuming extra color alone is the solution.",
+      "check": "A primer is not a repair for moisture or loose material."
+    },
+    {
+      "number": 9,
+      "title": "Application tools",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        15,
+        16,
+        18,
+        19
+      ],
+      "relationship": "matched-course",
+      "teaching": "Finishing knives, mixing tools, sanding equipment, and texture tools perform different tasks. Clean compatible tools help prevent contamination and avoidable surface defects.",
+      "practice": "A fictional compound contains hardened residue from a dirty container. Explain the preparation issue rather than blaming the board surface.",
+      "check": "Use current product instructions and authorized tool practices."
+    },
+    {
+      "number": 10,
+      "title": "Coverage estimates",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        24,
+        27,
+        28
+      ],
+      "relationship": "matched-course",
+      "teaching": "Coverage depends on the specified product, application thickness, surface, and conditions. A published coverage rate belongs to its stated product and use, not every paint or compound.",
+      "practice": "For a fictional product rated at 100 square feet per gallon for one coat, calculate two gallons for 200 square feet before allowances.",
+      "check": "This is an arithmetic example, not a current product recommendation."
+    },
+    {
+      "number": 11,
+      "title": "Drying versus curing",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        21,
+        22,
+        27
+      ],
+      "relationship": "matched-course",
+      "teaching": "The chapter distinguishes a setting compound becoming hard from water evaporating during drying. Paint curing is a separate product-specific process, so dry-to-touch, ready-to-recoat, and fully cured are not interchangeable labels.",
+      "practice": "A fictional learner equates a firm joint or touch-dry coating with readiness for every next step. Identify the stage and actual product instructions to check.",
+      "check": "Temperature, humidity, thickness, and ventilation can affect the interval."
+    },
+    {
+      "number": 12,
+      "title": "Recognizing finish defects",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        4,
+        14,
+        18,
+        36
+      ],
+      "relationship": "matched-course",
+      "teaching": "Raised edges, tool marks, voids, and uneven appearance can arise at different stages. Lighting and decoration can reveal imperfections that were less visible before finishing.",
+      "practice": "A fictional wall looks smooth in one light but shows a ridge under side lighting. Describe the observation and the relevant finish requirement to review.",
+      "check": "Do not diagnose every visible line as the same defect."
+    },
+    {
+      "number": 13,
+      "title": "Moisture warning signs",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        14,
+        22,
+        27,
+        28
+      ],
+      "relationship": "matched-course",
+      "teaching": "Finishing materials need appropriate surface and environmental conditions. Persistent dampness is a condition to investigate, not something automatically solved by adding another coating.",
+      "practice": "A fictional patched area remains damp after nearby areas dry. Record the location and conditions for qualified review before proceeding.",
+      "check": "Do not declare a leak or mold diagnosis from appearance alone."
+    },
+    {
+      "number": 14,
+      "title": "Cleanup planning",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        15,
+        19,
+        35
+      ],
+      "relationship": "matched-course",
+      "teaching": "Cleanup protects the work area and reduces contamination of later materials. Product residue, dust, and splatter should be handled according to current instructions and the site procedure.",
+      "practice": "A fictional learner proposes sweeping dust into an occupied route and washing unknown residue into a drain. Identify the approved cleanup and disposal questions.",
+      "check": "Do not improvise disposal based on a product's water-based label."
+    },
+    {
+      "number": 15,
+      "title": "Finishing portfolio",
+      "sourceId": "pdf-drywall",
+      "pages": [
+        2,
+        4,
+        14,
+        18
+      ],
+      "relationship": "matched-course",
+      "teaching": "The chapter connects intended finish, substrate condition, and staged work. A portfolio can demonstrate how those decisions were checked without copying manufacturer procedures as universal specifications.",
+      "practice": "Write a fictional case note with the requested finish, observed condition, relevant product information, and one verified checkpoint.",
+      "check": "Distinguish a learning example from an accepted professional finish inspection."
+    }
+  ],
   "masonry-fundamentals": [
     {
       "number": 1,
@@ -4083,1153 +5560,6 @@
       "check": "Use fictional records and confirm current training pathways."
     }
   ],
-  "construction-readiness": [
-    {
-      "number": 1,
-      "title": "Site roles",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for site roles: Facilities work coordinates buildings, people, services, and business needs. Routine support and specialist technical work require different responsibilities and authorization. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for site roles, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For site roles, identify the responsible role and business impact. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 2,
-      "title": "Hazard recognition",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for hazard recognition: Request priority depends on safety, disruption, and the response procedure. The first request received is not automatically the most urgent. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for hazard recognition, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For hazard recognition, use the site's actual emergency procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 3,
-      "title": "Protective equipment",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for protective equipment: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for protective equipment, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For protective equipment, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 4,
-      "title": "Stop-work communication",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for stop-work communication: Facilities decisions affect occupants and business activity. Updates should explain the affected service, expected next information, and any approved temporary arrangement. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for stop-work communication, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For stop-work communication, report confirmed facts and the next update point. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 5,
-      "title": "Hand-tool inspection",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for hand-tool inspection: Planned work depends on knowing which assets and equipment are present. TCF applies the asset-register idea to tool identity, location, condition, and responsibility. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for hand-tool inspection, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For hand-tool inspection, do not mark an uninspected tool as ready. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 6,
-      "title": "Measuring accurately",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for measuring accurately: Routine observations can reveal changes before an interruption becomes larger. A useful record identifies the location and compares conditions consistently. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for measuring accurately, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For measuring accurately, escalate according to training and site procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 7,
-      "title": "Drawing scales",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for drawing scales: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for drawing scales, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For drawing scales, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 8,
-      "title": "Material identification",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for material identification: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for material identification, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For material identification, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 9,
-      "title": "Safe material storage",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        3
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for safe material storage: Space arrangements must support occupants and life safety. Moving furniture or storing supplies can affect access and emergency routes. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for safe material storage, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For safe material storage, do not redesign an emergency route yourself. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 10,
-      "title": "Work sequencing",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for work sequencing: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for work sequencing, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For work sequencing, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 11,
-      "title": "Quality checkpoints",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for quality checkpoints: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for quality checkpoints, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For quality checkpoints, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 12,
-      "title": "Jobsite housekeeping",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        3
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for jobsite housekeeping: Space arrangements must support occupants and life safety. Moving furniture or storing supplies can affect access and emergency routes. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for jobsite housekeeping, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For jobsite housekeeping, do not redesign an emergency route yourself. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 13,
-      "title": "Reporting problems",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for reporting problems: A help desk connects requests with response and escalation. Location, timing, symptom, impact, and a reachable contact make intake more actionable. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for reporting problems, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For reporting problems, a clear request should reduce follow-up guessing. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 14,
-      "title": "Entry-level career paths",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for entry-level career paths: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for entry-level career paths, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For entry-level career paths, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 15,
-      "title": "Readiness plan",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for readiness plan: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for readiness plan, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For readiness plan, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    }
-  ],
-  "carpentry-fundamentals": [
-    {
-      "number": 1,
-      "title": "Wood properties",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for wood properties: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for wood properties, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For wood properties, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 2,
-      "title": "Lumber dimensions",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for lumber dimensions: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for lumber dimensions, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For lumber dimensions, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 3,
-      "title": "Reading fractions",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for reading fractions: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for reading fractions, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For reading fractions, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 4,
-      "title": "Square and level",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for square and level: Routine observations can reveal changes before an interruption becomes larger. A useful record identifies the location and compares conditions consistently. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for square and level, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For square and level, escalate according to training and site procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 5,
-      "title": "Layout marks",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for layout marks: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for layout marks, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For layout marks, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 6,
-      "title": "Fastener selection",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for fastener selection: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for fastener selection, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For fastener selection, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 7,
-      "title": "Joinery concepts",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for joinery concepts: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for joinery concepts, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For joinery concepts, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 8,
-      "title": "Framing vocabulary",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for framing vocabulary: Facilities work coordinates buildings, people, services, and business needs. Routine support and specialist technical work require different responsibilities and authorization. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for framing vocabulary, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For framing vocabulary, identify the responsible role and business impact. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 9,
-      "title": "Sheet materials",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for sheet materials: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for sheet materials, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For sheet materials, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 10,
-      "title": "Cut planning",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for cut planning: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for cut planning, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For cut planning, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 11,
-      "title": "Sanding concepts",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for sanding concepts: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for sanding concepts, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For sanding concepts, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 12,
-      "title": "Surface finishing",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for surface finishing: Cleaning is planned work with tasks at different intervals. Compatibility, occupancy, and required training matter as much as completion speed. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for surface finishing, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For surface finishing, never mix products based on appearance or smell. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 13,
-      "title": "Troubleshooting fit",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for troubleshooting fit: A help desk connects requests with response and escalation. Location, timing, symptom, impact, and a reachable contact make intake more actionable. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for troubleshooting fit, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For troubleshooting fit, a clear request should reduce follow-up guessing. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 14,
-      "title": "Estimating materials",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for estimating materials: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for estimating materials, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For estimating materials, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 15,
-      "title": "Carpentry portfolio",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for carpentry portfolio: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for carpentry portfolio, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For carpentry portfolio, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    }
-  ],
-  "electrical-foundations": [
-    {
-      "number": 1,
-      "title": "Electrical safety boundaries",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for electrical safety boundaries: Facilities work coordinates buildings, people, services, and business needs. Routine support and specialist technical work require different responsibilities and authorization. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for electrical safety boundaries, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For electrical safety boundaries, identify the responsible role and business impact. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 2,
-      "title": "Voltage current resistance",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for voltage current resistance: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for voltage current resistance, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For voltage current resistance, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 3,
-      "title": "Ohm's law",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for ohm's law: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for ohm's law, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For ohm's law, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 4,
-      "title": "Series and parallel",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for series and parallel: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for series and parallel, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For series and parallel, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 5,
-      "title": "Circuit diagrams",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for circuit diagrams: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for circuit diagrams, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For circuit diagrams, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 6,
-      "title": "Grounding and bonding",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for grounding and bonding: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for grounding and bonding, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For grounding and bonding, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 7,
-      "title": "Overcurrent protection",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for overcurrent protection: Request priority depends on safety, disruption, and the response procedure. The first request received is not automatically the most urgent. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for overcurrent protection, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For overcurrent protection, use the site's actual emergency procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 8,
-      "title": "Conductor identification",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for conductor identification: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for conductor identification, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For conductor identification, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 9,
-      "title": "Meters and measurement",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for meters and measurement: Planned work depends on knowing which assets and equipment are present. TCF applies the asset-register idea to tool identity, location, condition, and responsibility. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for meters and measurement, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For meters and measurement, do not mark an uninspected tool as ready. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 10,
-      "title": "Loads and power",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for loads and power: Environmental stewardship and efficient operation are facilities concerns. Changes intended to save energy still need to preserve safety, comfort, and the building's function. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for loads and power, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For loads and power, do not alter safety-critical equipment to save energy. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 11,
-      "title": "Switching concepts",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for switching concepts: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for switching concepts, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For switching concepts, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 12,
-      "title": "Lighting terminology",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for lighting terminology: A help desk connects requests with response and escalation. Location, timing, symptom, impact, and a reachable contact make intake more actionable. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for lighting terminology, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For lighting terminology, a clear request should reduce follow-up guessing. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 13,
-      "title": "Fault recognition",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for fault recognition: A help desk connects requests with response and escalation. Location, timing, symptom, impact, and a reachable contact make intake more actionable. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for fault recognition, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For fault recognition, a clear request should reduce follow-up guessing. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 14,
-      "title": "Codes and permits",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for codes and permits: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for codes and permits, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For codes and permits, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 15,
-      "title": "Apprenticeship readiness",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for apprenticeship readiness: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for apprenticeship readiness, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For apprenticeship readiness, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    }
-  ],
-  "plumbing-foundations": [
-    {
-      "number": 1,
-      "title": "System boundaries",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for system boundaries: Facilities work coordinates buildings, people, services, and business needs. Routine support and specialist technical work require different responsibilities and authorization. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for system boundaries, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For system boundaries, identify the responsible role and business impact. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 2,
-      "title": "Pressure and flow",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for pressure and flow: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for pressure and flow, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For pressure and flow, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 3,
-      "title": "Pipe materials",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for pipe materials: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for pipe materials, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For pipe materials, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 4,
-      "title": "Pipe sizing",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for pipe sizing: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for pipe sizing, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For pipe sizing, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 5,
-      "title": "Fitting vocabulary",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for fitting vocabulary: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for fitting vocabulary, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For fitting vocabulary, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 6,
-      "title": "Reading layouts",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for reading layouts: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for reading layouts, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For reading layouts, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 7,
-      "title": "Valves and isolation",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for valves and isolation: Request priority depends on safety, disruption, and the response procedure. The first request received is not automatically the most urgent. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for valves and isolation, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For valves and isolation, use the site's actual emergency procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 8,
-      "title": "Drainage concepts",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for drainage concepts: Operational observations can identify waste for qualified follow-up. A water-related symptom should be documented rather than treated as permission to dismantle a fixture. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for drainage concepts, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For drainage concepts, do not assume the visible point is the only cause. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 9,
-      "title": "Venting concepts",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for venting concepts: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for venting concepts, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For venting concepts, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 10,
-      "title": "Trap seals",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for trap seals: Operational observations can identify waste for qualified follow-up. A water-related symptom should be documented rather than treated as permission to dismantle a fixture. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for trap seals, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For trap seals, do not assume the visible point is the only cause. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 11,
-      "title": "Leak documentation",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for leak documentation: A help desk connects requests with response and escalation. Location, timing, symptom, impact, and a reachable contact make intake more actionable. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for leak documentation, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For leak documentation, a clear request should reduce follow-up guessing. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 12,
-      "title": "Cross-connection awareness",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for cross-connection awareness: Request priority depends on safety, disruption, and the response procedure. The first request received is not automatically the most urgent. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for cross-connection awareness, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For cross-connection awareness, use the site's actual emergency procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 13,
-      "title": "Fixture specifications",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for fixture specifications: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for fixture specifications, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For fixture specifications, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 14,
-      "title": "Estimating and inventory",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for estimating and inventory: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for estimating and inventory, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For estimating and inventory, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 15,
-      "title": "Plumbing career pathway",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for plumbing career pathway: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for plumbing career pathway, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For plumbing career pathway, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    }
-  ],
-  "hvac-foundations": [
-    {
-      "number": 1,
-      "title": "Service safety boundaries",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for service safety boundaries: Facilities work coordinates buildings, people, services, and business needs. Routine support and specialist technical work require different responsibilities and authorization. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for service safety boundaries, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For service safety boundaries, identify the responsible role and business impact. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 2,
-      "title": "Heat transfer",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for heat transfer: Environmental stewardship and efficient operation are facilities concerns. Changes intended to save energy still need to preserve safety, comfort, and the building's function. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for heat transfer, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For heat transfer, do not alter safety-critical equipment to save energy. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 3,
-      "title": "Refrigeration cycle",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for refrigeration cycle: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for refrigeration cycle, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For refrigeration cycle, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 4,
-      "title": "Heating systems",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for heating systems: Facilities work coordinates buildings, people, services, and business needs. Routine support and specialist technical work require different responsibilities and authorization. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for heating systems, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For heating systems, identify the responsible role and business impact. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 5,
-      "title": "Airflow basics",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for airflow basics: Routine observations can reveal changes before an interruption becomes larger. A useful record identifies the location and compares conditions consistently. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for airflow basics, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For airflow basics, escalate according to training and site procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 6,
-      "title": "Filtration",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for filtration: Preventive schedules organize inspection, testing, and maintenance before failure. Task frequency should come from the actual asset and applicable instructions, not a universal calendar. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for filtration, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For filtration, confirm the current equipment identity and instructions. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 7,
-      "title": "Thermostat concepts",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for thermostat concepts: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for thermostat concepts, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For thermostat concepts, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 8,
-      "title": "Ductwork vocabulary",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for ductwork vocabulary: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for ductwork vocabulary, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For ductwork vocabulary, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 9,
-      "title": "Insulation and air sealing",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for insulation and air sealing: Environmental stewardship and efficient operation are facilities concerns. Changes intended to save energy still need to preserve safety, comfort, and the building's function. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for insulation and air sealing, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For insulation and air sealing, do not alter safety-critical equipment to save energy. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 10,
-      "title": "Humidity and condensation",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for humidity and condensation: Operational observations can identify waste for qualified follow-up. A water-related symptom should be documented rather than treated as permission to dismantle a fixture. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for humidity and condensation, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For humidity and condensation, do not assume the visible point is the only cause. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 11,
-      "title": "Refrigerant responsibility",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for refrigerant responsibility: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for refrigerant responsibility, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For refrigerant responsibility, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 12,
-      "title": "Reading service labels",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for reading service labels: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for reading service labels, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For reading service labels, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 13,
-      "title": "Preventive maintenance records",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for preventive maintenance records: Preventive schedules organize inspection, testing, and maintenance before failure. Task frequency should come from the actual asset and applicable instructions, not a universal calendar. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for preventive maintenance records, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For preventive maintenance records, confirm the current equipment identity and instructions. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 14,
-      "title": "Customer communication",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for customer communication: Facilities decisions affect occupants and business activity. Updates should explain the affected service, expected next information, and any approved temporary arrangement. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for customer communication, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For customer communication, report confirmed facts and the next update point. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 15,
-      "title": "HVAC career preparation",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for hvac career preparation: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for hvac career preparation, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For hvac career preparation, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    }
-  ],
-  "painting-drywall": [
-    {
-      "number": 1,
-      "title": "Surface assessment",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for surface assessment: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for surface assessment, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For surface assessment, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 2,
-      "title": "Product labels",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for product labels: Cleaning is planned work with tasks at different intervals. Compatibility, occupancy, and required training matter as much as completion speed. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for product labels, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For product labels, never mix products based on appearance or smell. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 3,
-      "title": "Containment and protection",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        3
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for containment and protection: Space arrangements must support occupants and life safety. Moving furniture or storing supplies can affect access and emergency routes. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for containment and protection, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For containment and protection, do not redesign an emergency route yourself. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 4,
-      "title": "Drywall components",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for drywall components: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for drywall components, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For drywall components, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 5,
-      "title": "Measuring surfaces",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for measuring surfaces: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for measuring surfaces, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For measuring surfaces, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 6,
-      "title": "Joint finishing stages",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for joint finishing stages: Preventive schedules organize inspection, testing, and maintenance before failure. Task frequency should come from the actual asset and applicable instructions, not a universal calendar. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for joint finishing stages, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For joint finishing stages, confirm the current equipment identity and instructions. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 7,
-      "title": "Surface preparation",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for surface preparation: Cleaning is planned work with tasks at different intervals. Compatibility, occupancy, and required training matter as much as completion speed. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for surface preparation, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For surface preparation, never mix products based on appearance or smell. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 8,
-      "title": "Primer purpose",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for primer purpose: Cleaning is planned work with tasks at different intervals. Compatibility, occupancy, and required training matter as much as completion speed. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for primer purpose, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For primer purpose, never mix products based on appearance or smell. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 9,
-      "title": "Application tools",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for application tools: Planned work depends on knowing which assets and equipment are present. TCF applies the asset-register idea to tool identity, location, condition, and responsibility. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for application tools, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For application tools, do not mark an uninspected tool as ready. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 10,
-      "title": "Coverage estimates",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for coverage estimates: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for coverage estimates, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For coverage estimates, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 11,
-      "title": "Drying versus curing",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for drying versus curing: Preventive schedules organize inspection, testing, and maintenance before failure. Task frequency should come from the actual asset and applicable instructions, not a universal calendar. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for drying versus curing, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For drying versus curing, confirm the current equipment identity and instructions. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 12,
-      "title": "Recognizing finish defects",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for recognizing finish defects: A help desk connects requests with response and escalation. Location, timing, symptom, impact, and a reachable contact make intake more actionable. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for recognizing finish defects, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For recognizing finish defects, a clear request should reduce follow-up guessing. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 13,
-      "title": "Moisture warning signs",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for moisture warning signs: Operational observations can identify waste for qualified follow-up. A water-related symptom should be documented rather than treated as permission to dismantle a fixture. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for moisture warning signs, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For moisture warning signs, do not assume the visible point is the only cause. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 14,
-      "title": "Cleanup planning",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for cleanup planning: Cleaning is planned work with tasks at different intervals. Compatibility, occupancy, and required training matter as much as completion speed. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for cleanup planning, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For cleanup planning, never mix products based on appearance or smell. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 15,
-      "title": "Finishing portfolio",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for finishing portfolio: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for finishing portfolio, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For finishing portfolio, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    }
-  ],
   "welding-foundations": [
     {
       "number": 1,
@@ -5420,201 +5750,6 @@
       "teaching": "Supporting workplace skill for career portfolio: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
       "practice": "Using the worked application for career portfolio, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
       "check": "For career portfolio, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    }
-  ],
-  "cdl-preparation": [
-    {
-      "number": 1,
-      "title": "CDL classes and career routes",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for cdl classes and career routes: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for cdl classes and career routes, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For cdl classes and career routes, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 2,
-      "title": "Commercial learner permit preparation",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for commercial learner permit preparation: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for commercial learner permit preparation, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For commercial learner permit preparation, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 3,
-      "title": "Entry-level driver training",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for entry-level driver training: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for entry-level driver training, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For entry-level driver training, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 4,
-      "title": "Vehicle inspection awareness",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for vehicle inspection awareness: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for vehicle inspection awareness, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For vehicle inspection awareness, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 5,
-      "title": "Controls and backing concepts",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for controls and backing concepts: Facilities work coordinates buildings, people, services, and business needs. Routine support and specialist technical work require different responsibilities and authorization. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for controls and backing concepts, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For controls and backing concepts, identify the responsible role and business impact. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 6,
-      "title": "Seeing and communicating",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for seeing and communicating: Facilities decisions affect occupants and business activity. Updates should explain the affected service, expected next information, and any approved temporary arrangement. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for seeing and communicating, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For seeing and communicating, report confirmed facts and the next update point. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 7,
-      "title": "Speed and space management",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for speed and space management: Request priority depends on safety, disruption, and the response procedure. The first request received is not automatically the most urgent. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for speed and space management, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For speed and space management, use the site's actual emergency procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 8,
-      "title": "Road weather and terrain",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for road weather and terrain: Request priority depends on safety, disruption, and the response procedure. The first request received is not automatically the most urgent. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for road weather and terrain, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For road weather and terrain, use the site's actual emergency procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 9,
-      "title": "Air brake fundamentals",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for air brake fundamentals: Maintenance, inspection, and testing support safe operation, but observing a condition is different from diagnosing its cause. Accurate descriptions help qualified staff decide what to do. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for air brake fundamentals, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For air brake fundamentals, describe what was observed and what remains unknown. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 10,
-      "title": "Combination vehicle fundamentals",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for combination vehicle fundamentals: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for combination vehicle fundamentals, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For combination vehicle fundamentals, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 11,
-      "title": "Cargo and securement awareness",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for cargo and securement awareness: Contractor coordination needs current asset information and a clear scope. An outdated register can produce an inaccurate estimate or missed work. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for cargo and securement awareness, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For cargo and securement awareness, check who authorizes changes and access. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 12,
-      "title": "Hazards and emergency planning",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for hazards and emergency planning: Request priority depends on safety, disruption, and the response procedure. The first request received is not automatically the most urgent. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for hazards and emergency planning, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For hazards and emergency planning, use the site's actual emergency procedure. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 13,
-      "title": "Fatigue and driver readiness",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for fatigue and driver readiness: Facilities decisions affect occupants and business activity. Updates should explain the affected service, expected next information, and any approved temporary arrangement. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for fatigue and driver readiness, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For fatigue and driver readiness, report confirmed facts and the next update point. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 14,
-      "title": "Hours of service and records",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for hours of service and records: Maintenance and compliance records support continuity, planning, and later review. Recording an action is different from proving every underlying requirement was met. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for hours of service and records, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For hours of service and records, keep acceptance within the qualified person's role. Keep the trade-specific specification and qualified supervision in control."
-    },
-    {
-      "number": 15,
-      "title": "Skills training and career action plan",
-      "sourceId": "pdf-facilities",
-      "pages": [
-        1,
-        2
-      ],
-      "relationship": "supporting-skill",
-      "teaching": "Supporting workplace skill for skills training and career action plan: Facilities careers combine communication, safety awareness, records, coordination, and technical learning. Background knowledge should lead toward supervised role-specific development. Apply this coordination principle to the lesson's trade example; it does not supply technical operating instructions.",
-      "practice": "Using the worked application for skills training and career action plan, write a brief handover naming the observed condition, who is responsible for the next authorized step, and one detail to confirm.",
-      "check": "For skills training and career action plan, use fictional records and confirm current training pathways. Keep the trade-specific specification and qualified supervision in control."
     }
   ],
   "turning-forward": [

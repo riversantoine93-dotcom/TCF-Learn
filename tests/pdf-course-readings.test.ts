@@ -12,8 +12,22 @@ import LessonKnowledgeContent from '../components/LessonKnowledgeContent';
 import type {LearningLesson,LearningCourse} from '../lib/learning/types';
 
 describe('Uploaded PDF course readings',()=>{
- it('maps twenty uploaded sources to 300 matched lessons and clearly labels the other 174 supporting applications',()=>{
-  expect(sources).toHaveLength(20);expect(Object.keys(notes)).toHaveLength(30);
+ it('uses the seven new trade PDFs for their own 105 lessons rather than retaining facilities-only supporting readings',()=>{
+  const expected={'construction-readiness':'pdf-construction','carpentry-fundamentals':'pdf-carpentry','electrical-foundations':'pdf-electrical','plumbing-foundations':'pdf-plumbing','hvac-foundations':'pdf-hvac','painting-drywall':'pdf-drywall','cdl-preparation':'pdf-cdl'};
+  let count=0;for(const [slug,id] of Object.entries(expected))for(const note of notes[slug as keyof typeof notes]){count++;expect(note.sourceId).toBe(id);expect(note.relationship).toBe('matched-course');expect(note.teaching).not.toContain('Supporting workplace skill')}
+  expect(count).toBe(105);
+ });
+ it('distinguishes historic trade background from current qualifications and product-specific instructions',()=>{
+  expect(sources.find(s=>s.id==='pdf-cdl')!.scope).toContain('predates modern ELDT');
+  expect(notes['cdl-preparation'][2].teaching).toContain('separate registered-provider requirement');
+  expect(notes['cdl-preparation'][13].teaching).toContain('does not supply the current');
+  expect(notes['electrical-foundations'][0].check).toContain('Do not perform a live test');
+  expect(notes['construction-readiness'][2].check).toContain('historic PPE list');
+  expect(notes['painting-drywall'][1].check).toContain('brand-specific');
+  expect(notes['hvac-foundations'][10].check).toContain('Current EPA requirements');
+ });
+ it('maps twenty-seven uploaded sources to 405 matched lessons and clearly labels the other 69 supporting applications',()=>{
+  expect(sources).toHaveLength(27);expect(Object.keys(notes)).toHaveLength(30);
   const used=new Set<string>();let direct=0,supporting=0;
   for(const course of catalog){const rows=notes[course.slug as keyof typeof notes];expect(rows).toHaveLength(course.lesson_count);
    for(const row of rows){expect(row.title).toBe(course.outline[row.number-1].title);used.add(row.sourceId);
@@ -22,7 +36,7 @@ describe('Uploaded PDF course readings',()=>{
     expect(row.teaching.length).toBeGreaterThan(90);expect(row.practice.length).toBeGreaterThan(65);expect(row.check.length).toBeGreaterThan(20);
     if(row.relationship==='matched-course')direct++;else {supporting++;expect(row.teaching).toContain('Supporting')}
    }
-  }expect(direct).toBe(300);expect(supporting).toBe(174);expect(used.size).toBe(20);
+  }expect(direct).toBe(405);expect(supporting).toBe(69);expect(used.size).toBe(27);
  });
  it('adds source teaching, small written practice, and checks without changing the seven-step structure or repeating references',()=>{
   for(const lesson of lessons){const note=notes[lesson.course_slug as keyof typeof notes][lesson.number-1];const c=lesson.content;
