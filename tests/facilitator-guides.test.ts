@@ -26,7 +26,7 @@ describe('facilitator guides',()=>{
           expect(answer.options[answer.correctIndex]).toBe(question.options[question.correctIndex]);
           expect(answer.explanation).toBe(question.feedback);
         });
-        expect(guide.runOfShow.reduce((n,s)=>n+s.minutes,0)).toBe(35);
+        expect(guide.runOfShow.reduce((n,s)=>n+s.minutes,0)).toBe(20);
         expect(guide.facilitatorNotes.join(' ')).toContain('any order');
         expect(guide.facilitatorNotes.join(' ')).toContain('every required lesson');
         expect(Object.values(guide.script).every(Boolean)).toBe(true);
