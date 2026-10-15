@@ -1,5 +1,6 @@
 import type { KnowledgeSource } from './lesson-knowledge';
 import depthSources from './lesson-depth-sources.json';
+import pdfSources from './learning/pdf-sources.json';
 const checked = '2026-10-14';
 export const knowledgeSources: Record<string, KnowledgeSource> = Object.fromEntries(([
  ['osha-focus','OSHA: Construction Focus Four','https://www.osha.gov/training/outreach/construction/focus-four','Guidance'],
@@ -31,4 +32,9 @@ export const knowledgeSources: Record<string, KnowledgeSource> = Object.fromEntr
 for (const [id,title,url,kind] of depthSources) {
   if (knowledgeSources[id]) throw new Error(`Duplicate knowledge source: ${id}`);
   knowledgeSources[id]={id,title,url,kind:kind as KnowledgeSource['kind'],checked:'2026-10-15'};
+}
+
+for (const source of pdfSources) {
+ if (knowledgeSources[source.id]) throw new Error(`Duplicate knowledge source: ${source.id}`);
+ knowledgeSources[source.id]={...source,title:`${source.title} — ${source.author}`,kind:source.kind as KnowledgeSource['kind']};
 }

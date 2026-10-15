@@ -1,9 +1,11 @@
 import fs from 'node:fs';
-import { selfPacedContent } from './build-self-paced-lessons.mjs';
+import { buildPDFLessons } from './build-pdf-lessons.mjs';
 import { build } from 'esbuild';
 import { lessonKnowledge, validateKnowledge, writeLegacyKnowledge } from './build-lesson-knowledge.mjs';
 await build({entryPoints:['scripts/build-scenario-art.ts'],bundle:true,platform:'node',format:'esm',outfile:'/tmp/tcf-scenario-art.mjs'});
 const {writeScenarioArt}=await import('/tmp/tcf-scenario-art.mjs');writeScenarioArt();
+buildPDFLessons(JSON.parse(fs.readFileSync('lib/learning/catalog.json','utf8')),JSON.parse(fs.readFileSync('lib/learning/pdf-sources.json','utf8')));
+const {selfPacedContent}=await import('./build-self-paced-lessons.mjs');
 const courses=[];const lessons=[];
 for (const category of ['trades','technology','reentry']) {
  const blocks=fs.readFileSync(`scripts/curriculum-${category}.txt`,'utf8').trim().split(/\n\s*\n/);

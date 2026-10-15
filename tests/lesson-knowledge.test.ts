@@ -21,7 +21,7 @@ describe('Practical key-idea content',()=>{
  });
  it('keeps regulations distinct from guidance and technical references',()=>{
    expect(knowledgeSources['fmcsa-hos'].kind).toBe('Regulation');expect(knowledgeSources['nist-ai'].kind).toBe('Guidance');expect(knowledgeSources['wcag-contrast'].kind).toBe('Technical reference');
-   for(const s of Object.values(knowledgeSources)){expect(s.url).toMatch(/^https:\/\//);expect(s.checked).toMatch(/^\d{4}-\d{2}-\d{2}$/);expect(Number.isNaN(Date.parse(s.checked))).toBe(false)}
+   for(const s of Object.values(knowledgeSources)){if(s.uploadedFile){expect(s.url).toBe('');expect(s.scope!.length).toBeGreaterThan(60)}else expect(s.url).toMatch(/^https:\/\//);expect(s.checked).toMatch(/^\d{4}-\d{2}-\d{2}$/);expect(Number.isNaN(Date.parse(s.checked))).toBe(false)}
  });
  it('includes applicable CDL, refrigerant, and accessibility facts with sources',()=>{
    const cdl=lessons.find(l=>l.course_slug==='cdl-preparation'&&l.number===14)!;expect(cdl.content.knowledge.references.some(r=>r.sourceId==='fmcsa-hos')).toBe(true);

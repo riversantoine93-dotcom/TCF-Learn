@@ -10,7 +10,7 @@ export type MicrolearningContent={
  retrieval:{prompt:string;guide:string}[];successCriteria:string[];connection:string;
  habit:{cue:string;routine:string;evidence:string;restart:string;reviewPrompt:string};
 };
-export type LearningContent={depthVersion?:string;microlearning?:MicrolearningContent;version?:string;why?:string;overview?:string;outcomes?:string[];topics?:StudyTopic[];scenario?:{kind:string;text:string};reflectionQuestions?:string[];questions?:import("./validation").AssessmentQuestion[];knowledge?:LessonKnowledge;objective:string;teaching:string;context:string;practice:string;reflection:string;actionPrompt:string;question:string;options:string[];correctIndex:number;feedback:string;minutes:number};
+export type LearningContent={pdfVersion?:string;pdfReading?:{sourceId:string;pages:number[];relationship:string};depthVersion?:string;microlearning?:MicrolearningContent;version?:string;why?:string;overview?:string;outcomes?:string[];topics?:StudyTopic[];scenario?:{kind:string;text:string};reflectionQuestions?:string[];questions?:import("./validation").AssessmentQuestion[];knowledge?:LessonKnowledge;objective:string;teaching:string;context:string;practice:string;reflection:string;actionPrompt:string;question:string;options:string[];correctIndex:number;feedback:string;minutes:number};
 export type LearningLesson={course_slug:string;number:number;title:string;content:LearningContent};
 export const CATEGORY_LABELS={trades:'Trade skills',technology:'Technology',reentry:'Reentry & growth'} as const;
 export type StudyTopic={title:string;paragraphs:string[]};

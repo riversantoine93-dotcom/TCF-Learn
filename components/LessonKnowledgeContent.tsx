@@ -10,7 +10,7 @@ export default function LessonKnowledgeContent({knowledge,hideExample=false}:{kn
     {knowledge.reset ? <details className={styles.reset}><summary>Optional focus and mindfulness reset</summary><p>{knowledge.reset}</p><small>Use only when safely at rest. This is an optional attention exercise, not treatment. Skip it if uncomfortable; qualified support can help with persistent distress.</small><p className={styles.sourceLinks}><a href={knowledgeSources['va-mindfulness'].url} target="_blank" rel="noreferrer">VA mindful breathing reference ↗</a><a href={knowledgeSources['nccih-mindfulness'].url} target="_blank" rel="noreferrer">NCCIH: effectiveness and safety ↗</a></p></details> : null}
     {knowledge.references.length ? <div className={styles.references}><h4>Regulations, standards &amp; references</h4>{knowledge.references.map(reference=>{
       const source=knowledgeSources[reference.sourceId];
-      return <div className={styles.reference} key={reference.sourceId}><span>{source.kind}</span><p>{reference.note}</p><a href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a><small>Source checked {source.checked}. Confirm current requirements for your location and task.</small></div>;
+      return <div className={styles.reference} key={reference.sourceId}><span>{source.kind}</span><p>{reference.note}</p>{source.url?<a href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>:<strong>{source.title}</strong>}<small>{source.uploadedFile?'Uploaded reading reviewed':'Source checked'} {source.checked}. Confirm current requirements for your location and task.</small></div>;
     })}</div> : null}
   </div>;
 }
