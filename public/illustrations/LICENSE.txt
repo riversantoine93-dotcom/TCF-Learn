@@ -1,0 +1,18 @@
+TCF Learn original scenario illustrations
+CC0 1.0 Universal (CC0-1.0)
+
+The original SVG illustrations in this directory are dedicated to the public
+domain under CC0 1.0, to the extent permitted by law. They may be copied,
+modified, and redistributed, including commercially, without attribution.
+
+Canonical dedication and legal code:
+https://creativecommons.org/publicdomain/zero/1.0/
+https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+The dedication applies only to these original illustrations and their drawing
+code in lib/learning/illustration-art.ts. It does not apply to TCF logos,
+trademarks, course text, assessments, learner data, or linked third-party works.
+No third-party stock images, icon-library paths, logos, portraits, or font files
+are included in these illustrations. All people, records, and settings are
+fictional. Illustrations are conceptual, not technical operating instructions,
+scaled designs, professional approvals, or assurances of safety or eligibility.
